@@ -76,7 +76,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-fit bg-blue-600 text-white text-sm font-medium px-6 py-2.5 rounded-md hover:bg-blue-700 transition"
+                  className="w-fit bg-sky-500 text-white text-sm font-medium px-6 py-2.5 rounded-md hover:bg-blue-700 transition"
                 >
                   Submit My Request
                 </button>

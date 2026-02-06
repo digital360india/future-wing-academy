@@ -1,8 +1,10 @@
 "use client";
-
-import Link from "next/link";
+import { useState } from "react";
+import ContactPopup from "./ContactPopup";
 
 export default function Hero() {
+  const [open, setOpen] = useState(false);
+
   return (
     <section className="relative h-[90vh] w-full overflow-hidden">
       <video
@@ -29,13 +31,14 @@ export default function Hero() {
             </h1>
 
             <div className="mt-6">
-              <Link
-                href="/join"
+              <button
+                onClick={() => setOpen(true)}
                 className="inline-block rounded-md bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
               >
                 Join now
-              </Link>
+              </button>
             </div>
+            <ContactPopup isOpen={open} onClose={() => setOpen(false)} />
           </div>
         </div>
       </div>

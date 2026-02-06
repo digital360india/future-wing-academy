@@ -9,15 +9,13 @@ export default function AboutUs() {
   return (
     <section className="w-full bg-white py-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        
-        {/* IMAGE — hidden on mobile, unchanged on desktop */}
         <div className="relative hidden md:block">
-          <div className="rounded-2xl overflow-hidden">
+          <div className=" overflow-hidden">
             <Image
               src="/about.png"
               alt="Pilots in cockpit"
-              width={600}
-              height={400}
+              width={700}
+              height={500}
               className="object-cover w-full h-auto"
             />
           </div>
@@ -36,9 +34,10 @@ export default function AboutUs() {
           {/* MOBILE CONTENT */}
           <div className="md:hidden text-gray-600 leading-relaxed">
             <p>
-              Future Wings Aviation Academy is India&apos;s first dedicated Pilot
-              Preparation & Mentorship Institute in Dehradun, created to guide
-              aspiring pilots before they invest heavily in flying training.
+              Future Wings Aviation Academy is India&apos;s first dedicated
+              Pilot Preparation & Mentorship Institute in Dehradun, created to
+              guide aspiring pilots before they invest heavily in flying
+              training.
             </p>
 
             {readMore && (
@@ -76,25 +75,25 @@ export default function AboutUs() {
           {/* DESKTOP CONTENT — UNTOUCHED */}
           <div className="hidden md:block">
             <p className="text-gray-600 mb-5 leading-relaxed">
-              Future Wings Aviation Academy is India&apos;s first dedicated Pilot
-              Preparation & Mentorship Institute in Dehradun, created to guide
-              aspiring pilots before they invest heavily in flying training.
+              Future Wings Aviation Academy is India&apos;s first dedicated
+              Pilot Preparation & Mentorship Institute in Dehradun, created to
+              guide aspiring pilots before they invest heavily in flying
+              training.
             </p>
 
             <p className="text-gray-600 mb-5 leading-relaxed">
-              We exist to ensure that students and parents make informed, timely,
-              and correct decisions at every stage of the pilot journey right from
-              Class 12 to airline selection.
+              We exist to ensure that students and parents make informed,
+              timely, and correct decisions at every stage of the pilot journey
+              right from Class 12 to airline selection.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
               In an industry where misinformation, poor guidance, and rushed
-              decisions often lead to financial and career setbacks, Future Wings
-              stands for transparent preparation and long-term mentorship.
+              decisions often lead to financial and career setbacks, Future
+              Wings stands for transparent preparation and long-term mentorship.
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );

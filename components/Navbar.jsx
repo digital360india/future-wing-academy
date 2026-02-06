@@ -3,16 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import ContactPopup from "./ContactPopup";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isPopupOpen, setPopupOpen] = useState(false);
 
   return (
     <>
       <header className="w-full border-b border-gray-500 bg-white overflow-visible">
         <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 min-h-[72px] md:min-h-0">
+          {/* Mobile Menu Button */}
           <button
-            onClick={() => setOpen(true)}
+            onClick={() => setSidebarOpen(true)}
             className="md:hidden flex flex-col gap-1"
             aria-label="Open menu"
           >
@@ -21,7 +24,7 @@ export default function Navbar() {
             <span className="h-[3px] w-6 bg-gray-700" />
           </button>
 
-          {/* Logo (center on mobile, normal on desktop) */}
+          {/* Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
             <Image
               src="/Future-wings-logo.png"
@@ -48,12 +51,12 @@ export default function Navbar() {
 
           {/* Desktop Right */}
           <div className="hidden md:flex items-center gap-4">
-            <Link
-              href="/join"
-              className="rounded-md bg-sky-500 px-5 py-2 text-[18px] font-semibold text-white hover:bg-sky-600 transition"
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="rounded-md bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
             >
               Join now
-            </Link>
+            </button>
 
             <div className="hidden lg:flex items-center">
               <Image
@@ -67,18 +70,22 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* OVERLAY */}
-      {open && (
+      {/* CONTACT POPUP */}
+      <ContactPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
+
+      {/* MOBILE OVERLAY */}
+      {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/40 z-40  "
-          onClick={() => setOpen(false)}
+          className="fixed inset-0 bg-black/40 z-40"
+          onClick={() => setSidebarOpen(false)}
         />
       )}
 
-      {/* SIDEBAR */}
+      {/* MOBILE SIDEBAR */}
       <aside
-        className={`fixed top-0 left-0 z-50 h-full w-[260px] bg-white p-8 border-b border-gray-500  transform transition-transform duration-300
-        ${open ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 z-50 h-full w-[260px] bg-white p-8 border-b border-gray-500
+        transform transition-transform duration-300
+        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Sidebar Header */}
         <div className="flex items-center justify-between mb-8">
@@ -91,7 +98,7 @@ export default function Navbar() {
           />
 
           <button
-            onClick={() => setOpen(false)}
+            onClick={() => setSidebarOpen(false)}
             className="text-xl font-bold"
             aria-label="Close menu"
           >
@@ -101,24 +108,26 @@ export default function Navbar() {
 
         {/* Sidebar Menu */}
         <nav className="flex flex-col gap-6 text-[18px] font-medium text-gray-700">
-          <Link href="/" onClick={() => setOpen(false)}>
+          <Link href="/" onClick={() => setSidebarOpen(false)}>
             Home
           </Link>
-          <Link href="/about" onClick={() => setOpen(false)}>
+          <Link href="/about" onClick={() => setSidebarOpen(false)}>
             About
           </Link>
-          <Link href="/contact" onClick={() => setOpen(false)}>
+          <Link href="/contact" onClick={() => setSidebarOpen(false)}>
             Contact
           </Link>
 
-          {/* Join button only in sidebar (mobile) */}
-          <Link
-            href="/join"
-            onClick={() => setOpen(false)}
+          {/* Mobile Join */}
+          <button
+            onClick={() => {
+              setSidebarOpen(false);
+              setPopupOpen(true);
+            }}
             className="mt-6 rounded-md bg-sky-500 py-3 text-center text-white font-semibold"
           >
             Join now
-          </Link>
+          </button>
         </nav>
       </aside>
     </>
