@@ -81,7 +81,7 @@ export default function ContactPage() {
 
           {/* RIGHT */}
           <div className="relative">
-            <div className="w-full mx-auto md:h-[80vh] bg-white rounded-xl shadow-xl px-8 py-10">
+            <div className="w-full mx-auto md:min-h-screen bg-white rounded-xl shadow-xl px-8 py-10">
               <h3 className="md:text-[32px] text-[22px] font-bold text-gray-900">
                 Where Dreams Take Flight
               </h3>
