@@ -47,7 +47,7 @@ export default function Footer() {
             <div className="md:block hidden">
               <div className="mt-10 flex items-center gap-3">
                 <Image
-                  src="/Future-wings-logo.png"
+                  src="/Futurewings-Logo.png"
                   alt="Future Wings Academy"
                   width={130}
                   height={100}
@@ -109,7 +109,7 @@ export default function Footer() {
         <div className="md:hidden block">
           <div className="mt-10 flex items-center justify-center">
             <Image
-              src="/Future-wings-logo.png"
+              src="/Futurewings-Logo.png"
               alt="Future Wings Academy"
               width={130}
               height={100}

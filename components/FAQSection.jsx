@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 const faqs = [
   {
     question: "Is this a flying school?",
@@ -27,6 +26,16 @@ const faqs = [
     answer:
       "Students receive continued mentorship for flying school selection, licensing, and airline preparation.",
   },
+  {
+    question: "How can I contact you?",
+    answer:
+      "You can contact us through our website contact form, phone, or email. Our team will get back to you promptly with guidance and support.",
+  },
+  {
+    question: "How is the connectivity to Dehradun?",
+    answer:
+      "Dehradun is well connected by air, rail, and road. Jolly Grant Airport has regular flights from major cities, and the city is easily accessible via trains and highways.",
+  },
 ];
 
 export default function FAQs() {
@@ -37,7 +46,7 @@ export default function FAQs() {
   };
 
   return (
-    <section className="w-full py-10 px-4 md:px-12">
+    <section className="w-full md:py-10 px-4 md:px-12">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-[18px] font-bold text-center text-[#104E7E] mb-2">FAQs</h2>
         <p className="text-center md:text-3xl text-[24px] font-bold text-gray-900 mb-8">

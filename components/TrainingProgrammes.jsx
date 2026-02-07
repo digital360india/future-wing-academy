@@ -3,10 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const courses = [
   {
@@ -93,16 +94,20 @@ export default function TrainingProgrammes() {
         </div>
 
         {/* 🔹 MOBILE CAROUSEL */}
-        <div className="md:hidden">
+        <div className="relative md:hidden">
           <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Navigation]}
             pagination={{ clickable: true }}
+            navigation={{
+              prevEl: ".swiper-prev",
+              nextEl: ".swiper-next",
+            }}
             spaceBetween={20}
             slidesPerView={1}
           >
             {courses.map((course, index) => (
               <SwiperSlide key={index}>
-                <div className="rounded-2xl h-[350px] bg-[#183961] p-8 text-white">
+                <div className="h-[350px] rounded-2xl bg-[#183961] p-8 text-white">
                   <div className="mb-4">
                     <Image
                       src={course.icon}
@@ -112,7 +117,9 @@ export default function TrainingProgrammes() {
                     />
                   </div>
 
-                  <h3 className="mb-4 text-lg font-semibold">{course.title}</h3>
+                  <h3 className="mb-4 text-lg font-semibold">
+                    {course.title}
+                  </h3>
 
                   <ul className="space-y-2 text-sm text-blue-100">
                     {course.points.map((point, idx) => (
@@ -126,10 +133,20 @@ export default function TrainingProgrammes() {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          {/* MOBILE NAVIGATION BUTTONS */}
+          <div className="mt-6 flex justify-center gap-6">
+            <button className="swiper-prev flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 text-gray-700">
+              ←
+            </button>
+            <button className="swiper-next flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 text-gray-700">
+              →
+            </button>
+          </div>
         </div>
 
         {/* 🔹 DESKTOP GRID (UNCHANGED) */}
-        <div className="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="hidden gap-8 md:grid md:grid-cols-2 lg:grid-cols-3">
           {courses.map((course, index) => (
             <div
               key={index}
@@ -158,15 +175,17 @@ export default function TrainingProgrammes() {
           ))}
         </div>
 
-        {/* CTA */}
-        {/* <div className="mt-12 text-center">
+        {/* OPTIONAL CTA */}
+        {/*
+        <div className="mt-12 text-center">
           <Link
             href="/courses"
             className="inline-flex items-center gap-2 text-[18px] font-semibold text-sky-500 hover:underline"
           >
             Explore our courses →
           </Link>
-        </div> */}
+        </div>
+        */}
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
             <Image
-              src="/Future-wings-logo.png"
+              src="/Futurewings-Logo.png"
               alt="Future Wings Academy"
               width={130}
               height={110}
@@ -90,7 +90,7 @@ export default function Navbar() {
         {/* Sidebar Header */}
         <div className="flex items-center justify-between mb-8">
           <Image
-            src="/Future-wings-logo.png"
+            src="/Futurewings-Logo.png"
             alt="Future Wings Academy"
             width={150}
             height={120}

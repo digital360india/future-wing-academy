@@ -43,7 +43,7 @@ export default function Testimonials() {
         <p className="mb-2 text-[18px] font-bold text-[#104E7E]">
           Testimonials
         </p>
-        <h2 className="mb-4 md:text-3xl text-[24px] font-bold text-gray-800">
+        <h2 className="mb-4 md:text-3xl text-[24px] p-4 font-bold text-gray-800">
           What Our Students and Parents Say
         </h2>
 

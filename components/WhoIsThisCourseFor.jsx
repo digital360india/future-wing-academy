@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function WhoIsThisCourseFor() {
   return (
-    <section className="bg-white py-20">
-      <div className=" max-w-7xl">
+    <section className="bg-white md:py-20">
+      <div className=" max-w-7xl md:mx-20">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="overflow-hidden md:block hidden ">
             <Image
-              src="/Course for whom.png"
+              src="/Course for whom (1).png"
               alt="Students ready for aviation career"
               width={600}
               height={500}
@@ -60,9 +60,9 @@ export default function WhoIsThisCourseFor() {
             </ul>
           </div>
 
-          <div className="overflow-hidden md:hidden block ">
+          <div className="overflow-hidden md:hidden block px-6 ">
             <Image
-              src="/Course for whom.png"
+              src="/Course for whom (1).png"
               alt="Students ready for aviation career"
               width={600}
               height={500}

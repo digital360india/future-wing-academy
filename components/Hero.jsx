@@ -26,8 +26,8 @@ export default function Hero() {
               Where Dreams Take Flight
             </p>
 
-            <h1 className="mb-4 md:text-[38px] text-[28px] font-bold leading-tight ">
-              Pioneers of Dedicated Pilot
+            <h1 className="mb-4 md:text-[38px] text-[32px] font-bold italic leading-tight ">
+              Training . Fly . Learn
             </h1>
 
             <div className="mt-6">
