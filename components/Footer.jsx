@@ -101,7 +101,7 @@ export default function Footer() {
             <p className="mt-4 font-semibold text-[18px] text-[#163660]">
               Phone no.
             </p>
-            <p>+91-7843257762</p>
+            <p>+91-8679234969</p>
           </div>
         </div>
 
