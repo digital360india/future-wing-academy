@@ -27,7 +27,7 @@ export default function Hero() {
             </p>
 
             <h1 className="mb-4 md:text-[38px] text-[32px] font-bold italic leading-tight ">
-              Training . Fly . Learn
+             Learn. Train . Fly  
             </h1>
 
             <div className="mt-6">

@@ -19,7 +19,7 @@ const courses = [
       "Flight planning and calculations",
       "Radio navigation systems",
       "Practical navigation scenarios",
-      "Captain Singh's insights: How navigation is actually done in modern aircraft with GPS and FMS",
+      "How navigation is actually done in modern aircraft with GPS and FMS",
     ],
   },
   {
