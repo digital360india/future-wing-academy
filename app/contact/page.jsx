@@ -74,7 +74,7 @@ export default function ContactPage() {
                 <h4 className="text-[20px] font-semibold text-[#163660]">
                   Phone no.
                 </h4>
-                <p className="mt-3 text-[16px] text-gray-600">+91-7843257762</p>
+                <p className="mt-3 text-[16px] text-gray-600">+91-8679234969</p>
               </div>
             </div>
           </div>
