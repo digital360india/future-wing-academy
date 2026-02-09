@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IoCallOutline } from "react-icons/io5";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,15 +26,36 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Tawk.to Script */}
+        <Script
+          id="tawk-to"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+                var s1=document.createElement("script"),
+                    s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/698986c9c060e01c37488e01/1jh0jd1la';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+              })();
+            `,
+          }}
+        />
+
         <Navbar />
         {children}
-        <div className="z-50 absolute">
-          <a href="tel:8679234969">
-            <div className="fixed bottom-18 md:bottom-24 left-4 md:w-16 w-12 md:h-16 h-12 bg-[#02618f] flex justify-center items-center rounded-full">
-              <IoCallOutline className="md:w-8 w-5 md:h-8 h-5 text-white" />
-            </div>
-          </a>
-        </div>
+
+        {/* Floating Call Button */}
+        <a href="tel:8679234969" className="z-50">
+          <div className="fixed bottom-18 md:bottom-24 left-4 md:w-16 w-12 md:h-16 h-12 bg-[#02618f] flex justify-center items-center rounded-full">
+            <IoCallOutline className="md:w-8 w-5 md:h-8 h-5 text-white" />
+          </div>
+        </a>
+
         <Footer />
       </body>
     </html>
