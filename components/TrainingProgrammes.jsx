@@ -180,17 +180,7 @@ export default function TrainingProgrammes() {
           ))}
         </div>
 
-        {/* OPTIONAL CTA */}
-        {/*
-        <div className="mt-12 text-center">
-          <Link
-            href="/courses"
-            className="inline-flex items-center gap-2 text-[18px] font-semibold text-sky-500 hover:underline"
-          >
-            Explore our courses →
-          </Link>
-        </div>
-        */}
+       
       </div>
     </section>
   );
