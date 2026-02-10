@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
 
         {/* Floating Call Button */}
         <a href="tel:8679234969" className="z-50">
-          <div className="fixed bottom-6 md:bottom-24 left-4 md:w-16 w-14 md:h-16 h-14 bg-blue-600 flex justify-center items-center rounded-full">
+          <div className="fixed bottom-6 md:bottom-4 left-4 md:w-16 w-14 md:h-16 h-14 bg-blue-600 flex justify-center items-center rounded-full">
             <IoCallOutline className="md:w-8 w-7 md:h-8 h-7 text-white" />
           </div>
         </a>

@@ -26,6 +26,9 @@ const courses = [
     title: "Aviation Meteorology",
     icon: "/material-weather.png",
     points: [
+      "Basic Understanding of Meteorology.",
+      "Types of Clouds",
+      "Tropical Systems",
       "Atmospheric physics and weather systems",
       "Reading METARs, TAFs, and weather charts",
       "Weather hazards and avoidance",
@@ -37,6 +40,8 @@ const courses = [
     title: "Air Regulations",
     icon: "/material-symbols_air.png",
     points: [
+      "Basic definition",
+      "Flight Planning",
       "DGCA rules and regulations",
       "ICAO annexes and standards",
       "Aviation law and procedures",
