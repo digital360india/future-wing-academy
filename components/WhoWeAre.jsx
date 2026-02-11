@@ -49,7 +49,6 @@ export default function WhoWeAre() {
               />
             </div>
 
-            {/* STATS */}
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4 text-center md:text-left">
               <div>
                 <h3 className="text-3xl font-bold text-sky-500">5+</h3>
