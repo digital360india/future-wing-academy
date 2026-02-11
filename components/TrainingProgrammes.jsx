@@ -98,7 +98,6 @@ export default function TrainingProgrammes() {
           </p>
         </div>
 
-        {/* 🔹 MOBILE CAROUSEL */}
         <div className="relative md:hidden">
           <Swiper
             modules={[Pagination, Navigation]}
