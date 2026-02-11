@@ -16,7 +16,7 @@ export default function WhoIsThisCourseFor() {
               className="object-cover"
             />
           </div>
-          <div className="text-center md:text-left max-w-[340px] md:max-w-none mx-auto md:mx-0">
+          <div className="text-center md:text-left max-w-85 md:max-w-none mx-auto md:mx-0">
             <p className="mb-2 text-[18px] font-bold text-[#104E7E]">
               Who is this course for
             </p>
