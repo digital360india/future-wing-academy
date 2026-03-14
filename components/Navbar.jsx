@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import ContactPopup from "./ContactPopup";
+import RegistrationPopup from "./RegistrationPopup";
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -71,7 +71,7 @@ export default function Navbar() {
       </header>
 
       {/* CONTACT POPUP */}
-      <ContactPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
+      <RegistrationPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
 
       {/* MOBILE OVERLAY */}
       {isSidebarOpen && (

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@tailwind utilities;
+
 /* Testimonial pagination positioning */
 .testimonial-swiper {
   padding-bottom: 10px;
