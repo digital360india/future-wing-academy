@@ -204,7 +204,7 @@ export default function RegistrationPopup({ isOpen, onClose }) {
                   <div className="mt-3 text-center md:hidden">
                     <p className="text-sm">
                       <span className="font-semibold">UPI ID:</span>{" "}
-                      Aviationacademy221-@okhdfcbank
+                      masspal@ibl
                     </p>
                   </div>
                 </div>
