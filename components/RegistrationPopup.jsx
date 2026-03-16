@@ -174,7 +174,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
             </>
           )}
 
-          {/* STEP 2 */}
           {step === 2 && (
             <>
               <div className="text-sm ">
@@ -202,7 +201,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
                     alt="QR Code"
                   />
 
-                  {/* UPI ID – visible only on mobile, matching your example */}
                   <div className="mt-3 text-center md:hidden">
                     <p className="text-sm">
                       <span className="font-semibold">UPI ID:</span>{" "}
