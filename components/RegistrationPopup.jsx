@@ -191,7 +191,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
               <p className="text-sm text-gray-500 mt-1">Total Amount:</p>
               <h3 className="text-[#4EADE3] text-2xl font-bold mb-5">₹5000</h3>
 
-              {/* Main payment content – force stack on mobile, side-by-side on md+ */}
               <div className="flex flex-col items-center sm:items-start gap-10 md:flex-row md:items-start">
                 {/* QR code area – centered on mobile */}
                 <div className="flex flex-col items-center md:items-start">
