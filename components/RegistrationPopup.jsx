@@ -87,7 +87,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
       <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl max-w-5xl w-full flex flex-col md:flex-row">
-        {/* CLOSE BUTTON */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-20 bg-white border border-gray-200 rounded-full w-8 h-8 flex items-center justify-center"
@@ -95,7 +94,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
           ✕
         </button>
 
-        {/* LEFT CONTENT */}
         <div className="w-full md:w-1/2 p-6 md:p-8">
           {/* STEP 1 */}
           {step === 1 && (
