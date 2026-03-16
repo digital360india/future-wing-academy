@@ -225,7 +225,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
                 </div>
               </div>
 
-              {/* Transaction ID input + button – full width on mobile */}
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <input
                   placeholder="Enter Transaction ID"
