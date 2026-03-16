@@ -20,7 +20,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
   const [transactionId, setTransactionId] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // reset popup when opened
   useEffect(() => {
     if (isOpen) {
       setStep(1);
