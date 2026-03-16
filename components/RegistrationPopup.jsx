@@ -75,8 +75,8 @@ export default function RegistrationPopup({ isOpen, onClose }) {
       const data = await res.json();
 
       if (data.success) {
-        onClose(); // close popup
-        router.push("/thankyou"); // redirect
+        onClose(); 
+        router.push("/thankyou"); 
       }
     } catch (error) {
       console.log(error);
