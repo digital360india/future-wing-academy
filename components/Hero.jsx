@@ -16,7 +16,6 @@ export default function Hero() {
 
   return (
     <section className="relative h-[90vh] w-full overflow-hidden">
-      {/* Background Video */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
@@ -27,10 +26,8 @@ export default function Hero() {
         <source src="/future wings.mp4" type="video/mp4" />
       </video>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Content */}
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-6">
           <div className="ml-auto max-w-xl text-left text-white">
