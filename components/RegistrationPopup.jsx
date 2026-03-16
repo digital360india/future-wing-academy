@@ -95,7 +95,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
         </button>
 
         <div className="w-full md:w-1/2 p-6 md:p-8">
-          {/* STEP 1 */}
           {step === 1 && (
             <>
               <h2 className="text-2xl md:text-[32px] font-bold text-gray-800">
