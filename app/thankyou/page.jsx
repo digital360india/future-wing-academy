@@ -47,7 +47,7 @@ export default function ThankYouPage() {
 
               <div className="flex justify-center gap-8">
                 <a
-                  href="https://instagram.com/futurewingsaviation"
+                  href="https://www.instagram.com/futurewingsaviationacademy?igsh=NDI0YTZoOWR4MTJh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#42B2F0] hover:text-[#2b86b7] transition text-4xl"
@@ -56,7 +56,7 @@ export default function ThankYouPage() {
                 </a>
 
                 <a
-                  href="https://facebook.com/futurewingsaviation"
+                  href="https://www.facebook.com/share/1E76hV9TT2/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#42B2F0] hover:text-[#2b86b7] transition text-4xl"
