@@ -5,7 +5,6 @@ export async function POST(req) {
   try {
     const data = await req.json();
 
-    // ✅ BASE URL (AUTO SWITCH DEV / PROD)
     const baseUrl =
       process.env.NODE_ENV === "production"
         ? "https://www.futurewingsavn.com"
