@@ -4,8 +4,18 @@ import puppeteerCore from "puppeteer-core"; // production
 import chromium from "@sparticuz/chromium";
 
 export async function POST(req) {
+  console.log("🚀 API HIT");
+
   try {
     const data = await req.json();
+
+    console.log("📦 Incoming Data:", data);
+
+    // ENV CHECK
+    console.log("🔐 ENV CHECK:", {
+      EMAIL_USER: process.env.EMAIL_USER,
+      EMAIL_PASS: process.env.EMAIL_PASS ? "EXISTS" : "MISSING",
+    });
 
     const isProd = process.env.NODE_ENV === "production";
 
@@ -15,14 +25,13 @@ export async function POST(req) {
 
     const logoUrl = `${baseUrl}/Futurewings-Logo.png`;
 
-    // ---------- HTML TEMPLATE ----------
+    // ---------- HTML TEMPLATE (NO GOOGLE FONTS) ----------
     const html = `
     <html>
     <head>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
       <style>
         body{
-          font-family: 'Roboto', sans-serif;
+          font-family: Arial, sans-serif;
           background:#f3f4f6;
           padding:20px;
         }
@@ -127,14 +136,20 @@ export async function POST(req) {
     let browser;
 
     if (isProd) {
-      // ✅ Vercel
+      console.log("🌍 Running on Vercel");
+
       browser = await puppeteerCore.launch({
-        args: chromium.args,
+        args: [
+          ...chromium.args,
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+        ],
         executablePath: await chromium.executablePath(),
-        headless: true,
+        headless: chromium.headless,
       });
     } else {
-      // ✅ Local
+      console.log("💻 Running locally");
+
       browser = await puppeteer.launch({
         headless: true,
       });
@@ -142,10 +157,12 @@ export async function POST(req) {
 
     const page = await browser.newPage();
 
+    console.log("📄 Setting HTML content...");
     await page.setContent(html, {
       waitUntil: "networkidle0",
     });
 
+    console.log("📄 Generating PDF...");
     const pdfBuffer = await page.pdf({
       format: "A4",
       printBackground: true,
@@ -153,37 +170,44 @@ export async function POST(req) {
 
     await browser.close();
 
+    console.log("📄 PDF Generated:", pdfBuffer.length);
+
     // ---------- EMAIL ----------
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASS, // NO SPACES
       },
     });
 
     // ADMIN EMAIL
-  await transporter.sendMail({
-  from: process.env.EMAIL_USER,
-  to: process.env.EMAIL_USER,
-  subject: "New Student Registration",
-  html: `
-    <h2>New Student Registration</h2>
+    console.log("📩 Sending admin email...");
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      subject: "New Student Registration",
+      html: `
+        <h2>New Student Registration</h2>
 
-    <p><b>Name:</b> ${data.name}</p>
-    <p><b>Phone:</b> ${data.phone}</p>
-    <p><b>Email:</b> ${data.email}</p>
-    <p><b>Age:</b> ${data.age}</p>
-    <p><b>Address:</b> ${data.address}</p>
-    <p><b>City:</b> ${data.city}</p>
-    <p><b>Qualification:</b> ${data.qualification}</p>
+        <p><b>Name:</b> ${data.name}</p>
+        <p><b>Phone:</b> ${data.phone}</p>
+        <p><b>Email:</b> ${data.email}</p>
+        <p><b>Age:</b> ${data.age}</p>
+        <p><b>Address:</b> ${data.address}</p>
+        <p><b>City:</b> ${data.city}</p>
+        <p><b>Qualification:</b> ${data.qualification}</p>
 
-    <hr/>
+        <hr/>
 
-    <p><b>Transaction ID:</b> ${data.transactionId}</p>
-  `,
-});
+        <p><b>Transaction ID:</b> ${data.transactionId}</p>
+      `,
+    });
+
     // USER EMAIL
+    console.log("📩 Sending user email...");
     await transporter.sendMail({
       from: `"Future Wings Aviation" <${process.env.EMAIL_USER}>`,
       to: data.email,
@@ -196,6 +220,8 @@ export async function POST(req) {
         },
       ],
     });
+
+    console.log("✅ Emails sent successfully");
 
     return Response.json({ success: true });
 
