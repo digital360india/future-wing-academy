@@ -23,7 +23,6 @@ export async function POST(req) {
       src: path.join(process.cwd(), "public/fonts/NotoSans-Regular.ttf"),
     });
 
-    // ================= LOGO BASE64 =================
     const logoPath = path.join(process.cwd(), "public/Futurewings-Logo.png");
 
     const logoBase64 = `data:image/png;base64,${fs
