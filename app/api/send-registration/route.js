@@ -29,7 +29,6 @@ export async function POST(req) {
       .readFileSync(logoPath)
       .toString("base64")}`;
 
-    // ================= STYLES =================
     const styles = StyleSheet.create({
       page: {
         padding: 20,
