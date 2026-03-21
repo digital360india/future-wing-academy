@@ -18,7 +18,6 @@ export async function POST(req) {
   try {
     const data = await req.json();
 
-    // ================= FONT FIX (₹ ISSUE) =================
     Font.register({
       family: "NotoSans",
       src: path.join(process.cwd(), "public/fonts/NotoSans-Regular.ttf"),
