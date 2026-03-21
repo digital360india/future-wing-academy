@@ -1,7 +1,5 @@
 import nodemailer from "nodemailer";
-import puppeteer from "puppeteer"; // local
-import puppeteerCore from "puppeteer-core"; // production
-import chromium from "@sparticuz/chromium";
+import path from "path";
 
 export async function POST(req) {
   console.log("🚀 API HIT");
@@ -9,214 +7,102 @@ export async function POST(req) {
   try {
     const data = await req.json();
 
-    console.log("📦 Incoming Data:", data);
+    console.log("📦 Data:", data);
 
-    // ENV CHECK
-    console.log("🔐 ENV CHECK:", {
-      EMAIL_USER: process.env.EMAIL_USER,
-      EMAIL_PASS: process.env.EMAIL_PASS ? "EXISTS" : "MISSING",
-    });
+    // ---------- USER INVOICE (WITH CID LOGO) ----------
+    const userHTML = `
+    <div style="background:#f3f4f6;padding:20px;font-family:Arial">
+      <div style="max-width:700px;margin:auto;background:white;border-radius:12px;padding:25px">
 
-    const isProd = process.env.NODE_ENV === "production";
-
-    const baseUrl = isProd
-      ? "https://www.futurewingsavn.com"
-      : "http://localhost:3000";
-
-    const logoUrl = `${baseUrl}/Futurewings-Logo.png`;
-
-    // ---------- HTML TEMPLATE (NO GOOGLE FONTS) ----------
-    const html = `
-    <html>
-    <head>
-      <style>
-        body{
-          font-family: Arial, sans-serif;
-          background:#f3f4f6;
-          padding:20px;
-        }
-        .container{
-          max-width:800px;
-          margin:auto;
-          background:white;
-          padding:30px;
-          border-radius:12px;
-        }
-        .logo{
-          text-align:center;
-          margin-bottom:20px;
-        }
-        .logo img{
-          width:120px;
-        }
-        .tagline{
-          font-size:14px;
-          color:#555;
-        }
-        .payment-box{
-          background:#cfe8f3;
-          padding:25px;
-          border-radius:15px;
-          text-align:center;
-        }
-        .amount{
-          font-size:42px;
-          font-weight:700;
-          margin:10px 0;
-        }
-        .card{
-          background:#f5f5f5;
-          margin-top:25px;
-          padding:25px;
-          border-radius:15px;
-        }
-        .title{
-          font-size:22px;
-          font-weight:700;
-        }
-        .section{
-          margin-top:20px;
-        }
-        .row{
-          margin:6px 0;
-        }
-        .label{
-          display:inline-block;
-          width:180px;
-          font-weight:500;
-        }
-      </style>
-    </head>
-
-    <body>
-      <div class="container">
-
-        <div class="logo">
-          <img src="${logoUrl}" />
-          <h1>Future Wings Aviation Academy</h1>
-          <div class="tagline">...where dreams take flight</div>
+        <div style="text-align:center">
+          <img src="cid:logo" width="100" style="display:block;margin:auto;" />
+          <h2>Future Wings Aviation Academy</h2>
+          <p style="color:#777">...where dreams take flight</p>
         </div>
 
-        <div class="payment-box">
-          <h2>Payment Amount</h2>
-          <div class="amount">₹ 5,000 ✔</div>
+        <div style="background:#cfe8f3;padding:20px;border-radius:12px;text-align:center;margin-top:20px">
+          <h3>Payment Amount</h3>
+          <h1 style="margin:10px 0">₹ 5,000 ✔</h1>
           <p>Once payment is verified, we’ll get back to you shortly.</p>
         </div>
 
-        <div class="card">
-          <div class="title">RECEIPT</div>
+        <div style="background:#f5f5f5;padding:20px;border-radius:12px;margin-top:20px">
+          <h3>RECEIPT</h3>
 
           <p>
-            <b>Receipt No:</b> FWAA/${Math.floor(Math.random() * 1000)}/2026
-            <br/>
+            <b>Receipt No:</b> FWAA/${Math.floor(Math.random() * 1000)}/2026<br/>
             <b>Date:</b> ${new Date().toLocaleDateString()}
           </p>
 
-          <div class="section">
-            <h3>STUDENT DETAILS</h3>
-            <div class="row"><span class="label">Name:</span> ${data.name}</div>
-            <div class="row"><span class="label">Phone:</span> ${data.phone}</div>
-            <div class="row"><span class="label">Email:</span> ${data.email}</div>
-            <div class="row"><span class="label">City:</span> ${data.city}</div>
-          </div>
+          <h4>STUDENT DETAILS</h4>
+          <p><b>Name:</b> ${data.name}</p>
+          <p><b>Phone:</b> ${data.phone}</p>
+          <p><b>Email:</b> ${data.email}</p>
+          <p><b>City:</b> ${data.city}</p>
 
-          <div class="section">
-            <h3>PAYMENT DETAILS</h3>
-            <div class="row"><span class="label">Amount:</span> ₹5000</div>
-            <div class="row"><span class="label">Transaction ID:</span> ${data.transactionId}</div>
-          </div>
+          <h4>PAYMENT DETAILS</h4>
+          <p><b>Amount:</b> ₹5000</p>
+          <p><b>Transaction ID:</b> ${data.transactionId}</p>
         </div>
 
       </div>
-    </body>
-    </html>
+    </div>
     `;
 
-    // ---------- BROWSER SETUP ----------
-    let browser;
+    // ---------- ADMIN EMAIL ----------
+    const adminHTML = `
+    <div style="font-family:Arial;padding:20px">
+      <h2 style="color:#1479CB;">New Student Registration</h2>
 
-    if (isProd) {
-      console.log("🌍 Running on Vercel");
+      <table style="border-collapse:collapse;width:100%;max-width:500px">
+        <tr><td style="padding:8px;font-weight:bold;">Name:</td><td>${data.name}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;">Phone:</td><td>${data.phone}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;">Email:</td><td>${data.email}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;">Age:</td><td>${data.age}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;">Address:</td><td>${data.address}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;">City:</td><td>${data.city}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;">Qualification:</td><td>${data.qualification}</td></tr>
+      </table>
 
-      browser = await puppeteerCore.launch({
-        args: [
-          ...chromium.args,
-          "--no-sandbox",
-          "--disable-setuid-sandbox",
-        ],
-        executablePath: await chromium.executablePath(),
-        headless: chromium.headless,
-      });
-    } else {
-      console.log("💻 Running locally");
+      <hr style="margin:20px 0"/>
 
-      browser = await puppeteer.launch({
-        headless: true,
-      });
-    }
+      <h3>Payment Info</h3>
+      <p><b>Transaction ID:</b> ${data.transactionId}</p>
+    </div>
+    `;
 
-    const page = await browser.newPage();
-
-    console.log("📄 Setting HTML content...");
-    await page.setContent(html, {
-      waitUntil: "networkidle0",
-    });
-
-    console.log("📄 Generating PDF...");
-    const pdfBuffer = await page.pdf({
-      format: "A4",
-      printBackground: true,
-    });
-
-    await browser.close();
-
-    console.log("📄 PDF Generated:", pdfBuffer.length);
-
-    // ---------- EMAIL ----------
+    // ---------- EMAIL SETUP ----------
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, // NO SPACES
+        pass: process.env.EMAIL_PASS, // no spaces
       },
     });
 
-    // ADMIN EMAIL
+    // ---------- SEND ADMIN EMAIL ----------
     console.log("📩 Sending admin email...");
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: "New Student Registration",
-      html: `
-        <h2>New Student Registration</h2>
-
-        <p><b>Name:</b> ${data.name}</p>
-        <p><b>Phone:</b> ${data.phone}</p>
-        <p><b>Email:</b> ${data.email}</p>
-        <p><b>Age:</b> ${data.age}</p>
-        <p><b>Address:</b> ${data.address}</p>
-        <p><b>City:</b> ${data.city}</p>
-        <p><b>Qualification:</b> ${data.qualification}</p>
-
-        <hr/>
-
-        <p><b>Transaction ID:</b> ${data.transactionId}</p>
-      `,
+      subject: `New Registration - ${data.name}`,
+      html: adminHTML,
     });
 
-    // USER EMAIL
-    console.log("📩 Sending user email...");
+    // ---------- SEND USER EMAIL ----------
+    console.log("📩 Sending user invoice...");
     await transporter.sendMail({
       from: `"Future Wings Aviation" <${process.env.EMAIL_USER}>`,
       to: data.email,
-      subject: "Payment Receipt",
-      html: `<p>Hello ${data.name}, your receipt is attached.</p>`,
+      subject: "Your Payment Receipt",
+      html: userHTML,
       attachments: [
         {
-          filename: "receipt.pdf",
-          content: pdfBuffer,
+          filename: "logo.png",
+          path: path.join(process.cwd(), "public/Futurewings-Logo.png"),
+          cid: "logo", // matches cid in img src
         },
       ],
     });
@@ -224,7 +110,6 @@ export async function POST(req) {
     console.log("✅ Emails sent successfully");
 
     return Response.json({ success: true });
-
   } catch (error) {
     console.log("❌ ERROR:", error);
     return Response.json({ success: false, error: error.message });
