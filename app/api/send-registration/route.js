@@ -96,7 +96,6 @@ export async function POST(req) {
       },
     });
 
-    // ================= PDF =================
     const MyDoc = (
       <Document>
         <Page size="A4" style={styles.page}>
