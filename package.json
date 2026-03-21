@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.3.2",
     "@sparticuz/chromium": "^143.0.4",
     "lucide-react": "^0.563.0",
     "next": "16.1.6",
