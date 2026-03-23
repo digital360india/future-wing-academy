@@ -219,7 +219,6 @@ export async function POST(req) {
       },
     });
 
-    // ================= SEND ADMIN MAIL =================
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
