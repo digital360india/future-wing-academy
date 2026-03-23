@@ -186,7 +186,6 @@ export async function POST(req) {
     </div>
     `;
 
-    // ================= ADMIN EMAIL =================
     const adminHTML = `
     <div style="font-family:Arial;background:#f4f6f8;padding:20px">
       <div style="max-width:600px;margin:auto;background:#fff;padding:20px;border-radius:10px">
