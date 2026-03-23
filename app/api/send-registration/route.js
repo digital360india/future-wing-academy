@@ -163,7 +163,6 @@ export async function POST(req) {
 
     const pdfBuffer = await pdf(MyDoc).toBuffer();
 
-    // ================= USER EMAIL =================
     const userHTML = `
     <div style="background:#f3f4f6;padding:20px;font-family:Arial">
       <div style="max-width:700px;margin:auto;background:white;border-radius:12px;padding:25px">
