@@ -211,7 +211,6 @@ export async function POST(req) {
     </div>
     `;
 
-    // ================= EMAIL SETUP =================
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
