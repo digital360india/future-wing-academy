@@ -66,7 +66,6 @@ export default function ThankYouPage() {
               </div>
             </div>
 
-            {/* Button */}
             <div className="mt-6">
               <Link
                 href="/"
