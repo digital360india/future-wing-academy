@@ -45,7 +45,6 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white flex items-center">
       <div className="w-full max-w-7xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          {/* LEFT */}
           <div>
             <h1 className="text-[24px] lg:text-4xl font-medium text-gray-900 leading-tight">
               We are ready to <br />
