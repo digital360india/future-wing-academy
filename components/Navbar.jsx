@@ -69,7 +69,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* CONTACT POPUP */}
       <RegistrationPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
 
       {/* MOBILE OVERLAY */}
