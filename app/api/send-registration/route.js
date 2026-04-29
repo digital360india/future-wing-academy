@@ -226,7 +226,6 @@ export async function POST(req) {
       html: adminHTML,
     });
 
-    // ================= SEND USER MAIL =================
     await transporter.sendMail({
       from: `"Future Wings Aviation" <${process.env.EMAIL_USER}>`,
       to: data.email,
