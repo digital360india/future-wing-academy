@@ -49,7 +49,6 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* Desktop Right */}
           <div className="hidden md:flex items-center gap-4">
             <button
               onClick={() => setPopupOpen(true)}
