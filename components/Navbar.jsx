@@ -79,7 +79,6 @@ export default function Navbar() {
         />
       )}
 
-      {/* MOBILE SIDEBAR */}
       <aside
         className={`fixed top-0 left-0 z-50 h-full w-[260px] bg-white p-8 border-b border-gray-500
         transform transition-transform duration-300
