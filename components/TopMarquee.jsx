@@ -14,13 +14,13 @@ export default function TopMarquee() {
             <span key={i} className="flex items-center gap-2 mx-6 shrink-0">
               CPSS COACHING STARTING SOON CLICK TO
 
-              <Link href="/join" className="font-bold underline hover:text-black">
+              <Link href="/cpss" className="font-bold underline hover:text-black">
                 JOIN NOW
               </Link>
 
               . BATCH COMMENCE ON 05 MAY 26
 
-              <Link href="/enroll" className="font-bold underline hover:text-black">
+              <Link href="/cpss" className="font-bold underline hover:text-black">
                 ENROLL NOW
               </Link>
 
