@@ -13,11 +13,9 @@ export default function CognitiveTest() {
           <li>Total Time: 2 hours 30 minutes</li>
         </ul>
 
-        {/* Table */}
         <div className="overflow-x-auto border border-gray-400">
           <table className="w-full text-sm border-collapse">
             
-            {/* Table Head */}
             <thead className="bg-gray-200">
               <tr>
                 <th className="border border-gray-400 px-3 py-2 text-left">S.No</th>
@@ -27,10 +25,8 @@ export default function CognitiveTest() {
               </tr>
             </thead>
 
-            {/* Table Body */}
             <tbody>
               
-              {/* Row 1 */}
               <tr>
                 <td className="border border-gray-300 px-3 py-6 align-top">1</td>
                 <td className="border border-gray-300 px-3 py-6 align-top">INSB 1</td>
@@ -46,7 +42,6 @@ export default function CognitiveTest() {
                 </td>
               </tr>
 
-              {/* Row 2 */}
               <tr>
                 <td className="border border-gray-300 px-3 py-4">2</td>
                 <td className="border border-gray-300 px-3 py-4">INSB 2</td>
@@ -56,7 +51,6 @@ export default function CognitiveTest() {
                 </td>
               </tr>
 
-              {/* Row 3 */}
               <tr>
                 <td className="border border-gray-300 px-3 py-4">3</td>
                 <td className="border border-gray-300 px-3 py-4">Spatial Ability Test</td>
@@ -66,7 +60,6 @@ export default function CognitiveTest() {
                 </td>
               </tr>
 
-              {/* Row 4 */}
               <tr>
                 <td className="border border-gray-300 px-3 py-4">4</td>
                 <td className="border border-gray-300 px-3 py-4">Spatial Visualization Test</td>
@@ -76,7 +69,6 @@ export default function CognitiveTest() {
                 </td>
               </tr>
 
-              {/* Row 5 */}
               <tr>
                 <td className="border border-gray-300 px-3 py-4">5</td>
                 <td className="border border-gray-300 px-3 py-4">Numerical Reasoning Test</td>
@@ -86,7 +78,6 @@ export default function CognitiveTest() {
                 </td>
               </tr>
 
-              {/* Row 6 */}
               <tr>
                 <td className="border border-gray-300 px-3 py-4">6</td>
                 <td className="border border-gray-300 px-3 py-4">Reasoning Test</td>
