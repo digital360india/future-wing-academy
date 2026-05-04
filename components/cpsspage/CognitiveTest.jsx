@@ -2,7 +2,6 @@ export default function CognitiveTest() {
   return (
     <div className=" py-12 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-gray-800">
-        
         <h2 className="text-xl md:text-2xl font-bold mb-4">
           1. Cognitive Ability Test in CPSS
         </h2>
@@ -15,22 +14,34 @@ export default function CognitiveTest() {
 
         <div className="overflow-x-auto border border-gray-400">
           <table className="w-full text-sm border-collapse">
-            
             <thead className="bg-gray-200">
               <tr>
-                <th className="border border-gray-400 px-3 py-2 text-left">S.No</th>
-                <th className="border border-gray-400 px-3 py-2 text-left">Test Name</th>
-                <th className="border border-gray-400 px-3 py-2 text-left">Questions</th>
-                <th className="border border-gray-400 px-3 py-2 text-left">About</th>
+                <th className="border border-gray-400 px-3 py-2 text-left">
+                  S.No
+                </th>
+                <th className="border border-gray-400 px-3 py-2 text-left">
+                  Test Name
+                </th>
+                <th className="border border-gray-400 px-3 py-2 text-left">
+                  Questions
+                </th>
+                <th className="border border-gray-400 px-3 py-2 text-left">
+                  About
+                </th>
               </tr>
             </thead>
 
             <tbody>
-              
               <tr>
-                <td className="border border-gray-300 px-3 py-6 align-top">1</td>
-                <td className="border border-gray-300 px-3 py-6 align-top">INSB 1</td>
-                <td className="border border-gray-300 px-3 py-6 align-top">15</td>
+                <td className="border border-gray-300 px-3 py-6 align-top">
+                  1
+                </td>
+                <td className="border border-gray-300 px-3 py-6 align-top">
+                  INSB 1
+                </td>
+                <td className="border border-gray-300 px-3 py-6 align-top">
+                  15
+                </td>
                 <td className="border border-gray-300 px-3 py-4 space-y-1">
                   <p>Recognizing Scales and meters</p>
                   <p>• Magnetic Compass</p>
@@ -53,7 +64,9 @@ export default function CognitiveTest() {
 
               <tr>
                 <td className="border border-gray-300 px-3 py-4">3</td>
-                <td className="border border-gray-300 px-3 py-4">Spatial Ability Test</td>
+                <td className="border border-gray-300 px-3 py-4">
+                  Spatial Ability Test
+                </td>
                 <td className="border border-gray-300 px-3 py-4">30</td>
                 <td className="border border-gray-300 px-3 py-4">
                   Perceiving 2D, 3F Figures in space
@@ -62,7 +75,9 @@ export default function CognitiveTest() {
 
               <tr>
                 <td className="border border-gray-300 px-3 py-4">4</td>
-                <td className="border border-gray-300 px-3 py-4">Spatial Visualization Test</td>
+                <td className="border border-gray-300 px-3 py-4">
+                  Spatial Visualization Test
+                </td>
                 <td className="border border-gray-300 px-3 py-4">30</td>
                 <td className="border border-gray-300 px-3 py-4">
                   Perceiving position of objects in space
@@ -71,7 +86,9 @@ export default function CognitiveTest() {
 
               <tr>
                 <td className="border border-gray-300 px-3 py-4">5</td>
-                <td className="border border-gray-300 px-3 py-4">Numerical Reasoning Test</td>
+                <td className="border border-gray-300 px-3 py-4">
+                  Numerical Reasoning Test
+                </td>
                 <td className="border border-gray-300 px-3 py-4">30</td>
                 <td className="border border-gray-300 px-3 py-4">
                   Perceiving position of objects in space
@@ -80,17 +97,17 @@ export default function CognitiveTest() {
 
               <tr>
                 <td className="border border-gray-300 px-3 py-4">6</td>
-                <td className="border border-gray-300 px-3 py-4">Reasoning Test</td>
+                <td className="border border-gray-300 px-3 py-4">
+                  Reasoning Test
+                </td>
                 <td className="border border-gray-300 px-3 py-4">30</td>
                 <td className="border border-gray-300 px-3 py-4">
                   Verbal and Non Verbal reasoning
                 </td>
               </tr>
-
             </tbody>
           </table>
         </div>
-
       </div>
     </div>
   );
