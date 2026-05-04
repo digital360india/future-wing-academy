@@ -64,7 +64,7 @@ export default function CognitiveTest() {
                 <td className="border border-gray-300 px-3 py-4">Spatial Ability Test</td>
                 <td className="border border-gray-300 px-3 py-4">30</td>
                 <td className="border border-gray-300 px-3 py-4">
-                  Perceiving 2D, 3D Figures in space
+                  Perceiving 2D, 3F Figures in space
                 </td>
               </tr>
 
