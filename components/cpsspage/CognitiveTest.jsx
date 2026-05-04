@@ -7,7 +7,6 @@ export default function CognitiveTest() {
           1. Cognitive Ability Test in CPSS
         </h2>
 
-        {/* Points */}
         <ul className="list-disc pl-6 text-sm mb-6 space-y-1">
           <li>6 Test are there.</li>
           <li>Total Question: 212 (MCQ Based)</li>
