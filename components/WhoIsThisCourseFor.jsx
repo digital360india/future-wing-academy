@@ -1,13 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function WhoIsThisCourseFor() {
   return (
-    <section className="bg-white md:py-20">
+    <section className="bg-white md:py-6">
       <div className=" max-w-7xl md:mx-20">
         <div className="grid items-center gap-12 md:grid-cols-2">
-          <div className="overflow-hidden md:block hidden ">
+
+          {/* LEFT IMAGE (Desktop) */}
+          <motion.div
+            className="overflow-hidden md:block hidden"
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: false }}
+          >
             <Image
               src="/Course for whom (1).png"
               alt="Students ready for aviation career"
@@ -15,8 +24,16 @@ export default function WhoIsThisCourseFor() {
               height={500}
               className="object-cover"
             />
-          </div>
-          <div className="text-center md:text-left max-w-85 md:max-w-none mx-auto md:mx-0">
+          </motion.div>
+
+          {/* RIGHT CONTENT */}
+          <motion.div
+            className="text-center md:text-left max-w-85 md:max-w-none mx-auto md:mx-0"
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: false }}
+          >
             <p className="mb-2 text-[18px] font-bold text-[#104E7E]">
               Who is this course for
             </p>
@@ -31,7 +48,7 @@ export default function WhoIsThisCourseFor() {
             </p>
 
             <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start gap-3 justify-center md:justify-start text-left md:text-left">
+              <li className="flex items-start gap-3 justify-center md:justify-start text-left">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-black" />
                 <p>
                   <strong>12th Pass Students (Physics & Mathematics)</strong>{" "}
@@ -40,7 +57,7 @@ export default function WhoIsThisCourseFor() {
                 </p>
               </li>
 
-              <li className="flex items-start gap-3 justify-center md:justify-start text-left md:text-left">
+              <li className="flex items-start gap-3 justify-center md:justify-start text-left">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-black" />
                 <p>
                   <strong>Science & Technical Graduates</strong> aiming to
@@ -49,7 +66,7 @@ export default function WhoIsThisCourseFor() {
                 </p>
               </li>
 
-              <li className="flex items-start gap-3 justify-center md:justify-start text-left md:text-left">
+              <li className="flex items-start gap-3 justify-center md:justify-start text-left">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-black" />
                 <p>
                   Aspirants aged <strong>17 to 65 years</strong> who are
@@ -58,9 +75,16 @@ export default function WhoIsThisCourseFor() {
                 </p>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="overflow-hidden md:hidden block px-6 ">
+          {/* MOBILE IMAGE */}
+          <motion.div
+            className="overflow-hidden md:hidden block px-6"
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: false }}
+          >
             <Image
               src="/Course for whom (1).png"
               alt="Students ready for aviation career"
@@ -68,7 +92,8 @@ export default function WhoIsThisCourseFor() {
               height={500}
               className="object-cover"
             />
-          </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

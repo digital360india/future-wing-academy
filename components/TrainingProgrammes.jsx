@@ -84,7 +84,7 @@ const courses = [
 
 export default function TrainingProgrammes() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-8">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
           <p className="mb-2 text-[18px] font-bold text-[#104E7E]">Courses</p>

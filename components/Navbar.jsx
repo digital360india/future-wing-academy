@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <>
       <header className="w-full border-b border-gray-500 bg-white overflow-visible">
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 min-h-[72px] md:min-h-0">
+        <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 min-h-18 md:min-h-0">
           {/* Mobile Menu Button */}
           <button
             onClick={() => setSidebarOpen(true)}
@@ -46,6 +46,9 @@ export default function Navbar() {
             </Link>
             <Link href="/contact" className="hover:text-[#183961]">
               Contact
+            </Link>
+              <Link href="/cpss" className="border-2 p-2 rounded-[10px] border-sky-500 hover:bg-sky-500 hover:text-white transition text-sky-500">
+             Apply CPSS
             </Link>
           </nav>
 
@@ -91,7 +94,7 @@ export default function Navbar() {
             alt="Future Wings Academy"
             width={150}
             height={120}
-            className="w-auto h-[50px]"
+            className="w-auto h-12.5"
           />
 
           <button
@@ -114,6 +117,10 @@ export default function Navbar() {
           <Link href="/contact" onClick={() => setSidebarOpen(false)}>
             Contact
           </Link>
+           <Link href="/cpss" onClick={() => setSidebarOpen(false)}>
+            CPSS
+          </Link>
+
 
           {/* Mobile Join */}
           <button

@@ -2,14 +2,22 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function WhoWeAre() {
   return (
-    <section className="bg-white md:py-20 py-4">
+    <section className="bg-white md:py-8 py-4">
       <div className="max-w-7xl md:mx-20 px-6 md:px-0">
         <div className="grid items-center gap-16 md:grid-cols-2">
+          
           {/* LEFT IMAGE */}
-          <div className="relative">
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: false }}
+          >
             <div className="overflow-hidden rounded-2xl hidden md:block">
               <Image
                 src="/Pilots.png"
@@ -19,10 +27,15 @@ export default function WhoWeAre() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT CONTENT */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: false }}
+          >
             <p className="mb-2 text-[18px] font-bold text-[#104E7E] text-center md:text-left">
               Who we are
             </p>
@@ -82,7 +95,8 @@ export default function WhoWeAre() {
             >
               Know more about us <span>→</span>
             </Link>
-          </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

@@ -10,125 +10,118 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="w-full bg-white border-t border-gray-500 md:px-10 px-5 py-14">
-        <div className="max-w-7xl flex justify-between">
-          {/* LEFT SECTION */}
-          <div className="max-w-md">
-            <div className="flex gap-12">
-              <h2 className="text-[28px] font-medium text-gray-900 leading-snug md:block hidden">
-                Give your <span className="italic font-normal">future</span> fly{" "}
-                <br />
-                journey today !
-              </h2>
+      {/* TOP BLUE SECTION */}
+      <section className="bg-[#183961] text-white p-20  py-10">
+        <div className="max-w-7xl  grid md:grid-cols-5 gap-8 items-start">
+          
+          {/* LEFT CONTENT */}
+          <div className="col-span-1 md:col-span-2">
+            <p className="text-sm mb-2 opacity-80">
+              Where Dreams Take Flight
+            </p>
 
-              {/* Button + arrow note */}
-              <div className="relative mt-5 md:block hidden">
-                <button
-                  onClick={() => setPopupOpen(true)}
-                  className="rounded-md bg-sky-400 px-6 py-2 text-[18px] font-medium text-white hover:bg-sky-500 transition"
-                >
-                  Join now
-                </button>
+            <h2 className="text-2xl md:text-3xl font-semibold italic">
+              Training. Fly. Learn
+            </h2>
 
-                <div className="hidden lg:flex items-center mt-2">
-                  <Image
-                    src="/waiting graphics 2.png"
-                    alt="Your future is waiting"
-                    width={120}
-                    height={30}
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-            </div>
+            <div className="flex items-center gap-6 mt-6">
+              <button
+                onClick={() => setPopupOpen(true)}
+                className="bg-sky-400 hover:bg-sky-500 px-6 py-2 rounded-md text-white font-medium transition"
+              >
+                Join now
+              </button>
 
-            {/* Logo (desktop) */}
-            <div className="md:block hidden">
-              <div className="mt-10 flex items-center gap-3">
-                <Image
-                  src="/Futurewings-Logo.png"
-                  alt="Future Wings Academy"
-                  width={130}
-                  height={100}
-                />
-              </div>
             </div>
           </div>
 
           {/* QUICK LINKS */}
-          <div className="text-sm text-gray-500">
-            <h4 className="mb-4 font-bold text-[18px] text-gray-900">
-              Quick Links
-            </h4>
-
-            <ul className="space-y-2">
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <Link href="/" className="hover:text-sky-500 transition">
+                <Link href="/" className="hover:underline">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-sky-500 transition">
+                <Link href="/about" className="hover:underline">
                   About us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-sky-500 transition">
+                <Link href="/contact" className="hover:underline">
                   Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* CONTACT US */}
-          <div className="max-w-xs text-sm text-gray-600">
-            <h4 className="mb-4 font-bold text-[18px] text-gray-900">
-              Contact Us
-            </h4>
+          {/* CONTACT */}
+          <div className="flex justify-between " >
+           <div>
+             <h4 className="font-semibold mb-4">Contact Us</h4>
 
-            <p className="font-semibold text-[18px] text-[#163660] mb-1">
+            <p className="text-sm font-medium mb-1">
               Office training centre
             </p>
-            <p className="leading-relaxed">
+
+            <p className="text-sm opacity-80 leading-relaxed">
               Ground Floor, Digital 360, B-36,
               <br />
               Nehru Colony, Dalanwala,
               <br />
               Dehradun, Uttarakhand
             </p>
+           </div>
 
-            <p className="mt-4 font-semibold text-[18px] text-[#163660]">
-              Phone No.
-            </p>
+         
+          </div>
+           <div>
+              <p className="mt-4 font-medium">Phone no.</p>
 
-            {["+91-8679234969", "+91-8679181254", "+91-8679189147"].map(
-              (phone, index) => (
-                <span key={index} className="block">
-                  <span className="sm:hidden">
-                    <a href={`tel:${phone.replace(/[^0-9+]/g, "")}`}>{phone}</a>
-                  </span>
-                  <span className="hidden sm:block">{phone}</span>
-                </span>
-              ),
-            )}
+            <div className="text-sm opacity-90">
+              <p>+91-7843257762</p>
+              <p>+91-7843257762</p>
+              <p>+91-7843257762</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Logo (mobile) */}
-        <div className="md:hidden block">
-          <div className="mt-10 flex items-center justify-center">
-            <Image
-              src="/Futurewings-Logo.png"
-              alt="Future Wings Academy"
-              width={130}
-              height={100}
-            />
-          </div>
+      {/* BOTTOM STRIP WITH PLANE */}
+      <section className="bg-gray-100 px-6 md:px-16 py-6 rounded-t-2xl">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          {/* LOGO */}
+          <Image
+            src="/Futurewings-Logo.png"
+            alt="Future Wings"
+            width={140}
+            height={80}
+          />
+
+          {/* PLANE IMAGE */}
+          <Image
+            src="/aeroplane footer.png" 
+            alt="plane"
+            width={300}
+            height={120}
+            className="object-contain"
+          />
+
+          {/* TEXT */}
+          <h2 className="text-lg md:text-xl text-gray-800 text-center md:text-right">
+            Give your <span className="italic">future fly</span> journey today !
+          </h2>
         </div>
-      </footer>
+      </section>
 
-      {/* CONTACT POPUP */}
-      <ContactPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
+      {/* POPUP */}
+      <ContactPopup
+        isOpen={isPopupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </>
   );
 }
