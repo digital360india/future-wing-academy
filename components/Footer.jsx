@@ -10,11 +10,9 @@ export default function Footer() {
 
   return (
     <>
-      {/* TOP BLUE SECTION */}
       <section className="bg-[#183961] text-white p-20  py-10">
         <div className="max-w-7xl  grid md:grid-cols-5 gap-8 items-start">
           
-          {/* LEFT CONTENT */}
           <div className="col-span-1 md:col-span-2">
             <p className="text-sm mb-2 opacity-80">
               Where Dreams Take Flight
