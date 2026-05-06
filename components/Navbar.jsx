@@ -13,7 +13,6 @@ export default function Navbar() {
     <>
       <header className="w-full border-b border-gray-500 bg-white overflow-visible">
         <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 min-h-18 md:min-h-0">
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setSidebarOpen(true)}
             className="md:hidden flex flex-col gap-1"
