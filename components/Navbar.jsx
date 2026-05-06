@@ -84,7 +84,6 @@ export default function Navbar() {
         transform transition-transform duration-300
         ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
-        {/* Sidebar Header */}
         <div className="flex items-center justify-between mb-8">
           <Image
             src="/Futurewings-Logo.png"
@@ -103,7 +102,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Sidebar Menu */}
         <nav className="flex flex-col gap-6 text-[18px] font-medium text-gray-700">
           <Link href="/" onClick={() => setSidebarOpen(false)}>
             Home
@@ -119,7 +117,6 @@ export default function Navbar() {
           </Link>
 
 
-          {/* Mobile Join */}
           <button
             onClick={() => {
               setSidebarOpen(false);
