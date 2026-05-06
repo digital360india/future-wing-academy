@@ -54,7 +54,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* CONTACT */}
           <div className="flex justify-between " >
            <div>
              <h4 className="font-semibold mb-4">Contact Us</h4>
@@ -86,7 +85,6 @@ export default function Footer() {
         </div>
       </section>
 
-      {/* BOTTOM STRIP WITH PLANE */}
       <section className="bg-gray-100 px-6 md:px-16 py-6 rounded-t-2xl">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           
