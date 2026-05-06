@@ -88,7 +88,6 @@ export default function Footer() {
       <section className="bg-gray-100 px-6 md:px-16 py-6 rounded-t-2xl">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           
-          {/* LOGO */}
           <Image
             src="/Futurewings-Logo.png"
             alt="Future Wings"
@@ -96,7 +95,6 @@ export default function Footer() {
             height={80}
           />
 
-          {/* PLANE IMAGE */}
           <Image
             src="/aeroplane footer.png" 
             alt="plane"
@@ -105,7 +103,6 @@ export default function Footer() {
             className="object-contain"
           />
 
-          {/* TEXT */}
           <h2 className="text-lg md:text-xl text-gray-800 text-center md:text-right">
             Give your <span className="italic">future fly</span> journey today !
           </h2>
