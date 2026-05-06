@@ -36,7 +36,6 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-20 text-[18px] font-medium text-gray-700">
             <Link href="/" className="text-[#183961]">
               Home
@@ -74,7 +73,6 @@ export default function Navbar() {
 
       <RegistrationPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
 
-      {/* MOBILE OVERLAY */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black/40 z-40"
