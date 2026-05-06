@@ -47,7 +47,6 @@ export default function PilotJourneyForm() {
         What is your current status <br /> in the pilot journey?
       </h2>
 
-      {/* Progress Bar */}
       <div className="h-1 bg-gray-200 rounded mt-4 mb-6">
         <div
           className={`h-1 bg-[#42B2F0] rounded transition-all ${
@@ -56,7 +55,6 @@ export default function PilotJourneyForm() {
         />
       </div>
 
-      {/* STEP 1 */}
       {step === 1 && (
         <div className="space-y-3">
           {steps.map((item) => (
