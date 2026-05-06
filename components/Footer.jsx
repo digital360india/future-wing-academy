@@ -109,7 +109,6 @@ export default function Footer() {
         </div>
       </section>
 
-      {/* POPUP */}
       <ContactPopup
         isOpen={isPopupOpen}
         onClose={() => setPopupOpen(false)}
