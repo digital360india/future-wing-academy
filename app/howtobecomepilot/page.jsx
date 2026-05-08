@@ -338,7 +338,7 @@ export default function BecomePilotPage() {
                 </li>
 
                 <li>
-                  assess whether you’re truly ready to operate safely in the
+                  assess whether you&apos;re truly ready to operate safely in the
                   air.
                 </li>
               </ul>
@@ -346,7 +346,6 @@ export default function BecomePilotPage() {
           </div>
         </section>
 
-        {/* STEP 6 */}
         <section className="mt-12">
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-3">
             Step 6: Complete Your Flight Training Hours
@@ -354,10 +353,10 @@ export default function BecomePilotPage() {
 
           <div className="space-y-2 text-[16px] leading-8 text-[#222]">
             <p>
-              This is where things get real — you’ll finally be in the cockpit,
+              This is where things get real — you&apos;ll finally be in the cockpit,
               logging actual flying hours. The DGCA mandates a minimum of 200
               hours of total flight time to qualify for a{" "}
-              <b>Commercial Pilot License (CPL).</b> Here’s the breakdown:
+              <b>Commercial Pilot License (CPL).</b> Here&apos;s the breakdown:
             </p>
 
             <div className="space-y-1 pt-2">
@@ -392,7 +391,6 @@ export default function BecomePilotPage() {
         </section>
         <div className="space-y-12">
         
-        {/* Step 7 */}
         <div>
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-3 mt-4">Step 7: Get Licensed to Communicate</h2>
           <p className="text-gray-700 mb-6">
@@ -411,7 +409,6 @@ export default function BecomePilotPage() {
           </p>
         </div>
 
-        {/* Step 8 */}
         <div>
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-3 mt-2">Step 8: Clear the CPL Skill Test</h2>
           <p className="text-gray-700">
@@ -422,7 +419,6 @@ export default function BecomePilotPage() {
           </p>
         </div>
 
-        {/* Step 9 */}
         <div>
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-3">Step 9: Apply for Your Commercial Pilot License</h2>
           <p className="text-gray-700 mb-6">
@@ -445,7 +441,6 @@ export default function BecomePilotPage() {
           </p>
         </div>
 
-        {/* Step 10 */}
         <div>
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-3">Step 10: Start Your Career as a Pilot</h2>
           <p className="text-gray-700 mb-6">
