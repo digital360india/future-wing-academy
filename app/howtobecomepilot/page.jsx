@@ -21,9 +21,7 @@ export default function BecomePilotPage() {
           know exactly what to expect. Let&apos;s get started.
         </p>
 
-        {/* TOP GRID */}
         <div className="grid lg:grid-cols-2 gap-6 mt-14 items-start">
-          {/* TABLE OF CONTENT */}
           <div className="bg-[#dfeaf1] p-8 md:p-6">
             <h2 className="text-[36px] font-normal text-[#4c4c4c] mb-8">
               Table of content
