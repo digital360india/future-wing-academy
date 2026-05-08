@@ -108,7 +108,6 @@ export default function BecomePilotPage() {
           </div>
         </section>
 
-        {/* STEP 2 */}
         <section className="mt-10">
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-8">
             Step 2: Complete Your Medical Certifications
