@@ -19,7 +19,7 @@ export default function Footer() {
             </p>
 
             <h2 className="text-2xl md:text-3xl font-semibold italic">
-              Training. Fly. Learn
+            Learn. Training. Fly. 
             </h2>
 
             <div className="flex items-center gap-6 mt-6">
