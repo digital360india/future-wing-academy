@@ -54,7 +54,6 @@ export default function BecomePilotPage() {
           </div>
         </div>
 
-        {/* STEP 1 */}
         <section className="mt-6">
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-3">
             Step 1: Check Your Eligibility
