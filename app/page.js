@@ -2,6 +2,7 @@ import FAQs from "@/components/FAQSection";
 import Hero from "@/components/Hero";
 import PilotJourneyForm from "@/components/PilotJourneyForm";
 import Testimonials from "@/components/Testimonials";
+import TieUpMarquee from "@/components/TieUpMarquee";
 import TopMarquee from "@/components/TopMarquee";
 import TrainingProgrammes from "@/components/TrainingProgrammes";
 import WhoIsThisCourseFor from "@/components/WhoIsThisCourseFor";
@@ -18,6 +19,8 @@ export default function Home() {
     <PilotJourneyForm />
   </div>
   <WhyChooseUs />
+    <TieUpMarquee />
+
   <WhoWeAre />
   <TrainingProgrammes />
   <WhoIsThisCourseFor />
