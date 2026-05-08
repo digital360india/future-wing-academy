@@ -167,7 +167,6 @@ export default function BecomePilotPage() {
           </div>
         </section>
 
-        {/* STEP 3 */}
         <section className="mt-8">
           <h2 className="text-[34px] font-normal text-[#4a4a4a] mb-3">
             Step 3: Find the Right CPL Ground School in India
