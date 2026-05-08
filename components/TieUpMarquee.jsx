@@ -22,11 +22,10 @@ const logos = [
 export default function TieUpMarquee() {
   return (
     <section className="w-full overflow-hidden bg-white py-10 mt-3">
-      
       {/* HEADING */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-          Our Tie-Up Partners
+          Top flying schools
         </h2>
 
         <p className="text-gray-500 mt-2">
@@ -37,7 +36,6 @@ export default function TieUpMarquee() {
       {/* MARQUEE */}
       <div className="relative">
         <div className="flex w-max animate-marquee items-center gap-12">
-          
           {/* FIRST SET */}
           {logos.map((logo, index) => (
             <div

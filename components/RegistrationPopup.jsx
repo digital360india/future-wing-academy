@@ -86,7 +86,7 @@ export default function RegistrationPopup({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-      <div className="relative bg-white rounded-xl overflow-hidden shadow-2xl max-w-4xl w-full flex flex-col md:flex-row">
+      <div className="relative bg-white rounded-xl overflow-hidden shadow-2xl max-w-3xl w-full flex flex-col md:flex-row">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-20 bg-white border border-gray-200 rounded-full w-8 h-8 flex items-center justify-center"
@@ -97,11 +97,11 @@ export default function RegistrationPopup({ isOpen, onClose }) {
         <div className="w-full md:w-1/2 p-6 md:p-8">
           {step === 1 && (
             <>
-              <h2 className="text-xl md:text-[28px] font-bold text-gray-800">
+              <h2 className="text-xl md:text-[24px] font-bold text-gray-800">
                 Where Dreams Take Flight
               </h2>
 
-              <p className="text-[16px] md:text-[24px] mt-1">
+              <p className="text-[16px] md:text-[20px] mt-1">
                 Registration fee starts at{" "}
                 <span className="text-[#51B6E7] font-bold">₹5000</span>
               </p> 
