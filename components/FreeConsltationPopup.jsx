@@ -128,7 +128,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
     setLoading(false);
   };
 
-  // INTEREST OPTIONS (for new Step 2)
   const interestOptions = [
     "Just exploring aviation as a career",
     "Planning to start within 6–12 months",

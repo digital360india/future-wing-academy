@@ -89,12 +89,13 @@ export default function Navbar() {
           {/* RIGHT BUTTONS */}
           <div className="hidden lg:flex items-center">
             <div className="flex items-center border-l border-gray-200 pl-8 gap-4">
-              <Link
+              <button
+                onClick={handleOpenPopup}
                 href="/apply-cpss"
                 className="h-[44px] px-8 border border-sky-400 text-sky-500 rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-50 transition"
               >
                 Apply CPSS
-              </Link>
+              </button>
 
               {/* UPDATED FREE CONSULTATION BUTTON */}
               <button
