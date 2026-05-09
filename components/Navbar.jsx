@@ -4,10 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
+import FreeconsultationPopup from "./FreeConsltationPopup";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+
+  // ADD THESE STATES
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  // ADD THESE FUNCTIONS
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
 
   return (
     <>
@@ -64,7 +77,7 @@ export default function Navbar() {
                 >
                   <Link
                     href="/cpss"
-                    className="block px-4 py-4 text-[14px] text-gray-700 hover:bg-gray-50 leading-6"
+                    className="block px-4 py-4 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-sky-500 leading-6"
                   >
                     CPSS (Computerised Pilot Selection System)
                   </Link>
@@ -83,12 +96,13 @@ export default function Navbar() {
                 Apply CPSS
               </Link>
 
-              <Link
-                href="/consultation"
+              {/* UPDATED FREE CONSULTATION BUTTON */}
+              <button
+                onClick={handleOpenPopup}
                 className="h-[44px] px-7 bg-sky-400 text-white rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-500 transition"
               >
                 Free consultation
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -145,16 +159,23 @@ export default function Navbar() {
                 Apply CPSS
               </Link>
 
-              <Link
-                href="/consultation"
+              {/* UPDATED MOBILE FREE CONSULTATION BUTTON */}
+              <button
+                onClick={() => {
+                  handleOpenPopup();
+                  setMobileMenu(false);
+                }}
                 className="h-[45px] bg-sky-400 text-white rounded-md flex items-center justify-center font-semibold"
               >
                 Free consultation
-              </Link>
+              </button>
             </div>
           </nav>
         </div>
       </div>
+
+      {/* ADD THIS POPUP COMPONENT */}
+      <FreeconsultationPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
     </>
   );
 }
