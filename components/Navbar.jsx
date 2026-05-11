@@ -10,10 +10,8 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  // ADD THESE STATES
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  // ADD THESE FUNCTIONS
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
   };
