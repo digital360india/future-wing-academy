@@ -121,7 +121,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
         alert("Something went wrong. Please try again.");
       }
     } catch (error) {
-      console.log(error);
       alert("Submission failed. Please try again.");
     }
 
