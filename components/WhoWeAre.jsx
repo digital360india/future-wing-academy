@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function WhoWeAre() {
   return (
     <section className="bg-white md:py-8 py-4">
-      <div className="max-w-7xl md:mx-20 px-6 md:px-0">
+      <div className="w-full md:mx-auto px-6 md:px-20">
         <div className="grid items-center gap-16 md:grid-cols-2">
           
           {/* LEFT IMAGE */}

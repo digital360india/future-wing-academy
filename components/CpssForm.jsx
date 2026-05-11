@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-export default function FreeconsultationPopup({ isOpen, onClose }) {
+export default function CpssPopup({ isOpen, onClose }) {
   const router = useRouter();
 
   const [step, setStep] = useState(1);
@@ -153,11 +153,11 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
             <>
               <div className="mt-3">
                 <h2 className="text-3xl md:text-[28px] font-bold text-[#2f2f2f]">
-                  Free Consultation Form
+                  CPSS BATCH 2026 Joining Form
                 </h2>
 
                 <p className="mt-3 text-gray-500">
-                  Fill your details to continue your aviation journey.
+                  Don't miss your chance. join now
                 </p>
 
                 <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-4">

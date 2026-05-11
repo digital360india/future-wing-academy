@@ -4,21 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
+
 import FreeconsultationPopup from "./FreeConsltationPopup";
+import CpssPopup from "./CpssForm";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  // SEPARATE POPUP STATES
+  const [isConsultationPopupOpen, setIsConsultationPopupOpen] = useState(false);
 
-  const handleOpenPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
+  const [isCpssPopupOpen, setIsCpssPopupOpen] = useState(false);
 
   return (
     <>
@@ -36,8 +33,9 @@ export default function Navbar() {
             />
           </Link>
 
+          {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center h-full">
-            <div className="flex items-center gap-12 text-[14px] font-medium text-gray-700">
+            <div className="flex items-center gap-12 text-[16px] font-medium text-gray-700">
               <Link href="/" className="hover:text-sky-500 transition">
                 Home
               </Link>
@@ -53,6 +51,7 @@ export default function Navbar() {
                 How to become pilot
               </Link>
 
+              {/* COURSES DROPDOWN */}
               <div
                 className="relative h-[78px] flex items-center"
                 onMouseEnter={() => setShowDropdown(true)}
@@ -63,7 +62,7 @@ export default function Navbar() {
                   <ChevronDown size={16} />
                 </button>
 
-                {/* Dropdown Menu */}
+                {/* DROPDOWN */}
                 <div
                   className={`absolute top-full left-1/2 -translate-x-1/2 w-[210px] bg-white border border-gray-200 shadow-lg transition-all duration-200 ${
                     showDropdown
@@ -79,21 +78,26 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
+              <Link href="/contact" className="hover:text-sky-500 transition">
+                Contact
+              </Link>
             </div>
           </nav>
 
+          {/* DESKTOP BUTTONS */}
           <div className="hidden lg:flex items-center">
             <div className="flex items-center border-l border-gray-200 pl-8 gap-4">
+              {/* APPLY CPSS */}
               <button
-                onClick={handleOpenPopup}
-                href="/apply-cpss"
+                onClick={() => setIsCpssPopupOpen(true)}
                 className="h-[44px] px-8 border border-sky-400 text-sky-500 rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-50 transition"
               >
                 Apply CPSS
               </button>
 
+              {/* FREE CONSULTATION */}
               <button
-                onClick={handleOpenPopup}
+                onClick={() => setIsConsultationPopupOpen(true)}
                 className="h-[44px] px-7 bg-sky-400 text-white rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-500 transition"
               >
                 Free consultation
@@ -101,12 +105,14 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* MOBILE MENU BUTTON */}
           <button onClick={() => setMobileMenu(true)} className="lg:hidden">
             <Menu size={28} />
           </button>
         </div>
       </header>
 
+      {/* MOBILE SIDEBAR */}
       <div
         className={`fixed inset-0 z-50 transition ${
           mobileMenu ? "visible opacity-100" : "invisible opacity-0"
@@ -117,9 +123,9 @@ export default function Navbar() {
           onClick={() => setMobileMenu(false)}
         />
 
-        {/* Sidebar */}
+        {/* SIDEBAR */}
         <div
-          className={`absolute left-0 top-0 h-full w-[280px] bg-white p-6 transition-transform duration-300 ${
+          className={`absolute left-0 top-0 h-full w-70 bg-white p-6 transition-transform duration-300 ${
             mobileMenu ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -139,21 +145,30 @@ export default function Navbar() {
 
           <nav className="flex flex-col gap-6 text-[16px] font-medium text-gray-700">
             <Link href="/">Home</Link>
+
             <Link href="/about">About</Link>
+
             <Link href="/how-to-become-pilot">How to become pilot</Link>
+
             <Link href="/cpss">CPSS</Link>
+            <Link href="/contact">Contact</Link>
 
             <div className="flex flex-col gap-4 pt-6">
-              <Link
-                href="/apply-cpss"
+              {/* MOBILE APPLY CPSS */}
+              <button
+                onClick={() => {
+                  setIsCpssPopupOpen(true);
+                  setMobileMenu(false);
+                }}
                 className="h-[45px] border border-sky-400 text-sky-500 rounded-md flex items-center justify-center font-semibold"
               >
                 Apply CPSS
-              </Link>
+              </button>
 
+              {/* MOBILE FREE CONSULTATION */}
               <button
                 onClick={() => {
-                  handleOpenPopup();
+                  setIsConsultationPopupOpen(true);
                   setMobileMenu(false);
                 }}
                 className="h-[45px] bg-sky-400 text-white rounded-md flex items-center justify-center font-semibold"
@@ -165,7 +180,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      <FreeconsultationPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
+      {/* FREE CONSULTATION POPUP */}
+      <FreeconsultationPopup
+        isOpen={isConsultationPopupOpen}
+        onClose={() => setIsConsultationPopupOpen(false)}
+      />
+
+      {/* CPSS POPUP */}
+      <CpssPopup
+        isOpen={isCpssPopupOpen}
+        onClose={() => setIsCpssPopupOpen(false)}
+      />
     </>
   );
 }

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function WhoIsThisCourseFor() {
   return (
     <section className="bg-white md:py-6">
-      <div className=" max-w-7xl md:mx-20">
+      <div className=" w-full md:mx-auto px-6 md:px-20">
         <div className="grid items-center gap-12 md:grid-cols-2">
 
           {/* LEFT IMAGE (Desktop) */}
