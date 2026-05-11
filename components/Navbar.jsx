@@ -93,7 +93,6 @@ export default function Navbar() {
                 Apply CPSS
               </button>
 
-              {/* UPDATED FREE CONSULTATION BUTTON */}
               <button
                 onClick={handleOpenPopup}
                 className="h-[44px] px-7 bg-sky-400 text-white rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-500 transition"
@@ -103,7 +102,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* MOBILE MENU BUTTON */}
           <button onClick={() => setMobileMenu(true)} className="lg:hidden">
             <Menu size={28} />
           </button>
