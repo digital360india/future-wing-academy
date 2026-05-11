@@ -107,13 +107,11 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE SIDEBAR */}
       <div
         className={`fixed inset-0 z-50 transition ${
           mobileMenu ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
-        {/* Overlay */}
         <div
           className="absolute inset-0 bg-black/40"
           onClick={() => setMobileMenu(false)}
