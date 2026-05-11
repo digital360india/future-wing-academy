@@ -21,7 +21,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="relative overflow-hidden bg-[#16375f] text-white">
+      <footer className=" overflow-hidden bg-[#16375f] text-white">
         <div className="relative max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-14">
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-12 border-b border-white/10 pb-12">
             <div className="lg:col-span-2">
