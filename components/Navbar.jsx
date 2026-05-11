@@ -156,7 +156,6 @@ export default function Navbar() {
                 Apply CPSS
               </Link>
 
-              {/* UPDATED MOBILE FREE CONSULTATION BUTTON */}
               <button
                 onClick={() => {
                   handleOpenPopup();
@@ -171,7 +170,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ADD THIS POPUP COMPONENT */}
       <FreeconsultationPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
     </>
   );
