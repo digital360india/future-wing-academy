@@ -38,7 +38,7 @@ export default function WhoIsThisCourseFor() {
               Who is this course for
             </p>
 
-            <h2 className="mb-4 text-[24px] md:text-3xl lg:text-4xl font-bold text-gray-800">
+            <h2 className="mb-4 text-[24px] md:text-3xl  font-bold text-gray-800">
               Ready to Build a Career in Aviation
             </h2>
 
