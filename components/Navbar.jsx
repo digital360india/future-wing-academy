@@ -36,7 +36,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* DESKTOP MENU */}
           <nav className="hidden lg:flex items-center h-full">
             <div className="flex items-center gap-12 text-[14px] font-medium text-gray-700">
               <Link href="/" className="hover:text-sky-500 transition">
@@ -54,7 +53,6 @@ export default function Navbar() {
                 How to become pilot
               </Link>
 
-              {/* DROPDOWN */}
               <div
                 className="relative h-[78px] flex items-center"
                 onMouseEnter={() => setShowDropdown(true)}
