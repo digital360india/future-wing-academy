@@ -52,7 +52,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
     });
   };
 
-  // STEP 1 NEXT (Original Step 2 - Registration now in Step 1 as requested)
   const handleStep1Next = () => {
     const { name, phone, email, age, address, city, qualification } = formData;
 
@@ -71,7 +70,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
     setStep(2);
   };
 
-  // STEP 2 NEXT (Original Step 1 - Interest Selection now in Step 2)
   const handleInterestNext = () => {
     if (!selectedInterest) {
       alert("Please select your interest");

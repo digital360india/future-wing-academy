@@ -217,10 +217,10 @@ export default function Footer() {
                 <span className="italic text-sky-300">future flying</span>{" "}
                 journey wings today!
               </h2>
-
+{/* 
               <p className="text-white/60 text-sm mt-3">
                 © 2026 Future Wings Aviation. All rights reserved.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
