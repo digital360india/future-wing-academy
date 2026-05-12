@@ -141,7 +141,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
         </button>
 
         <div className="w-full lg:w-1/2 px-6 md:px-12 py-10 flex flex-col justify-center">
-          {/* ==================== STEP 1: REGISTRATION FORM (was Step 2) ==================== */}
           {step === 1 && (
             <>
               <div className="mt-3">
@@ -233,7 +232,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
             </>
           )}
 
-          {/* ==================== STEP 2: INTEREST SELECTION (was Step 1) ==================== */}
           {step === 2 && (
             <>
               <button
