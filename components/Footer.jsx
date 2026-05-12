@@ -156,7 +156,6 @@ export default function Footer() {
               <h4 className="text-white font-semibold mb-4">Follow Us</h4>
 
               <div className="flex items-center gap-4">
-                {/* INSTAGRAM */}
                 <Link
                   href="https://instagram.com"
                   target="_blank"
@@ -165,7 +164,6 @@ export default function Footer() {
                   <Instagram size={18} />
                 </Link>
 
-                {/* FACEBOOK */}
                 <Link
                   href="https://facebook.com"
                   target="_blank"
@@ -174,7 +172,6 @@ export default function Footer() {
                   <Facebook size={18} />
                 </Link>
 
-                {/* LINKEDIN */}
                 <Link
                   href="https://linkedin.com"
                   target="_blank"
@@ -187,7 +184,6 @@ export default function Footer() {
           </div>
 
           <div className="pt-8 flex flex-col lg:flex-row items-center justify-between gap-8">
-            {/* LOGO */}
             <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
               <Image
                 src="/Futurewings-Logo.png"
