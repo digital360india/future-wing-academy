@@ -156,7 +156,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-4">
                 <Link
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/futurewingsaviationacademy/"
                   target="_blank"
                   className="w-11 h-11 rounded-full bg-white/10 hover:bg-sky-400 transition-all duration-300 flex items-center justify-center hover:scale-110"
                 >
@@ -164,7 +164,7 @@ export default function Footer() {
                 </Link>
 
                 <Link
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/futurewingsaviation/"
                   target="_blank"
                   className="w-11 h-11 rounded-full bg-white/10 hover:bg-sky-400 transition-all duration-300 flex items-center justify-center hover:scale-110"
                 >
