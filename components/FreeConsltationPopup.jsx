@@ -132,7 +132,7 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-6 overflow-y-auto">
-      <div className="relative w-full md:h-[600px] max-w-5xl overflow-hidden rounded-[30px] bg-[#f5f5f5] shadow-2xl flex flex-col lg:flex-row">
+      <div className="relative w-full max-w-5xl overflow-hidden rounded-[30px] bg-[#f5f5f5] shadow-2xl flex flex-col lg:flex-row">
         <button
           onClick={onClose}
           className="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-lg"
@@ -140,11 +140,11 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
           ✕
         </button>
 
-        <div className="w-full lg:w-1/2 px-6 md:px-12 py-10 flex flex-col justify-center">
+        <div className="w-full lg:w-1/2 px-6 flex flex-col justify-center">
           {step === 1 && (
             <>
               <div className="mt-3">
-                <h2 className="text-3xl md:text-[28px] font-bold text-[#2f2f2f]">
+                <h2 className="text-xl md:text-[24px] font-bold text-[#2f2f2f]">
                   Free Consultation Form
                 </h2>
 
@@ -404,9 +404,9 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
         {/* RIGHT IMAGE */}
         <div className="hidden lg:block lg:w-1/2">
           <img
-            src="/aviation form image.png"
+            src="/consultform.png"
             alt="Aviation"
-            className="w-full h-full object-cover"
+            className="w-[560px] h-[566px] rounded-[30px] "
           />
         </div>
       </div>

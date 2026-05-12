@@ -152,7 +152,7 @@ export default function CpssPopup({ isOpen, onClose }) {
           {step === 1 && (
             <>
               <div className="mt-3">
-                <h2 className="text-3xl md:text-[28px] font-bold text-[#2f2f2f]">
+                <h2 className="text-3xl md:text-[24px] font-bold text-[#2f2f2f]">
                   CPSS BATCH 2026 Joining Form
                 </h2>
 
@@ -415,9 +415,9 @@ export default function CpssPopup({ isOpen, onClose }) {
         {/* RIGHT IMAGE */}
         <div className="hidden lg:block lg:w-1/2">
           <img
-            src="/aviation form image.png"
+            src="/cpssform.png"
             alt="Aviation"
-            className="w-full h-full object-cover"
+            className="w-full h-full "
           />
         </div>
       </div>
