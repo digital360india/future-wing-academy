@@ -330,7 +330,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
             </>
           )}
 
-          {/* ==================== STEP 4: RESEARCH QUESTION (from second image) + FINAL SUBMIT ==================== */}
           {step === 4 && (
             <>
               <button
