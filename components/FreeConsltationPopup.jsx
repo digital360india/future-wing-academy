@@ -78,7 +78,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
     setStep(3);
   };
 
-  // STEP 3 NEXT
   const handleStep3Next = () => {
     if (!whyInterested.trim()) {
       alert("Please write why you are interested");
@@ -87,7 +86,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
     setStep(4);
   };
 
-  // FINAL SUBMIT (Step 4)
   const handleSubmit = async () => {
     if (!selectedResearch) {
       alert("Please select your research status");
