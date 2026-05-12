@@ -286,7 +286,6 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
             </>
           )}
 
-          {/* ==================== STEP 3: WHY INTERESTED (from first image) ==================== */}
           {step === 3 && (
             <>
               <button
