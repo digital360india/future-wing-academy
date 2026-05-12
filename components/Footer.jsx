@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <>
       <footer className=" overflow-hidden bg-[#16375f] text-white">
-        <div className="relative max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-14">
+        <div className="relative  mx-auto px-5 md:px-10 lg:px-16 py-14">
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-12 border-b border-white/10 pb-12">
             <div className="lg:col-span-2">
               <p className="text-sky-300 text-sm uppercase tracking-[3px] mb-3">
@@ -45,7 +45,7 @@ export default function Footer() {
 
               <button
                 onClick={() => setPopupOpen(true)}
-                className="mt-7 inline-flex items-center gap-2 bg-sky-400 hover:bg-sky-500 transition-all duration-300 px-7 py-3 rounded-full text-white font-semibold shadow-lg shadow-sky-500/20 hover:scale-105"
+                className="mt-7 inline-flex items-center gap-2 bg-sky-400 hover:bg-sky-500 transition-all duration-300 px-7 py-3 rounded-xl text-white font-semibold shadow-lg shadow-sky-500/20 hover:scale-105"
               >
                 Join Now
                 <ArrowRight size={18} />
@@ -103,7 +103,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="flex flex-col justify-between lg:col-span-2">
+            <div className=" justify-between ">
               <h3 className="text-lg font-semibold mb-5">
                 Contact Information
               </h3>
@@ -136,8 +136,7 @@ export default function Footer() {
 
                   <div className="text-sm text-white/80 space-y-1">
                     <p>+91-7843257762</p>
-                    <p>+91-7843257762</p>
-                    <p>+91-7843257762</p>
+                    
                   </div>
                 </div>
 
@@ -152,7 +151,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="pt-4">
+            <div className="">
               <h4 className="text-white font-semibold mb-4">Follow Us</h4>
 
               <div className="flex items-center gap-4">
@@ -173,7 +172,7 @@ export default function Footer() {
                 </Link>
 
                 <Link
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/future-wings-aviation-academy/"
                   target="_blank"
                   className="w-11 h-11 rounded-full bg-white/10 hover:bg-sky-400 transition-all duration-300 flex items-center justify-center hover:scale-110"
                 >
