@@ -148,7 +148,6 @@ export default function CpssPopup({ isOpen, onClose }) {
 
         {/* LEFT SIDE */}
         <div className="w-full lg:w-1/2 px-6 md:px-12 py-10 flex flex-col justify-center">
-          {/* ==================== STEP 1: REGISTRATION FORM (was Step 2) ==================== */}
           {step === 1 && (
             <>
               <div className="mt-3">
