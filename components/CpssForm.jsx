@@ -70,7 +70,6 @@ export default function CpssPopup({ isOpen, onClose }) {
     setStep(2);
   };
 
-  // STEP 2 NEXT (Original Step 1 - Interest Selection now in Step 2)
   const handleInterestNext = () => {
     if (!selectedInterest) {
       alert("Please select your interest");
