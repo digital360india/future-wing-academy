@@ -135,7 +135,6 @@ export default function CpssPopup({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-6 overflow-y-auto">
       <div className="relative w-full md:h-[600px] max-w-5xl overflow-hidden rounded-[30px] bg-[#f5f5f5] shadow-2xl flex flex-col lg:flex-row">
-        {/* CLOSE BUTTON */}
         <button
           onClick={onClose}
           className="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-lg"
@@ -143,7 +142,6 @@ export default function CpssPopup({ isOpen, onClose }) {
           ✕
         </button>
 
-        {/* LEFT SIDE */}
         <div className="w-full lg:w-1/2 px-6 md:px-12 py-10 flex flex-col justify-center">
           {step === 1 && (
             <>
