@@ -88,7 +88,6 @@ export default function CpssPopup({ isOpen, onClose }) {
     setStep(4);
   };
 
-  // FINAL SUBMIT (Step 4)
   const handleSubmit = async () => {
     if (!selectedResearch) {
       alert("Please select your research status");
