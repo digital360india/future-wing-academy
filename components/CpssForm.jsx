@@ -403,7 +403,6 @@ export default function CpssPopup({ isOpen, onClose }) {
           )}
         </div>
 
-        {/* RIGHT IMAGE */}
         <div className="hidden lg:block lg:w-1/2">
           <img
             src="/cpssform.png"
