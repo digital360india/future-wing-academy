@@ -239,7 +239,6 @@ export default function CpssPopup({ isOpen, onClose }) {
             </>
           )}
 
-          {/* ==================== STEP 2: INTEREST SELECTION (was Step 1) ==================== */}
           {step === 2 && (
             <>
               <button
