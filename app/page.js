@@ -1,6 +1,7 @@
 import FAQs from "@/components/FAQSection";
 import Hero from "@/components/Hero";
 import PilotJourneyForm from "@/components/PilotJourneyForm";
+import QuizStart from "@/components/QuizStart";
 import ReviewsSection from "@/components/ReviewsSection";
 import Testimonials from "@/components/Testimonials";
 import TieUpMarquee from "@/components/TieUpMarquee";
@@ -28,6 +29,7 @@ export default function Home() {
   {/* <Testimonials /> */}
   <ReviewsSection />
   <FAQs />
+  <QuizStart />
   </>
   );
 }
