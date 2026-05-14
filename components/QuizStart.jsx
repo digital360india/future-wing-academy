@@ -55,7 +55,6 @@ export default function QuizStart() {
 
           </div>
 
-          {/* Button */}
           <button
             onClick={() => router.push("/quiz")}
             className="w-full sm:w-auto px-8 py-4 bg-white text-sky-600 font-semibold rounded-xl transition hover:bg-sky-50"
