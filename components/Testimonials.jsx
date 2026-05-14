@@ -39,7 +39,6 @@ export default function Testimonials() {
   return (
     <section className="bg-white py-5 overflow-hidden">
       <div className="text-center">
-        {/* Header */}
         <p className="mb-2 text-[18px] font-bold text-[#104E7E]">
           Testimonials
         </p>
