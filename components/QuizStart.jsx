@@ -17,10 +17,8 @@ export default function QuizStart() {
         {/* BLUR OVERLAY */}
         <div className="absolute inset-0 bg-sky-900/60 "></div>
 
-        {/* CONTENT */}
         <div className="relative z-10">
           
-          {/* Title */}
           <h1 className="text-3xl font-bold text-white">
             Aviation Quiz
           </h1>
