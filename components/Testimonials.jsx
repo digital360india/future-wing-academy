@@ -82,7 +82,6 @@ export default function Testimonials() {
                   }`}
                 >
                   <div className="flex h-[25vh] md:h-[48vh] flex-col md:flex-row rounded-xl bg-white shadow-lg overflow-hidden">
-                    {/* Content */}
                     <div className="flex w-full  flex-col justify-center px-6 py-6 md:px-10 md:py-0 text-left">
                       <Image
                         src="/quots.png"
