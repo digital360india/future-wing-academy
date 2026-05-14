@@ -27,7 +27,6 @@ export default function QuizStart() {
             Test your aviation knowledge and skills
           </p>
 
-          {/* Info Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 mb-10">
             
             <div className="border border-gray-200 rounded-xl p-5 text-left bg-white/90 backdrop-blur-md">
