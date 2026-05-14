@@ -327,13 +327,11 @@ export default function QuizClient() {
       </div>
 
       <div className="max-w-5xl mx-auto p-4 sm:p-6">
-        {/* WARNING MESSAGE */}
         <div className="mb-6 bg-yellow-50 border border-yellow-200 text-yellow-700 p-4 rounded-2xl text-center font-medium">
           ⚠️ Do not switch tabs or minimize the browser during the quiz. If tab
           change is detected, quiz will be submitted automatically.
         </div>
 
-        {/* STUDENT DETAILS */}
         <div className="bg-white rounded-3xl shadow-sm border border-gray-200 p-5 sm:p-6 mb-6">
           <h2 className="text-xl font-bold text-gray-900 mb-5">
             Student Details
