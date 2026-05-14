@@ -326,7 +326,6 @@ export default function QuizClient() {
         </div>
       </div>
 
-      {/* MAIN CONTENT */}
       <div className="max-w-5xl mx-auto p-4 sm:p-6">
         {/* WARNING MESSAGE */}
         <div className="mb-6 bg-yellow-50 border border-yellow-200 text-yellow-700 p-4 rounded-2xl text-center font-medium">
