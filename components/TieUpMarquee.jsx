@@ -33,7 +33,6 @@ export default function TieUpMarquee() {
         </p>
       </div>
 
-      {/* MARQUEE */}
       <div className="relative">
         <div className="flex w-max animate-marquee items-center gap-12">
           {/* FIRST SET */}
@@ -52,7 +51,6 @@ export default function TieUpMarquee() {
             </div>
           ))}
 
-          {/* DUPLICATE SET FOR LOOP */}
           {logos.map((logo, index) => (
             <div
               key={`second-${index}`}
@@ -70,7 +68,6 @@ export default function TieUpMarquee() {
         </div>
       </div>
 
-      {/* CUSTOM ANIMATION */}
       <style jsx>{`
         @keyframes marquee {
           0% {
