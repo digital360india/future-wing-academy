@@ -338,7 +338,6 @@ export default function QuizClient() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-4">
-            {/* NAME */}
             <div>
               <label className="text-sm font-medium text-gray-600 block mb-2">
                 Full Name
@@ -353,7 +352,6 @@ export default function QuizClient() {
               />
             </div>
 
-            {/* EMAIL */}
             <div>
               <label className="text-sm font-medium text-gray-600 block mb-2">
                 Email Address
@@ -368,7 +366,6 @@ export default function QuizClient() {
               />
             </div>
 
-            {/* PHONE */}
             <div>
               <label className="text-sm font-medium text-gray-600 block mb-2">
                 Phone Number
