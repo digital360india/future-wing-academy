@@ -7,6 +7,7 @@ import { useState } from "react";
 
 import FreeconsultationPopup from "./FreeConsltationPopup";
 import CpssPopup from "./CpssForm";
+import JoinFormPopup from "./cpsspage/JoinForm";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -15,7 +16,8 @@ export default function Navbar() {
   // SEPARATE POPUP STATES
   const [isConsultationPopupOpen, setIsConsultationPopupOpen] = useState(false);
 
-  const [isCpssPopupOpen, setIsCpssPopupOpen] = useState(false);
+
+  const [isJoinFormPopupOpen, setIsJoinFormPopupOpen] = useState(false);
 
   return (
     <>
@@ -89,7 +91,7 @@ export default function Navbar() {
             <div className="flex items-center border-l border-gray-200 pl-8 gap-4">
               {/* APPLY CPSS */}
               <button
-                onClick={() => setIsCpssPopupOpen(true)}
+                onClick={() => setIsJoinFormPopupOpen(true)}
                 className="h-[44px] px-8 border border-sky-400 text-sky-500 rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-50 transition"
               >
                 Apply CPSS
@@ -157,7 +159,7 @@ export default function Navbar() {
               {/* MOBILE APPLY CPSS */}
               <button
                 onClick={() => {
-                  setIsCpssPopupOpen(true);
+                  setIsJoinFormPopupOpen(true);
                   setMobileMenu(false);
                 }}
                 className="h-[45px] border border-sky-400 text-sky-500 rounded-md flex items-center justify-center font-semibold"
@@ -187,9 +189,9 @@ export default function Navbar() {
       />
 
       {/* CPSS POPUP */}
-      <CpssPopup
-        isOpen={isCpssPopupOpen}
-        onClose={() => setIsCpssPopupOpen(false)}
+      <JoinFormPopup
+        isOpen={isJoinFormPopupOpen}
+        onClose={() => setIsJoinFormPopupOpen(false)}
       />
     </>
   );
