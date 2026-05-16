@@ -4,39 +4,53 @@ import Link from "next/link";
 
 export default function TopMarquee() {
   return (
-    <div className="w-full bg-sky-400 overflow-hidden">
-      <div className="flex">
-        
-        <div className="marquee text-white text-sm font-medium py-2 flex">
-          
-          {/* Repeat multiple times for seamless loop */}
-          {[...Array(4)].map((_, i) => (
-            <span key={i} className="flex items-center gap-2 mx-6 shrink-0">
-              CPSS COACHING STARTING SOON CLICK TO
+    <div className="w-full bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500 overflow-hidden relative">
 
-              <Link href="/cpss" className="font-bold underline hover:text-black">
-                JOIN NOW
-              </Link>
+      {/* LEFT FADE */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-sky-500 to-transparent z-10" />
 
-              . BATCH COMMENCE ON 05 MAY 26
+      {/* RIGHT FADE */}
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-sky-500 to-transparent z-10" />
 
-              <Link href="/cpss" className="font-bold underline hover:text-black">
-                ENROLL NOW
-              </Link>
+      <div className="marquee flex whitespace-nowrap py-2 text-white text-xs sm:text-sm font-medium">
 
-              .
+        {[...Array(6)].map((_, i) => (
+          <span
+            key={i}
+            className="flex items-center gap-3 mx-10 shrink-0"
+          >
+            <span className="tracking-wide">
+               CPSS COACHING STARTING SOON CLICK TO
             </span>
-          ))}
 
-        </div>
+            <Link
+              href="/cpss"
+              className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md font-semibold hover:bg-white hover:text-sky-600 transition"
+            >
+              JOIN NOW
+            </Link>
 
+            <span className="opacity-90">
+              • BATCH COMMENCE ON 05 MAY 26
+            </span>
+
+            <Link
+              href="/cpss"
+              className="px-3 py-1 rounded-full bg-black/20 backdrop-blur-md font-semibold hover:bg-white hover:text-sky-600 transition"
+            >
+              ENROLL NOW
+            </Link>
+
+          </span>
+        ))}
       </div>
 
+      {/* ANIMATION */}
       <style jsx>{`
         .marquee {
           display: flex;
           width: max-content;
-          animation: scroll 20s linear infinite;
+          animation: scroll 18s linear infinite;
         }
 
         .marquee:hover {
@@ -48,7 +62,7 @@ export default function TopMarquee() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-100%);
+            transform: translateX(-50%);
           }
         }
       `}</style>
