@@ -14,7 +14,6 @@ export default function QuizStart() {
             "url('/Airbus A319 Corporate.jpg')",
         }}
       >
-        {/* BLUR OVERLAY */}
         <div className="absolute inset-0 bg-sky-900/60 "></div>
 
         <div className="relative z-10">
