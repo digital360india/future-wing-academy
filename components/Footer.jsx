@@ -21,7 +21,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className=" overflow-hidden bg-[#16375f] text-white">
+      <footer className=" overflow-hidden bg-[#1b4475] text-white">
         <div className="relative  mx-auto px-5 md:px-10 lg:px-16 py-14">
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-12 border-b border-white/10 pb-12">
             <div className="lg:col-span-2">
@@ -37,7 +37,7 @@ export default function Footer() {
                 </span>
               </h2>
 
-              <p className="text-white/70 mt-5 text-[15px] leading-7 max-w-md">
+              <p className="text-white mt-5 text-[15px] leading-7 max-w-md">
                 Future Wings provides professional pilot guidance, CPSS
                 preparation, and aviation career consultation to help students
                 achieve their dream of becoming pilots.
@@ -55,7 +55,7 @@ export default function Footer() {
             <div>
               <h3 className="text-lg font-semibold mb-5">Quick Links</h3>
 
-              <ul className="space-y-4 text-[15px] text-white/75">
+              <ul className="space-y-4 text-[15px] text-white">
                 <li>
                   <Link
                     href="/"
@@ -119,7 +119,7 @@ export default function Footer() {
                       Office Training Centre
                     </p>
 
-                    <p className="text-sm text-white/70 leading-6 mt-1">
+                    <p className="text-sm text-white leading-6 mt-1">
                       Ground Floor, Digital 360, B-36,
                       <br />
                       Nehru Colony, Dalanwala,
@@ -134,7 +134,7 @@ export default function Footer() {
                     <Phone size={18} />
                   </div>
 
-                  <div className="text-sm text-white/80 space-y-1">
+                  <div className="text-sm text-white space-y-1">
                     <p>+91-86792 34969</p>
                     
                   </div>
@@ -145,7 +145,7 @@ export default function Footer() {
                     <Mail size={18} />
                   </div>
 
-                  <div className="text-sm text-white/80 break-all">
+                  <div className="text-sm text-white break-all">
                     info@futurewingsaviation.com
                   </div>
                 </div>
@@ -194,7 +194,7 @@ export default function Footer() {
 
               <div className="hidden md:block w-px h-10 bg-white/20" />
 
-              <p className="text-sm text-white/60 max-w-xs">
+              <p className="text-sm text-white/90 max-w-xs">
                 Empowering future pilots with aviation guidance and professional
                 training.
               </p>
