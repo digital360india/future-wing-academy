@@ -136,7 +136,6 @@ export default function Footer() {
 
                   <div className="text-sm text-white space-y-1">
                     <p>+91-86792 34969</p>
-                    
                   </div>
                 </div>
 
@@ -192,7 +191,7 @@ export default function Footer() {
                 className="w-auto h-[60px]"
               />
 
-              <div className="hidden md:block w-px h-10 bg-white/20" />
+              <div className="hidden md:block w-px h-10 bg-white/80" />
 
               <p className="text-sm text-white/90 max-w-xs">
                 Empowering future pilots with aviation guidance and professional
@@ -216,7 +215,7 @@ export default function Footer() {
                 <span className="italic text-sky-300">future flying</span>{" "}
                 journey wings today!
               </h2>
-{/* 
+              {/* 
               <p className="text-white/60 text-sm mt-3">
                 © 2026 Future Wings Aviation. All rights reserved.
               </p> */}
