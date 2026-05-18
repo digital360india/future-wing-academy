@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function TopMarquee() {
   return (
-    <div className="w-full bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500 overflow-hidden relative">
+    <div className="w-full bg-linear-to-r from-sky-500 via-sky-400 to-sky-500 overflow-hidden relative">
 
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-sky-500 to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-linear-to-r from-sky-500 to-transparent z-10" />
 
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-sky-500 to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-linear-to-l from-sky-500 to-transparent z-10" />
 
       <div className="marquee flex whitespace-nowrap py-2 text-white text-xs sm:text-sm font-medium">
 
