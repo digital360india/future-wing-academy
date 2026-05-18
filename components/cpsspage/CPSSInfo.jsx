@@ -4,12 +4,10 @@ export default function CPSSInfo() {
   return (
     <div className="py-12 px-6 md:px-6">
       <div className="max-w-7xl mx-auto text-gray-800">
-        {/* Heading */}
         <h1 className="text-2xl md:text-3xl font-bold mb-6">
           Computerised Pilot Selection System (CPSS)
         </h1>
 
-        {/* Paragraph 1 */}
         <p className="text-sm leading-relaxed mb-4">
           <span className="font-semibold">
             The Computerised Pilot Selection System (CPSS)
@@ -26,7 +24,6 @@ export default function CPSSInfo() {
           , a British-era selection procedure.
         </p>
 
-        {/* Paragraph 2 */}
         <p className="text-sm leading-relaxed mb-8">
           Engineered to address the changing needs of contemporary aircraft,
           CPSS ensures a scientific, data-based analysis of applicants, ensuring
@@ -48,7 +45,6 @@ export default function CPSSInfo() {
           attempt to clear the CPSS test.
         </p>
 
-        {/* Points */}
         <ul className="list-disc pl-5 text-sm space-y-2 mb-10">
           <li>
             If a candidate is not able to pass the CPSS test, they will not be
@@ -67,7 +63,6 @@ export default function CPSSInfo() {
         {/* Table */}
         <div className="w-full  py-10">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6">
-            {/* LEFT BOX */}
             <div className="w-full max-w-2xl border border-gray-500 bg-white">
               <div className="h-24 flex items-center justify-center border-b border-gray-400 text-[13px] font-semibold text-gray-800">
                 CPSS TESTING
@@ -86,7 +81,6 @@ export default function CPSSInfo() {
               </div>
             </div>
 
-            {/* RIGHT IMAGE */}
             <div className="flex justify-center">
               <Image
                 src="/cpsspilottraning.png"
