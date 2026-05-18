@@ -58,7 +58,6 @@ export default function CPSSInfo() {
           </li>
         </ul>
 
-        {/* Table */}
         <div className="w-full  py-10">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6">
             <div className="w-full max-w-2xl border border-gray-500 bg-white">
