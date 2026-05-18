@@ -121,7 +121,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
     <div className="fixed inset-0 z-[999] bg-black/70 backdrop-blur-sm flex items-center justify-center px-4 py-6 overflow-y-auto">
       <div className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl animate-[popup_0.3s_ease] grid lg:grid-cols-2">
 
-        {/* CLOSE BUTTON */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/90 hover:bg-red-500 hover:text-white transition flex items-center justify-center shadow-md"
@@ -129,7 +128,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
           <X size={20} />
         </button>
 
-        {/* LEFT SIDE IMAGE SECTION */}
         <div className="relative hidden lg:flex flex-col justify-between  p-4 overflow-hidden">
 
           <div className="absolute inset-0 h-[70vh] ">
