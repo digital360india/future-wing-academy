@@ -157,7 +157,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
 
           </div>
 
-          {/* STEP 1 */}
           {step === 1 && (
             <form onSubmit={nextStep} className="space-y-5">
 
