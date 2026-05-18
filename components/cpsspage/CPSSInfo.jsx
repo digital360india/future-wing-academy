@@ -33,12 +33,10 @@ export default function CPSSInfo() {
           of aspiring pilots, enhancing Indian defence capabilities.
         </p>
 
-        {/* Section Title */}
         <h2 className="text-xl md:text-2xl font-bold mb-4">
           CPSS: An Once-in-Lifetime
         </h2>
 
-        {/* Description */}
         <p className="text-sm leading-relaxed font-semibold mb-4">
           The Computerised Pilot Selection System, is a once in lifetime
           opportunity for aspiring pilots in SSB. Candidates get only one
