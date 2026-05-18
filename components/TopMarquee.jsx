@@ -43,7 +43,6 @@ export default function TopMarquee() {
         ))}
       </div>
 
-      {/* ANIMATION */}
       <style jsx>{`
         .marquee {
           display: flex;
