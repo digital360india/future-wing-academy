@@ -28,8 +28,9 @@ export default function Home() {
   <WhoIsThisCourseFor />
   {/* <Testimonials /> */}
   <ReviewsSection />
+   <QuizStart />
   <FAQs />
-  <QuizStart />
+ 
   </>
   );
 }

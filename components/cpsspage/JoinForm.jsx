@@ -118,7 +118,7 @@ export default function JoinFormPopup({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] bg-black/70 backdrop-blur-sm flex items-center justify-center px-4 py-6 overflow-y-auto">
+    <div className="fixed inset-0 z-999 bg-black/70 backdrop-blur-sm flex items-center justify-center px-4 py-6 overflow-y-auto">
       <div className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl animate-[popup_0.3s_ease] grid lg:grid-cols-2">
 
         <button
@@ -146,7 +146,7 @@ export default function JoinFormPopup({ isOpen, onClose }) {
         </div>
 
         {/* RIGHT SIDE FORM */}
-        <div className="bg-white p-6 sm:p-10 lg:p-12 overflow-y-auto max-h-[100vh]">
+        <div className="bg-white p-6 sm:p-10 lg:p-12 overflow-y-auto max-h-screen">
 
           {/* TOP HEADER */}
           <div className="mb-7">
@@ -319,7 +319,7 @@ export default function JoinFormPopup({ isOpen, onClose }) {
 
               <button
                 type="submit"
-                className="w-full h-14 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold text-lg shadow-lg hover:scale-[1.01] transition-all"
+                className="w-full h-14 rounded-2xl bg-linear-to-r from-sky-500 to-blue-600 text-white font-semibold text-lg shadow-lg hover:scale-[1.01] transition-all"
               >
                 Continue to Payment ₹2000
               </button>
@@ -334,7 +334,7 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                 <img
                   src="/qrcode (2).png"
                   alt="QR Code"
-                  className="w-full max-w-[220px] mx-auto object-contain"
+                  className="w-full max-w-55 mx-auto object-contain"
                 />
               </div>
 
@@ -362,7 +362,7 @@ export default function JoinFormPopup({ isOpen, onClose }) {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full h-14 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold text-lg flex items-center justify-center gap-2 hover:scale-[1.01] transition-all disabled:opacity-70"
+                className="w-full h-14 rounded-2xl bg-linear-to-r from-sky-500 to-blue-600 text-white font-semibold text-lg flex items-center justify-center gap-2 hover:scale-[1.01] transition-all disabled:opacity-70"
               >
                 {loading ? (
                   <>
