@@ -24,7 +24,6 @@ export default function OurTeam() {
         </div>
 
         <div className="text-center md:text-left">
-          {/* Heading */}
           <p className="text-[16px] md:text-[18px] font-semibold text-[#104E7E] mb-3">
             Our Team
           </p>

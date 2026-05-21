@@ -31,7 +31,6 @@ export default function VisionValues() {
         </div>
       </div>
 
-      {/* ================= VALUES SECTION ================= */}
       <div className="bg-[#143A66] md:pt-48 pt-16 pb-20 relative overflow-hidden">
 
         {/* ✈️ AIRPLANE ANIMATION (SMOOTH + CINEMATIC) */}
@@ -52,7 +51,7 @@ export default function VisionValues() {
           }}
           transition={{
             duration: 2,
-            ease: [0.25, 0.8, 0.25, 1], // smooth cinematic easing
+            ease: [0.25, 0.8, 0.25, 1], 
           }}
           viewport={{ once: true, amount: 0.3 }}
           className="absolute top-2 left-[60%] -translate-x-1/2 w-[85%] max-w-5xl z-10"
