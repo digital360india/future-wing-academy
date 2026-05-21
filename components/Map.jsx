@@ -13,7 +13,6 @@ export default function GoogleIndiaMap() {
 
   const [mapSrc, setMapSrc] = useState(indiaMap);
 
-  // Zoom to location
   const handleLocationClick = () => {
     setMapSrc(academyLocation);
   };
