@@ -41,7 +41,6 @@ export default function GoogleIndiaMap() {
                     Future Wings Academy
                   </h3>
 
-                  {/* BUTTON */}
                   <button
                     onClick={handleLocationClick}
                     className="inline-flex items-center gap-2 mt-5 bg-sky-500 hover:bg-sky-600 transition-all duration-300 text-white px-5 py-3 rounded-xl text-sm font-semibold"
