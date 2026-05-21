@@ -31,7 +31,6 @@ export default function AboutUs() {
             Preparing Tomorrow&apos;s Pilots
           </h2>
 
-          {/* MOBILE CONTENT */}
           <div className="md:hidden text-gray-600 leading-relaxed">
             <p>
               Future Wings Aviation Academy is India&apos;s first dedicated
