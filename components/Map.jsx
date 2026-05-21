@@ -75,7 +75,6 @@ export default function GoogleIndiaMap() {
 
           </div>
 
-          {/* GOOGLE MAP */}
           <iframe
             src={mapSrc}
             width="100%"
