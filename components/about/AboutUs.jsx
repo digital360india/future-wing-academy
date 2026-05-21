@@ -72,7 +72,6 @@ export default function AboutUs() {
             </button>
           </div>
 
-          {/* DESKTOP CONTENT — UNTOUCHED */}
           <div className="hidden md:block">
             <p className="text-gray-600 mb-5 leading-relaxed">
               Future Wings Aviation Academy is India&apos;s first dedicated
