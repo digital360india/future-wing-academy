@@ -11,7 +11,6 @@ export default function GoogleIndiaMap() {
   const academyLocation =
     "https://www.google.com/maps?q=Ground+Floor+Digital+360+B-36+Nehru+Colony+Dalanwala+Dehradun+Uttarakhand&z=18&output=embed";
 
-  // Default map
   const [mapSrc, setMapSrc] = useState(indiaMap);
 
   // Zoom to location
