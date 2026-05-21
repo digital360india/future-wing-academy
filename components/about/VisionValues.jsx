@@ -63,7 +63,6 @@ export default function VisionValues() {
           />
         </motion.div>
 
-        {/* CONTENT */}
         <div className="max-w-7xl mx-auto px-6 text-center relative z-20">
           
           <h3 className="text-white text-2xl md:text-3xl font-semibold md:mb-14">
@@ -72,7 +71,6 @@ export default function VisionValues() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-            {/* VALUE 1 */}
             <div className="flex flex-col items-center">
               <Image
                 src="/vision1.png"
@@ -85,7 +83,6 @@ export default function VisionValues() {
               </p>
             </div>
 
-            {/* VALUE 2 */}
             <div className="flex flex-col items-center">
               <Image
                 src="/vision2.png"
