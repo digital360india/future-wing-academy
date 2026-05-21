@@ -21,7 +21,6 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* CONTENT */}
         <div className="text-center md:text-left">
           <p className="text-[16px] md:text-[18px] font-semibold text-[#104E7E] mb-3">
             About Us
