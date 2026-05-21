@@ -7,7 +7,6 @@ export default function VisionValues() {
   return (
     <section className="w-full relative overflow-hidden">
       
-      {/* ================= VISION SECTION ================= */}
       <div className="relative h-[450px] w-full">
         <Image
           src="/Our vision 1.png"
