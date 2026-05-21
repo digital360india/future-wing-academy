@@ -33,7 +33,6 @@ export default function VisionValues() {
 
       <div className="bg-[#143A66] md:pt-48 pt-16 pb-20 relative overflow-hidden">
 
-        {/* ✈️ AIRPLANE ANIMATION (SMOOTH + CINEMATIC) */}
         <motion.div
           initial={{
             x: 500,
