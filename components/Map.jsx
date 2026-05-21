@@ -20,7 +20,6 @@ export default function GoogleIndiaMap() {
   return (
     <section className="relative w-full py-20 bg-linear-to-b from-sky-100 to-white overflow-hidden">
 
-      {/* HEADING */}
       <div className="max-w-7xl mx-auto px-4 text-center mb-10">
 
         <h2 className="text-3xl  font-bold text-gray-900">
