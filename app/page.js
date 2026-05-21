@@ -1,5 +1,7 @@
 import FAQs from "@/components/FAQSection";
 import Hero from "@/components/Hero";
+import GoogleIndiaMap from "@/components/Map";
+import IndiaMap from "@/components/Map";
 import PilotJourneyForm from "@/components/PilotJourneyForm";
 import QuizStart from "@/components/QuizStart";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -30,6 +32,7 @@ export default function Home() {
   <ReviewsSection />
    <QuizStart />
   <FAQs />
+  <GoogleIndiaMap />
  
   </>
   );

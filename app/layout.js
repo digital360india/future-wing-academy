@@ -1,8 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "leaflet/dist/leaflet.css";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
 import { IoCallOutline } from "react-icons/io5";
+
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -24,8 +28,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white overflow-x-hidden`}
       >
+        
+        {/* Tawk Chat */}
         <Script
           id="tawk-to"
           strategy="afterInteractive"
@@ -35,26 +41,41 @@ export default function RootLayout({ children }) {
               (function(){
                 var s1=document.createElement("script"),
                     s0=document.getElementsByTagName("script")[0];
+
                 s1.async=true;
                 s1.src='https://embed.tawk.to/698986c9c060e01c37488e01/1jh0jd1la';
                 s1.charset='UTF-8';
                 s1.setAttribute('crossorigin','*');
+
                 s0.parentNode.insertBefore(s1,s0);
               })();
             `,
           }}
         />
 
+        {/* Navbar */}
         <Navbar />
-        {children}
 
-        <a href="tel:8679234969" className="z-50">
-          <div className="fixed bottom-6 md:bottom-4 left-4 md:w-16 w-14 md:h-16 h-14 bg-blue-600 flex justify-center items-center rounded-full">
-            <IoCallOutline className="md:w-8 w-7 md:h-8 h-7 text-white" />
+        {/* Page Content */}
+        <main className="min-h-screen">
+          {children}
+        </main>
+
+        {/* Floating Call Button */}
+        <a
+          href="tel:8679234969"
+          className="fixed bottom-5 left-5 z-[9999]"
+        >
+          <div className="w-14 h-14 md:w-16 md:h-16 bg-sky-500 hover:bg-sky-600 transition-all duration-300 shadow-2xl rounded-full flex items-center justify-center animate-pulse">
+            
+            <IoCallOutline className="text-white w-7 h-7 md:w-8 md:h-8" />
+
           </div>
         </a>
 
+        {/* Footer */}
         <Footer />
+
       </body>
     </html>
   );
