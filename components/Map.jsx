@@ -37,7 +37,6 @@ export default function GoogleIndiaMap() {
 
         <div className="relative overflow-hidden rounded-[30px] shadow-[0_20px_80px_rgba(0,0,0,0.15)]">
 
-          {/* LOCATION CARD */}
           <div className="absolute top-5 right-5 z-10 hidden md:block">
 
             <div className="bg-white rounded-3xl p-5 shadow-2xl w-[360px]">
