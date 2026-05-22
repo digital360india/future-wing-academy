@@ -12,7 +12,6 @@ export default function Hero() {
   return (
     <section className="relative h-[90vh] w-full overflow-hidden">
 
-      {/* VIDEO BACKGROUND */}
       <video
         className="absolute inset-0 h-full w-full object-cover scale-105"
         autoPlay
