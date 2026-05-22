@@ -23,7 +23,6 @@ export default function Hero() {
         <source src="/future wings.mp4" type="video/mp4" />
       </video>
 
-      {/* DARK + GRADIENT OVERLAY */}
       <div className="absolute inset-0 " />
       <div className="absolute inset-0 " />
 
