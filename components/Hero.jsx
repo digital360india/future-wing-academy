@@ -30,7 +30,6 @@ export default function Hero() {
 
           <div className="max-w-2xl text-white">
 
-            {/* SUB TITLE */}
             <p className="mb-3 text-[20px] sm:text-[26px] md:text-[38px] italic text-gray-200 leading-tight drop-shadow-lg">
               Where Dreams Take Flight
             </p>
