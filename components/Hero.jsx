@@ -53,7 +53,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* POPUP */}
       <RegistrationPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
     </section>
   );
