@@ -36,7 +36,6 @@ export default function Hero() {
               Where Dreams Take Flight
             </p>
 
-            {/* MAIN TITLE */}
             <h1 className="mb-6 text-[34px] sm:text-[42px] md:text-[52px] font-bold italic leading-tight drop-shadow-xl">
               Learn. Train. Fly
             </h1>
