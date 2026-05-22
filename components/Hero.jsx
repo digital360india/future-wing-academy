@@ -40,7 +40,6 @@ export default function Hero() {
               Learn. Train. Fly
             </h1>
 
-            {/* BUTTON */}
             <div className="mt-6">
               <button
                 onClick={handleOpenPopup}
