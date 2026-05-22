@@ -24,8 +24,8 @@ export default function Hero() {
       </video>
 
       {/* DARK + GRADIENT OVERLAY */}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+      <div className="absolute inset-0 " />
+      <div className="absolute inset-0 " />
 
       {/* CONTENT */}
       <div className="relative z-10 flex h-full items-center">
