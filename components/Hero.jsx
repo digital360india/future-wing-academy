@@ -26,7 +26,6 @@ export default function Hero() {
       <div className="absolute inset-0 " />
       <div className="absolute inset-0 " />
 
-      {/* CONTENT */}
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-6">
 
