@@ -239,7 +239,6 @@ export default function ReviewsSection() {
           </div>
         </motion.div>
 
-        {/* SMALL REVIEWS */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10">
           {smallReviews.map((item, index) => (
             <ReviewCard key={index} item={item} index={index} />
