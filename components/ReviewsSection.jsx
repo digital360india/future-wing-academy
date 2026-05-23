@@ -101,7 +101,6 @@ function ReviewCard({ item, index }) {
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-4">
-          {/* FIRST LETTER */}
           <div className="w-14 h-14 rounded-full bg-sky-500 text-white flex items-center justify-center text-2xl font-bold shadow-md">
             {item.name.charAt(0)}
           </div>
@@ -116,7 +115,6 @@ function ReviewCard({ item, index }) {
         </div>
       </div>
 
-      {/* STARS */}
       <div className="flex items-center gap-1 mt-7">
         {[...Array(5)].map((_, i) => (
           <Star
