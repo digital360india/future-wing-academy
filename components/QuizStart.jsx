@@ -14,20 +14,19 @@ import {
 import { useRouter } from "next/navigation";
 
 export default function QuizStart() {
-    const router = useRouter();
+  const router = useRouter();
 
   return (
     <section className="relative  overflow-hidden flex items-center justify-center px-4 py-6">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/Airbus A319 Corporate.jpg" 
+          src="/Airbus A319 Corporate.jpg"
           alt="Plane Background"
           width={1000}
           height={1000}
           className="w-full h-full object-cover "
         />
-
       </div>
 
       {/* Bottom Glow */}
@@ -36,9 +35,7 @@ export default function QuizStart() {
       <div className="relative z-10 w-full max-w-4xl">
         {/* Heading */}
         <div className="text-center text-white">
-          <h1 className="text-3xl  font-bold tracking-tight">
-            Aviation Quiz
-          </h1>
+          <h1 className="text-3xl  font-bold tracking-tight">Aviation Quiz</h1>
 
           <p className="mt-2 text-sm md:text-lg text-white/90">
             Test your aviation knowledge and earn a scholarship!
@@ -124,8 +121,7 @@ export default function QuizStart() {
             {/* Text */}
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-[#0B2D6B]">
-                Scholarship upto{" "}
-                <span className="text-blue-600">20%</span>
+                Scholarship upto <span className="text-blue-600">20%</span>
               </h3>
 
               <p className="mt-2 text-base text-gray-700 leading-relaxed max-w-2xl">
@@ -142,9 +138,7 @@ export default function QuizStart() {
           <div className="flex items-center gap-3 text-white">
             <ShieldCheck className="h-6 w-6 text-blue-300" />
 
-            <h3 className="text-xl font-bold">
-              Important Instructions
-            </h3>
+            <h3 className="text-xl font-bold">Important Instructions</h3>
           </div>
 
           {/* Instruction Items */}
@@ -202,14 +196,12 @@ export default function QuizStart() {
           </div>
         </div>
 
-        {/* Start Button */}
         <div className="mt-8 flex flex-col items-center">
           <button
-                      onClick={() => router.push("/quiz")}
-
-           className="group flex items-center gap-3 rounded-2xl border border-white/30 bg-linear-to-r from-[#1B6DFF] to-[#005BFF] px-14 py-4 text-xl font-bold text-white shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105">
+            onClick={() => router.push("/quiz")}
+            className="group flex items-center gap-3 rounded-2xl border border-white/30 bg-linear-to-r from-[#1B6DFF] to-[#005BFF] px-14 py-4 text-xl font-bold text-white shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105"
+          >
             Start Quiz
-
             <ArrowRight className="h-7 w-7 transition-transform duration-300 group-hover:translate-x-2" />
           </button>
 
