@@ -81,7 +81,6 @@ export default function PilotJourneyForm() {
         </div>
       )}
 
-      {/* STEP 2 */}
       {step === 2 && (
         <form
           onSubmit={handleSubmit}
