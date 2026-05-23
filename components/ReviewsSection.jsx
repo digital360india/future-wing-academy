@@ -127,7 +127,6 @@ function ReviewCard({ item, index }) {
         ))}
       </div>
 
-      {/* REVIEW */}
       <p className="text-gray-700 leading-8 text-[16px]  ">
         {expanded ? item.review : shortText}
       </p>
