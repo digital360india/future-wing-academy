@@ -131,7 +131,6 @@ function ReviewCard({ item, index }) {
         {expanded ? item.review : shortText}
       </p>
 
-      {/* READ MORE */}
       {item.review.length > 180 && (
         <button
           onClick={() => setExpanded(!expanded)}
@@ -169,7 +168,6 @@ export default function ReviewsSection() {
           </h2>
         </motion.div>
 
-        {/* TOP REVIEW */}
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
