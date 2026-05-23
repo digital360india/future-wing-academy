@@ -99,7 +99,6 @@ function ReviewCard({ item, index }) {
       viewport={{ once: true }}
       className="bg-white rounded-3xl shadow-sm border border-gray-200 p-7 hover:shadow-xl transition duration-300"
     >
-      {/* TOP */}
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-4">
           {/* FIRST LETTER */}
