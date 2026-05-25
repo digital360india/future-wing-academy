@@ -10,7 +10,6 @@ export default function WhoWeAre() {
       <div className="w-full ">
         <div className="grid items-center gap-16 md:grid-cols-2 md:px-20">
           
-          {/* LEFT IMAGE */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -80 }}
