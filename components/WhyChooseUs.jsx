@@ -37,7 +37,6 @@ export default function WhyChooseUs() {
       viewport={{ once: true }}
     >
       <div className="mx-auto max-w-7xl px-6 text-center">
-        {/* Header */}
         <motion.p
           className="mb-2 text-[18px] font-bold text-[#104E7E]"
           initial={{ opacity: 0, y: 20 }}
