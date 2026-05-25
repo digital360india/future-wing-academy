@@ -87,7 +87,6 @@ export default function WhoWeAre() {
               </div>
             </div>
 
-            {/* CTA */}
             <Link
               href="/about"
               className="mt-8 inline-flex items-center gap-2 text-[18px] font-semibold text-sky-500 hover:underline"
