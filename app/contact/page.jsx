@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Clock3,
-} from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, Clock3 } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -62,22 +56,21 @@ export default function ContactPage() {
 
   return (
     <main className="relative overflow-hidden bg-[#f8fbff] min-h-screen">
-
       {/* BACKGROUND BLUR */}
 
-
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-10">
-
         {/* TOP HEADING */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-
           <div className="inline-flex font-serif items-center gap-2 bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-xs font-medium">
             ✈ Future Wings Aviation Academy
           </div>
 
           <h1 className="mt-5 text-3xl font-serif  font-bold leading-tight text-[#163660]">
             Let&apos;s Connect &
-            <span className="text-sky-500 font-serif"> Build Your Aviation Future</span>
+            <span className="text-sky-500 font-serif">
+              {" "}
+              Build Your Aviation Future
+            </span>
           </h1>
 
           <p className="mt-4 text-[18px] text-gray-600 leading-7 font-serif">
@@ -88,12 +81,9 @@ export default function ContactPage() {
 
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-
           {/* LEFT SIDE */}
           <div className="relative">
-
             <div className="relative overflow-hidden rounded-[28px] shadow-2xl min-h-[620px]">
-
               {/* IMAGE */}
               <Image
                 src="/contactimg.jpg"
@@ -107,10 +97,8 @@ export default function ContactPage() {
 
               {/* CONTENT */}
               <div className="relative z-10 flex flex-col justify-between h-full p-6 sm:p-8 text-white">
-
                 {/* TOP */}
                 <div className="font-serif">
-
                   <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-2 rounded-full text-xs">
                     Aviation Career Support
                   </div>
@@ -120,17 +108,15 @@ export default function ContactPage() {
                   </h2>
 
                   <p className="mt-4 text-white/85 leading-7 text-[18px] max-w-md">
-                    Whether you are planning to become a pilot or preparing
-                    for CPSS, our experts are available to guide you.
+                    Whether you are planning to become a pilot or preparing for
+                    CPSS, our experts are available to guide you.
                   </p>
                 </div>
 
                 {/* CONTACT CARDS */}
                 <div className="space-y-4 mt-8">
-
                   {/* ADDRESS */}
                   <div className="flex items-start font-serif gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4">
-
                     <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                       <MapPin size={20} />
                     </div>
@@ -152,7 +138,6 @@ export default function ContactPage() {
 
                   {/* PHONE */}
                   <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4">
-
                     <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                       <Phone size={20} />
                     </div>
@@ -170,7 +155,6 @@ export default function ContactPage() {
 
                   {/* EMAIL */}
                   <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4">
-
                     <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                       <Mail size={20} />
                     </div>
@@ -185,8 +169,6 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
@@ -194,17 +176,13 @@ export default function ContactPage() {
 
           {/* RIGHT SIDE FORM */}
           <div className="relative font-serif">
-
             <div className="relative bg-white rounded-[28px] shadow-2xl border border-sky-100 overflow-hidden">
-
               {/* BLUR */}
               <div className="absolute top-0 right-0 w-44 h-44 bg-sky-100 rounded-full blur-3xl opacity-60"></div>
 
               <div className="relative z-10 p-6 sm:p-8 lg:p-9">
-
                 {/* FORM HEADING */}
                 <div>
-
                   <p className="text-sky-500 font-semibold uppercase tracking-widest text-xs">
                     Contact Form
                   </p>
@@ -220,14 +198,9 @@ export default function ContactPage() {
                 </div>
 
                 {/* FORM */}
-                <form
-                  onSubmit={handleSubmit}
-                  className="mt-8 space-y-5"
-                >
-
+                <form onSubmit={handleSubmit} className="mt-8 space-y-5">
                   {/* NAME + PHONE */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
                     <div>
                       <label className="text-xs font-medium text-gray-700 mb-2 block">
                         Full Name
