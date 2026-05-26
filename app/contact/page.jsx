@@ -56,7 +56,6 @@ export default function ContactPage() {
 
   return (
     <main className="relative overflow-hidden bg-[#f8fbff] min-h-screen">
-      {/* BACKGROUND BLUR */}
 
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-10">
         {/* TOP HEADING */}
