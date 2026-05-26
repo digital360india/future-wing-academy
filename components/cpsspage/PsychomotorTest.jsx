@@ -6,14 +6,14 @@ export default function PsychomotorTest() {
           2. Psychomotor Test in CPSS
         </h2>
 
-        <ul className="list-disc pl-6 text-sm mb-6 space-y-1">
+        <ul className="list-disc pl-6 text-[18px]  mb-6 space-y-1">
           <li>10 Test are there.</li>
           <li>4 Tests for each test are given (best attempt is continued)</li>
           <li>Total Time: 2 hours 30 minutes</li>
         </ul>
 
         <div className="overflow-x-auto border border-gray-400">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full text-[18px]  border-collapse">
             <thead className="bg-gray-200">
               <tr>
                 <th className="border border-gray-400 px-3 py-2 text-left">
@@ -86,7 +86,7 @@ export default function PsychomotorTest() {
           <h3 className="text-lg font-semibold mb-2">
             CPSS Test: Clear Guidlines & Focus on SSB Preparation
           </h3>
-          <p className="text-sm text-gray-600">
+          <p className="text-[18px]  text-gray-600">
             CPSS is once in lifetime opportunity, don't miss your chance and we
             will provide you adequate guidlines with state-of-art practical
             modules

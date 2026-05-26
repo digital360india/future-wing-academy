@@ -8,7 +8,7 @@ export default function CPSSInfo() {
           Computerised Pilot Selection System (CPSS)
         </h1>
 
-        <p className="text-sm leading-relaxed mb-4">
+        <p className="text-[18px] leading-relaxed mb-4">
           <span className="font-semibold">
             The Computerised Pilot Selection System (CPSS)
           </span>{" "}
@@ -24,7 +24,7 @@ export default function CPSSInfo() {
           , a British-era selection procedure.
         </p>
 
-        <p className="text-sm leading-relaxed mb-8">
+        <p className="text-[18px]  leading-relaxed mb-8">
           Engineered to address the changing needs of contemporary aircraft,
           CPSS ensures a scientific, data-based analysis of applicants, ensuring
           selection standards are in line with other top international air
@@ -37,13 +37,13 @@ export default function CPSSInfo() {
           CPSS: An Once-in-Lifetime
         </h2>
 
-        <p className="text-sm leading-relaxed font-semibold mb-4">
+        <p className="text-[18px]  leading-relaxed font-semibold mb-4">
           The Computerised Pilot Selection System, is a once in lifetime
           opportunity for aspiring pilots in SSB. Candidates get only one
           attempt to clear the CPSS test.
         </p>
 
-        <ul className="list-disc pl-5 text-sm space-y-2 mb-10">
+        <ul className="list-disc pl-5 text-[18px]  space-y-2 mb-10">
           <li>
             If a candidate is not able to pass the CPSS test, they will not be
             eligible to apply for any flying branch in the Air Force, Army,
@@ -61,19 +61,19 @@ export default function CPSSInfo() {
         <div className="w-full  py-10">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6">
             <div className="w-full max-w-2xl border border-gray-500 bg-white">
-              <div className="h-24 flex items-center justify-center border-b border-gray-400 text-[13px] font-semibold text-gray-800">
+              <div className="h-24 flex items-center justify-center border-b border-gray-400 text-[18px] font-semibold text-gray-800">
                 CPSS TESTING
               </div>
 
-              <div className="h-24 flex items-center justify-center border-b border-gray-400 text-[13px] text-gray-700">
+              <div className="h-24 flex items-center justify-center border-b border-gray-400 text-[18px] text-gray-700">
                 CPSS has 2 levels of testing
               </div>
 
-              <div className="h-24 flex items-center justify-center border-b border-gray-400 text-[13px] text-gray-700">
+              <div className="h-24 flex items-center justify-center border-b border-gray-400 text-[18px] text-gray-700">
                 1. Cognitive Ability Test
               </div>
 
-              <div className="h-24 flex items-center justify-center text-[13px] text-gray-700">
+              <div className="h-24 flex items-center justify-center text-[18px] text-gray-700">
                 2. Psychomotor Test
               </div>
             </div>

@@ -71,16 +71,16 @@ export default function ContactPage() {
         {/* TOP HEADING */}
         <div className="text-center max-w-2xl mx-auto mb-12">
 
-          <div className="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-xs font-medium">
+          <div className="inline-flex font-serif items-center gap-2 bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-xs font-medium">
             ✈ Future Wings Aviation Academy
           </div>
 
-          <h1 className="mt-5 text-3xl  font-bold leading-tight text-[#163660]">
+          <h1 className="mt-5 text-3xl font-serif  font-bold leading-tight text-[#163660]">
             Let&apos;s Connect &
-            <span className="text-sky-500"> Build Your Aviation Future</span>
+            <span className="text-sky-500 font-serif"> Build Your Aviation Future</span>
           </h1>
 
-          <p className="mt-4 text-[15px] text-gray-600 leading-7">
+          <p className="mt-4 text-[18px] text-gray-600 leading-7 font-serif">
             Have questions about pilot training, CPSS preparation, or aviation
             career guidance? Our team is here to assist you.
           </p>
@@ -109,7 +109,7 @@ export default function ContactPage() {
               <div className="relative z-10 flex flex-col justify-between h-full p-6 sm:p-8 text-white">
 
                 {/* TOP */}
-                <div>
+                <div className="font-serif">
 
                   <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-2 rounded-full text-xs">
                     Aviation Career Support
@@ -119,7 +119,7 @@ export default function ContactPage() {
                     We Are Ready To Assist You
                   </h2>
 
-                  <p className="mt-4 text-white/85 leading-7 text-[14px] max-w-md">
+                  <p className="mt-4 text-white/85 leading-7 text-[18px] max-w-md">
                     Whether you are planning to become a pilot or preparing
                     for CPSS, our experts are available to guide you.
                   </p>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                 <div className="space-y-4 mt-8">
 
                   {/* ADDRESS */}
-                  <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4">
+                  <div className="flex items-start font-serif gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4">
 
                     <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                       <MapPin size={20} />
@@ -140,7 +140,7 @@ export default function ContactPage() {
                         Office Training Centre
                       </h4>
 
-                      <p className="text-xs text-white/80 mt-1 leading-6">
+                      <p className="text-[18px] text-white/80 mt-1 leading-6">
                         Ground Floor, Digital 360, B-36,
                         <br />
                         Nehru Colony, Dalanwala,
@@ -158,11 +158,11 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-base">
+                      <h4 className="font-semibold text-[18px] font-serif">
                         Call Us
                       </h4>
 
-                      <p className="text-xs text-white/80 mt-1">
+                      <p className="text-[18px] text-white/80 mt-1">
                         +91-8679234969
                       </p>
                     </div>
@@ -176,11 +176,11 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-base">
+                      <h4 className="font-semibold text-[18px] font-serif">
                         Email Support
                       </h4>
 
-                      <p className="text-xs text-white/80 mt-1 break-all">
+                      <p className="text-[18px] text-white/80 mt-1 break-all">
                         futurewingsaviationinfo@gmail.com
                       </p>
                     </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT SIDE FORM */}
-          <div className="relative">
+          <div className="relative font-serif">
 
             <div className="relative bg-white rounded-[28px] shadow-2xl border border-sky-100 overflow-hidden">
 

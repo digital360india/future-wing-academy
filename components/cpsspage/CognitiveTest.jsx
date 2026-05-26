@@ -6,14 +6,14 @@ export default function CognitiveTest() {
           1. Cognitive Ability Test in CPSS
         </h2>
 
-        <ul className="list-disc pl-6 text-sm mb-6 space-y-1">
+        <ul className="list-disc pl-6 text-[18px] mb-6 space-y-1">
           <li>6 Test are there.</li>
           <li>Total Question: 212 (MCQ Based)</li>
           <li>Total Time: 2 hours 30 minutes</li>
         </ul>
 
         <div className="overflow-x-auto border border-gray-400">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full text-[18px] border-collapse">
             <thead className="bg-gray-200">
               <tr>
                 <th className="border border-gray-400 px-3 py-2 text-left">
@@ -49,7 +49,7 @@ export default function CognitiveTest() {
                   <p>Altimeter</p>
                   <p>Altitude Indicator</p>
                   <p>• Vertical Speed Indicator</p>
-                  <p>• Turn Coordinator</p>
+                  <p>• Turn Coordinator</p>   
                 </td>
               </tr>
 
