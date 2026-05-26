@@ -213,7 +213,6 @@ export default function ReviewsSection() {
                   </button>
                 )}
 
-                {/* STARS */}
                 <div className="flex items-center gap-1 mt-7">
                   {[...Array(5)].map((_, i) => (
                     <Star
