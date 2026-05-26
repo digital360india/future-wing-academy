@@ -177,7 +177,7 @@ export default function ReviewsSection() {
         >
           {/* LEFT IMAGE */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative w-[240px] h-[240px]  rounded-full overflow-hidden border border-gray-300 shadow-md">
+            <div className="relative w-60 h-60 rounded-full overflow-hidden border border-gray-300 shadow-md">
               <Image
                 src={topReview.image}
                 alt={topReview.name}
