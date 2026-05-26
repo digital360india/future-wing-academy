@@ -21,7 +21,6 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Future Wings Academy",
 
-  // ✅ improved SEO description
   description:
     "Future Wings Academy is a modern education platform empowering students with quality learning, skill development, and career growth opportunities.",
 
