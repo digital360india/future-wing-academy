@@ -7,7 +7,7 @@ export default function OurTeam() {
   const [readMore, setReadMore] = useState(false);
 
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full font-serif bg-white py-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div className="flex justify-center md:justify-start md:items-start">
           <div className="rounded-full p-4 md:p-6  md:block hidden">

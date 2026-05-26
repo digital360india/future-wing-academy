@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function VisionValues() {
   return (
-    <section className="w-full relative overflow-hidden">
+    <section className="w-full font-serif relative overflow-hidden">
       
       <div className="relative h-[450px] w-full">
         <Image

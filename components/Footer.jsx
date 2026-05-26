@@ -21,15 +21,15 @@ export default function Footer() {
 
   return (
     <>
-      <footer className=" overflow-hidden bg-[#25538d] text-white">
-        <div className="relative  mx-auto px-5 md:px-10 lg:px-16 py-14">
+      <footer className=" overflow-hidden  bg-[#25538d] text-white">
+        <div className="relative font-serif mx-auto px-5 md:px-10 lg:px-16 py-14">
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-12 border-b border-white/10 pb-12">
             <div className="lg:col-span-2">
               <p className="text-sky-300 text-sm uppercase tracking-[3px] mb-3">
                 Where Dreams Take Flight
               </p>
 
-              <h2 className="text-3xl md:text-4xl leading-tight font-semibold">
+              <h2 className="text-3xl font-serif md:text-4xl leading-tight font-semibold">
                 Learn. Train. Fly.
                 <br />
                 <span className="italic text-sky-300">
