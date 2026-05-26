@@ -76,7 +76,6 @@ export default function WhoIsThisCourseFor() {
             </ul>
           </motion.div>
 
-          {/* MOBILE IMAGE */}
           <motion.div
             className="overflow-hidden md:hidden block px-6"
             initial={{ opacity: 0, x: -80 }}
