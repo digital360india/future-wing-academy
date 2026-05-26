@@ -85,7 +85,7 @@ export default function RegistrationPopup({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
+    <div className="fixed font-serif inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
       <div className="relative bg-white rounded-xl overflow-hidden shadow-2xl max-w-3xl w-full flex flex-col md:flex-row">
         <button
           onClick={onClose}

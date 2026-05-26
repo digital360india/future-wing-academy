@@ -118,7 +118,7 @@ export default function JoinFormPopup({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-999 bg-black/70 backdrop-blur-sm flex items-center justify-center px-4 py-6 overflow-y-auto">
+    <div className="fixed inset-0 z-999 font-serif bg-black/70 backdrop-blur-sm flex items-center justify-center px-4 py-6 overflow-y-auto">
       <div className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl animate-[popup_0.3s_ease] grid lg:grid-cols-2">
 
         <button

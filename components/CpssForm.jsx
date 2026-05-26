@@ -133,7 +133,7 @@ export default function CpssPopup({ isOpen, onClose }) {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 font-serif flex items-center justify-center bg-black/50 px-4 py-6 overflow-y-auto">
       <div className="relative w-full md:h-[600px] max-w-5xl overflow-hidden rounded-[30px] bg-[#f5f5f5] shadow-2xl flex flex-col lg:flex-row">
         <button
           onClick={onClose}

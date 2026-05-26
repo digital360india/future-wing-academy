@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function TopMarquee() {
   return (
-    <div className="w-full bg-linear-to-r from-sky-500 via-sky-400 to-sky-500 overflow-hidden relative">
+    <div className="w-full font-serif bg-linear-to-r from-sky-500 via-sky-400 to-sky-500 overflow-hidden relative">
 
       <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-linear-to-r from-sky-500 to-transparent z-10" />
 
@@ -29,7 +29,7 @@ export default function TopMarquee() {
             </Link>
 
             <span className="opacity-90">
-              • BATCH COMMENCE ON 05 MAY 26
+              • BATCH COMMENCE ON 15 JUNE 26
             </span>
 
             <Link

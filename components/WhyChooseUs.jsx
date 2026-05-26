@@ -30,7 +30,7 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <motion.section
-      className="bg-white md:py-8 py-10"
+      className="bg-white md:py-8 py-10 font-serif"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}

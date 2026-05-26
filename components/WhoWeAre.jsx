@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function WhoWeAre() {
   return (
-    <section className="bg-white md:py-8 py-4">
+    <section className="bg-white md:py-8 py-4 font-serif">
       <div className="w-full ">
         <div className="grid items-center gap-16 md:grid-cols-2 md:px-20">
           

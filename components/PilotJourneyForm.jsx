@@ -42,7 +42,7 @@ export default function PilotJourneyForm() {
   };
 
   return (
-    <div className="max-w-sm mx-auto p-6">
+    <div className="max-w-sm mx-auto p-6 font-serif">
       <h2 className="text-center font-semibold text-lg">
         What is your current status <br /> in the pilot journey?
       </h2>

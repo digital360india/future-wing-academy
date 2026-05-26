@@ -1,6 +1,6 @@
 export default function PsychomotorTest() {
   return (
-    <div className=" py-12 px-6 md:px-20">
+    <div className=" py-12 px-6 md:px-20 font-serif">
       <div className="max-w-7xl mx-auto text-gray-800">
         <h2 className="text-xl md:text-2xl font-bold mb-4">
           2. Psychomotor Test in CPSS

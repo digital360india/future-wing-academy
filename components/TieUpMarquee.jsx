@@ -21,7 +21,7 @@ const logos = [
 
 export default function TieUpMarquee() {
   return (
-    <section className="w-full overflow-hidden bg-white py-10 mt-3">
+    <section className="w-full overflow-hidden font-serif bg-white py-10 mt-3">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
           Top flying schools

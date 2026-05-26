@@ -10,7 +10,7 @@ export default function Hero() {
   const handleClosePopup = () => setPopupOpen(false);
 
   return (
-    <section className="relative h-[90vh] w-full overflow-hidden">
+    <section className="relative h-[90vh] w-full overflow-hidden font-serif">
 
       <video
         className="absolute inset-0 h-full w-full object-cover scale-105"

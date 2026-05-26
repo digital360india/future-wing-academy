@@ -17,7 +17,7 @@ export default function QuizStart() {
   const router = useRouter();
 
   return (
-    <section className="relative  overflow-hidden flex items-center justify-center px-4 py-6">
+    <section className="relative font-serif  overflow-hidden flex items-center justify-center px-4 py-6">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
