@@ -198,7 +198,6 @@ export default function ReviewsSection() {
                   {expandedMain ? topReview.review : shortMainReview}
                 </p>
 
-                {/* READ MORE */}
                 {topReview.review.length > 500 && (
                   <button
                     onClick={() => setExpandedMain(!expandedMain)}
