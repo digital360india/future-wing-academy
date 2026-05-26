@@ -26,7 +26,6 @@ export default function WhoIsThisCourseFor() {
             />
           </motion.div>
 
-          {/* RIGHT CONTENT */}
           <motion.div
             className="text-center md:text-left max-w-85 md:max-w-none mx-auto md:mx-0"
             initial={{ opacity: 0, y: 80 }}
