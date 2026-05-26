@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function BecomePilotPage() {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full font-serif bg-white">
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-10">
         <h1 className="text-[28px] md:text-[36px] font-bold text-[#4a4a4a] leading-tight">
           Your Complete Guide to Becoming a Pilot After 12th Grade
