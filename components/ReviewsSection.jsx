@@ -223,7 +223,6 @@ export default function ReviewsSection() {
                   ))}
                 </div>
 
-                {/* NAME */}
                 <div className="mt-5">
                   <h3 className="text-xl md:text-2xl font-bold text-[#111827]">
                     {topReview.name}
