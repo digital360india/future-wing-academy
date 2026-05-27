@@ -144,7 +144,6 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* EMAIL */}
                   <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4">
                     <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                       <Mail size={20} />
