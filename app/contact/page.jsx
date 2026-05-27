@@ -79,7 +79,6 @@ export default function ContactPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* LEFT SIDE */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-[28px] shadow-2xl min-h-[620px]">
               <Image
