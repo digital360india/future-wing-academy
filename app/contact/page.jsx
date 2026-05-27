@@ -78,7 +78,6 @@ export default function ContactPage() {
           </p>
         </div>
 
-        {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* LEFT SIDE */}
           <div className="relative">
