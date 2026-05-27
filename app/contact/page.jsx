@@ -164,7 +164,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* RIGHT SIDE FORM */}
           <div className="relative font-serif">
             <div className="relative bg-white rounded-[28px] shadow-2xl border border-sky-100 overflow-hidden">
               {/* BLUR */}
