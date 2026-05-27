@@ -82,7 +82,6 @@ export default function ContactPage() {
           {/* LEFT SIDE */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-[28px] shadow-2xl min-h-[620px]">
-              {/* IMAGE */}
               <Image
                 src="/contactimg.jpg"
                 alt="Future Wings"
