@@ -90,7 +90,6 @@ export default function ContactPage() {
               />
 
 
-              {/* CONTENT */}
               <div className="relative z-10 flex flex-col justify-between h-full p-6 sm:p-8 text-white">
                 {/* TOP */}
                 <div className="font-serif">
