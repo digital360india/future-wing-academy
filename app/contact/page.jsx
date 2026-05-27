@@ -107,7 +107,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* CONTACT CARDS */}
                 <div className="space-y-4 mt-8">
                   {/* ADDRESS */}
                   <div className="flex items-start font-serif gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4">
