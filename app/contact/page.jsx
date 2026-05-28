@@ -221,7 +221,6 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* EMAIL */}
                   <div>
                     <label className="text-xs font-medium text-gray-700 mb-2 block">
                       Email Address
