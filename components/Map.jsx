@@ -24,11 +24,9 @@ export default function GoogleIndiaMap() {
 
   return (
     <section className="relative w-full  overflow-hidden bg-linear-to-b from-sky-50 via-white to-sky-100 py-20">
-      {/* BACKGROUND BLUR */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-sky-200 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
 
-      {/* HEADING */}
       <div className="max-w-7xl mx-auto px-4 text-center mb-14 relative z-10 font-serif">
         <div className="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-5 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm">
           <GraduationCap size={18} />
