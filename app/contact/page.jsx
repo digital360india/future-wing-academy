@@ -166,7 +166,6 @@ export default function ContactPage() {
 
           <div className="relative font-serif">
             <div className="relative bg-white rounded-[28px] shadow-2xl border border-sky-100 overflow-hidden">
-              {/* BLUR */}
               <div className="absolute top-0 right-0 w-44 h-44 bg-sky-100 rounded-full blur-3xl opacity-60"></div>
 
               <div className="relative z-10 p-6 sm:p-8 lg:p-9">
