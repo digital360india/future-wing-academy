@@ -169,7 +169,6 @@ export default function ContactPage() {
               <div className="absolute top-0 right-0 w-44 h-44 bg-sky-100 rounded-full blur-3xl opacity-60"></div>
 
               <div className="relative z-10 p-6 sm:p-8 lg:p-9">
-                {/* FORM HEADING */}
                 <div>
                   <p className="text-sky-500 font-semibold uppercase tracking-widest text-xs">
                     Contact Form
