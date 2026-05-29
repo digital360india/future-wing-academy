@@ -140,6 +140,8 @@ export default function ContactPage() {
 
                       <p className="text-[18px] text-white/80 mt-1">
                         +91-8679234969
+                         +91-8679030325
+                          +91-8679030326
                       </p>
                     </div>
                   </div>

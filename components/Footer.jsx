@@ -136,6 +136,8 @@ export default function Footer() {
 
                   <div className="text-sm text-white space-y-1">
                     <p>+91-86792 34969</p>
+                    <p>+91-8679030325</p>
+                    <p>+91-8679030326</p>
                   </div>
                 </div>
 

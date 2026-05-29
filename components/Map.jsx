@@ -1,17 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import {
-  MapPin,
-  Navigation,
-  Phone,
-  Clock3,
-  GraduationCap,
-} from "lucide-react";
+import { MapPin, Navigation, Phone, Clock3, GraduationCap } from "lucide-react";
 
 export default function GoogleIndiaMap() {
-  const indiaMap =
-    "https://www.google.com/maps?q=India&z=5&output=embed";
+  const indiaMap = "https://www.google.com/maps?q=India&z=5&output=embed";
 
   const academyLocation =
     "https://www.google.com/maps?q=Ground+Floor+Digital+360+B-36+Nehru+Colony+Dalanwala+Dehradun+Uttarakhand&z=18&output=embed";
@@ -30,18 +23,17 @@ export default function GoogleIndiaMap() {
       <div className="max-w-7xl mx-auto px-4 text-center mb-14 relative z-10 font-serif">
         <div className="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-5 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm">
           <GraduationCap size={18} />
-          Our  Location
+          Our Academy Location
         </div>
 
         <h2 className="text-3xl  font-bold text-gray-900 leading-tight">
-          Visit{" "}
-          <span className="text-sky-600">Future Wings Academy</span>
+          Visit <span className="text-sky-600">Future Wings Aviation Academy</span>
         </h2>
 
         <p className="text-gray-600 mt-5 text-lg max-w-3xl mx-auto leading-relaxed">
-          Explore our academy location directly on the interactive map.
-          Discover our modern learning environment and easily navigate to
-          our campus in Dehradun, Uttarakhand.
+          Explore our academy location directly on the interactive map. Discover
+          our modern learning environment and easily navigate to our aviation academy in
+          Dehradun, Uttarakhand.
         </p>
       </div>
 
@@ -58,11 +50,11 @@ export default function GoogleIndiaMap() {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-3xl font-bold text-gray-900 mt-6 leading-snug">
+                <h3 className="text-2xl font-bold text-gray-900 mt-2 leading-snug font-serif">
                   Future Wings Academy
                 </h3>
 
-                <p className="text-gray-600 mt-4 leading-relaxed">
+                <p className="text-gray-600 mt-4 leading-relaxed font-serif">
                   Empowering students with quality education, professional
                   guidance, and modern learning experiences in the heart of
                   Dehradun.
@@ -76,11 +68,9 @@ export default function GoogleIndiaMap() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900">
-                        Address
-                      </h4>
+                      <h4 className="font-semibold text-gray-900 font-serif">Address</h4>
 
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-sm text-gray-600 leading-relaxed font-serif">
                         Ground Floor, Digital 360, B-36, Nehru Colony,
                         Dalanwala, Dehradun, Uttarakhand
                       </p>
@@ -93,13 +83,9 @@ export default function GoogleIndiaMap() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900">
-                        Contact
-                      </h4>
+                      <h4 className="font-semibold text-gray-900 font-serif">Contact</h4>
 
-                      <p className="text-sm text-gray-600">
-                        +91 86792 34969
-                      </p>
+                      <p className="text-sm text-gray-600">+91 86792 34969</p>
                     </div>
                   </div>
 
@@ -109,7 +95,7 @@ export default function GoogleIndiaMap() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 font-serif">
                         Working Hours
                       </h4>
 
@@ -124,7 +110,7 @@ export default function GoogleIndiaMap() {
               {/* BUTTON */}
               <button
                 onClick={handleLocationClick}
-                className="group mt-8 w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 text-white px-6 py-4 rounded-2xl text-base font-semibold"
+                className="group mt-8 w-full inline-flex font-serif items-center justify-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 text-white px-6 py-4 rounded-2xl text-base font-semibold"
               >
                 <Navigation
                   size={20}
