@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       <header className="w-full font-serif bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto h-[78px] px-4 lg:px-6 flex items-center justify-between">
+        <div className="md:max-w-360 mx-auto h-19.5 px-4 lg:px-6 flex items-center justify-between">
           {/* LEFT LOGO */}
           <Link href="/" className="flex items-center">
             <Image
@@ -80,6 +80,10 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
+                <Link href="/feestructure" className="hover:text-sky-500 transition">
+                Fee Structure
+              </Link>
+
               <Link href="/contact" className="hover:text-sky-500 transition">
                 Contact
               </Link>

@@ -56,7 +56,6 @@ export default function ContactPage() {
 
   return (
     <main className="relative overflow-hidden bg-[#f8fbff] min-h-screen">
-
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-10">
         {/* TOP HEADING */}
         <div className="text-center max-w-2xl mx-auto mb-12">
@@ -88,7 +87,6 @@ export default function ContactPage() {
                 priority
                 className="object-cover"
               />
-
 
               <div className="relative z-10 flex flex-col justify-between h-full p-6 sm:p-8 text-white">
                 {/* TOP */}
@@ -139,9 +137,7 @@ export default function ContactPage() {
                       </h4>
 
                       <p className="text-[18px] text-white/80 mt-1">
-                        +91-8679234969
-                         +91-8679030325
-                          +91-8679030326
+                        +91-8679234969 +91-8679030325 +91-8679030326
                       </p>
                     </div>
                   </div>
