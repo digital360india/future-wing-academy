@@ -81,7 +81,7 @@ export default function ContactPopup({ isOpen, onClose }) {
             </p>
           </div>
 
-          {/* IMAGE */}
+          {/* IMAGE */} 
           <div className="absolute -bottom-10 left-0 hidden lg:block">
             <div className="relative w-60 h-60">
               <Image

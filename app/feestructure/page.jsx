@@ -12,8 +12,12 @@ import {
   ClipboardCheck,
   PlaneTakeoff,
 } from "lucide-react";
+import ContactPopup from "@/components/ContactPopup";
+import { useState } from "react";
 
 export default function FeeStructurePage() {
+    const [isPopupOpen, setPopupOpen] = useState(false);
+  
   const includes = [
     {
       icon: BookOpen,
@@ -91,6 +95,7 @@ export default function FeeStructurePage() {
   ];
 
   return (
+    <>
     <div className="min-h-screen bg-[#f2f2f2] flex justify-center py-6 px-3">
       <div className="w-full max-w-360 overflow-hidden rounded-sm bg-white shadow-lg">
         {/* HERO */}
@@ -326,11 +331,18 @@ export default function FeeStructurePage() {
             </div>
           </div>
 
-          <button className="rounded-md bg-[#f4b32b] px-10 py-4 text-[16px] font-bold text-[#0f2442] transition hover:bg-[#ffbf3b]">
+          <button 
+                          onClick={() => setPopupOpen(true)}
+
+          className="rounded-md bg-[#f4b32b] px-10 py-4 text-[16px] font-bold text-[#0f2442] transition hover:bg-[#ffbf3b]">
             Enquire Now
           </button>
         </div>
       </div>
     </div>
+          <ContactPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
+
+    </>
   );
+
 }
