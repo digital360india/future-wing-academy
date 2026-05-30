@@ -41,7 +41,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white overflow-x-hidden`}
       >
-        {/* Tawk Chat */}
         <Script
           id="tawk-to"
           strategy="afterInteractive"
