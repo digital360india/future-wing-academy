@@ -53,7 +53,7 @@ export default function EducationLoanSection() {
     <section className="bg-[#f5f6f8] py-10">
       <div className="mx-auto max-w-360 overflow-hidden border border-gray-200 bg-white shadow-lg">
         {/* HERO */}
-        <div className="relative h-105 overflow-hidden">
+        <div className="relative h-112 overflow-hidden">
           <img
             src="/loanplan.jpg"
             alt="Education Loan"

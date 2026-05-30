@@ -6,24 +6,27 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 import FreeconsultationPopup from "./FreeConsltationPopup";
-import CpssPopup from "./CpssForm";
 import JoinFormPopup from "./cpsspage/JoinForm";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
 
-  // SEPARATE POPUP STATES
+  // Desktop Dropdowns
+  const [showCoursesDropdown, setShowCoursesDropdown] = useState(false);
+  const [showFeeDropdown, setShowFeeDropdown] = useState(false);
+
+  // Mobile Dropdown
+  const [mobileFeeDropdown, setMobileFeeDropdown] = useState(false);
+
+  // Popups
   const [isConsultationPopupOpen, setIsConsultationPopupOpen] = useState(false);
-
-
   const [isJoinFormPopupOpen, setIsJoinFormPopupOpen] = useState(false);
 
   return (
     <>
       <header className="w-full font-serif bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="md:max-w-360 mx-auto h-19.5 px-4 lg:px-6 flex items-center justify-between">
-          {/* LEFT LOGO */}
+        <div className="md:max-w-[1440px] mx-auto h-[78px] px-4 lg:px-6 flex items-center justify-between">
+          {/* LOGO */}
           <Link href="/" className="flex items-center">
             <Image
               src="/Futurewings-Logo.png"
@@ -35,7 +38,7 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* DESKTOP NAV */}
+          {/* DESKTOP NAVIGATION */}
           <nav className="hidden lg:flex items-center h-full">
             <div className="flex items-center gap-12 text-[16px] font-medium text-gray-700">
               <Link href="/" className="hover:text-sky-500 transition">
@@ -50,39 +53,69 @@ export default function Navbar() {
                 href="/howtobecomepilot"
                 className="hover:text-sky-500 transition"
               >
-                How to become pilot
+                How to Become Pilot
               </Link>
 
               {/* COURSES DROPDOWN */}
               <div
                 className="relative h-[78px] flex items-center"
-                onMouseEnter={() => setShowDropdown(true)}
-                onMouseLeave={() => setShowDropdown(false)}
+                onMouseEnter={() => setShowCoursesDropdown(true)}
+                onMouseLeave={() => setShowCoursesDropdown(false)}
               >
                 <button className="flex items-center gap-1 hover:text-sky-500 transition">
                   Courses
                   <ChevronDown size={16} />
                 </button>
 
-                {/* DROPDOWN */}
                 <div
-                  className={`absolute top-full left-1/2 -translate-x-1/2 w-[210px] bg-white border border-gray-200 shadow-lg transition-all duration-200 ${
-                    showDropdown
+                  className={`absolute top-full left-1/2 -translate-x-1/2 w-[240px] bg-white border border-gray-200 shadow-lg transition-all duration-200 ${
+                    showCoursesDropdown
                       ? "opacity-100 visible translate-y-0"
                       : "opacity-0 invisible translate-y-2"
                   }`}
                 >
                   <Link
                     href="/cpss"
-                    className="block px-4 py-4 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-sky-500 leading-6"
+                    className="block px-4 py-4 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-sky-500"
                   >
                     CPSS (Computerised Pilot Selection System)
                   </Link>
                 </div>
               </div>
-                <Link href="/feestructure" className="hover:text-sky-500 transition">
-                Fee Structure
-              </Link>
+
+              {/* FEE STRUCTURE DROPDOWN */}
+              <div
+                className="relative h-[78px] flex items-center"
+                onMouseEnter={() => setShowFeeDropdown(true)}
+                onMouseLeave={() => setShowFeeDropdown(false)}
+              >
+                <button className="flex items-center gap-1 hover:text-sky-500 transition">
+                  Fee 
+                  <ChevronDown size={16} />
+                </button>
+
+                <div
+                  className={`absolute top-full left-1/2 -translate-x-1/2 w-[220px] bg-white border border-gray-200 shadow-lg transition-all duration-200 ${
+                    showFeeDropdown
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible translate-y-2"
+                  }`}
+                >
+                  <Link
+                    href="/feestructure"
+                    className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-sky-500"
+                  >
+                    Fee Structure
+                  </Link>
+
+                  <Link
+                    href="/educationloan"
+                    className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-sky-500"
+                  >
+                    CPSS Loan Structure
+                  </Link>
+                </div>
+              </div>
 
               <Link href="/contact" className="hover:text-sky-500 transition">
                 Contact
@@ -93,7 +126,6 @@ export default function Navbar() {
           {/* DESKTOP BUTTONS */}
           <div className="hidden lg:flex items-center">
             <div className="flex items-center border-l border-gray-200 pl-8 gap-4">
-              {/* APPLY CPSS */}
               <button
                 onClick={() => setIsJoinFormPopupOpen(true)}
                 className="h-[44px] px-8 border border-sky-400 text-sky-500 rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-50 transition"
@@ -101,12 +133,11 @@ export default function Navbar() {
                 Apply CPSS
               </button>
 
-              {/* FREE CONSULTATION */}
               <button
                 onClick={() => setIsConsultationPopupOpen(true)}
                 className="h-[44px] px-7 bg-sky-400 text-white rounded-[4px] flex items-center justify-center text-[14px] font-semibold hover:bg-sky-500 transition"
               >
-                Free consultation
+                Free Consultation
               </button>
             </div>
           </div>
@@ -129,12 +160,12 @@ export default function Navbar() {
           onClick={() => setMobileMenu(false)}
         />
 
-        {/* SIDEBAR */}
         <div
-          className={`absolute left-0 top-0 h-full w-70 bg-white p-6 transition-transform duration-300 ${
+          className={`absolute left-0 top-0 h-full w-[280px] bg-white p-6 transition-transform duration-300 ${
             mobileMenu ? "translate-x-0" : "-translate-x-full"
           }`}
         >
+          {/* MOBILE HEADER */}
           <div className="flex items-center justify-between mb-8">
             <Image
               src="/Futurewings-Logo.png"
@@ -149,18 +180,65 @@ export default function Navbar() {
             </button>
           </div>
 
+          {/* MOBILE NAVIGATION */}
           <nav className="flex flex-col gap-6 text-[16px] font-medium text-gray-700">
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={() => setMobileMenu(false)}>
+              Home
+            </Link>
 
-            <Link href="/about">About</Link>
+            <Link href="/about" onClick={() => setMobileMenu(false)}>
+              About
+            </Link>
 
-            <Link href="/how-to-become-pilot">How to become pilot</Link>
+            <Link href="/howtobecomepilot" onClick={() => setMobileMenu(false)}>
+              How to Become Pilot
+            </Link>
 
-            <Link href="/cpss">CPSS</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/cpss" onClick={() => setMobileMenu(false)}>
+              Courses
+            </Link>
 
+            {/* MOBILE FEE STRUCTURE DROPDOWN */}
+            <div>
+              <button
+                onClick={() => setMobileFeeDropdown(!mobileFeeDropdown)}
+                className="flex items-center justify-between w-full"
+              >
+                <span>Fee Structure</span>
+
+                <ChevronDown
+                  size={18}
+                  className={`transition-transform duration-200 ${
+                    mobileFeeDropdown ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileFeeDropdown && (
+                <div className="ml-4 mt-4 flex flex-col gap-3 text-[15px] text-gray-600">
+                  <Link
+                    href="/feestructure"
+                    onClick={() => setMobileMenu(false)}
+                  >
+                    Fee Structure
+                  </Link>
+
+                  <Link
+                    href="/educationloan"
+                    onClick={() => setMobileMenu(false)}
+                  >
+                    CPSS Loan Structure
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link href="/contact" onClick={() => setMobileMenu(false)}>
+              Contact
+            </Link>
+
+            {/* MOBILE BUTTONS */}
             <div className="flex flex-col gap-4 pt-6">
-              {/* MOBILE APPLY CPSS */}
               <button
                 onClick={() => {
                   setIsJoinFormPopupOpen(true);
@@ -171,7 +249,6 @@ export default function Navbar() {
                 Apply CPSS
               </button>
 
-              {/* MOBILE FREE CONSULTATION */}
               <button
                 onClick={() => {
                   setIsConsultationPopupOpen(true);
@@ -179,7 +256,7 @@ export default function Navbar() {
                 }}
                 className="h-[45px] bg-sky-400 text-white rounded-md flex items-center justify-center font-semibold"
               >
-                Free consultation
+                Free Consultation
               </button>
             </div>
           </nav>
@@ -192,7 +269,7 @@ export default function Navbar() {
         onClose={() => setIsConsultationPopupOpen(false)}
       />
 
-      {/* CPSS POPUP */}
+      {/* APPLY CPSS POPUP */}
       <JoinFormPopup
         isOpen={isJoinFormPopupOpen}
         onClose={() => setIsJoinFormPopupOpen(false)}
