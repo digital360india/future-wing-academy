@@ -204,7 +204,7 @@ export default function Navbar() {
                 onClick={() => setMobileFeeDropdown(!mobileFeeDropdown)}
                 className="flex items-center justify-between w-full"
               >
-                <span>Fee Structure</span>
+                <span>Fee </span>
 
                 <ChevronDown
                   size={18}
