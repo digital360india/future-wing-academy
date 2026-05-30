@@ -63,7 +63,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* Navbar */}
         <Navbar />
 
         {/* Page Content */}
