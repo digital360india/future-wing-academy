@@ -73,7 +73,6 @@ export default function RootLayout({ children }) {
           </div>
         </a>
 
-        {/* Footer */}
         <Footer />
       </body>
     </html>
