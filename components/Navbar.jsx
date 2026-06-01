@@ -138,7 +138,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* MOBILE MENU BUTTON */}
           <button onClick={() => setMobileMenu(true)} className="lg:hidden">
             <Menu size={28} />
           </button>
