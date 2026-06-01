@@ -120,7 +120,6 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* DESKTOP BUTTONS */}
           <div className="hidden lg:flex items-center">
             <div className="flex items-center border-l border-gray-200 pl-8 gap-4">
               <button
