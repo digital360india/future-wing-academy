@@ -56,7 +56,7 @@ export default function Navbar() {
               </Link>
 
               <div
-                className="relative h-[78px] flex items-center"
+                className="relative h-19.5 flex items-center"
                 onMouseEnter={() => setShowCoursesDropdown(true)}
                 onMouseLeave={() => setShowCoursesDropdown(false)}
               >
