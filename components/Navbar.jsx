@@ -198,7 +198,6 @@ export default function Navbar() {
               Courses
             </Link>
 
-            {/* MOBILE FEE STRUCTURE DROPDOWN */}
             <div>
               <button
                 onClick={() => setMobileFeeDropdown(!mobileFeeDropdown)}
