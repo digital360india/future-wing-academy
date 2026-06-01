@@ -262,7 +262,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* FREE CONSULTATION POPUP */}
       <FreeconsultationPopup
         isOpen={isConsultationPopupOpen}
         onClose={() => setIsConsultationPopupOpen(false)}
