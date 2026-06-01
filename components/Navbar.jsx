@@ -82,7 +82,7 @@ export default function Navbar() {
               </div>
 
               <div
-                className="relative h-[78px] flex items-center"
+                className="relative h-19.5 flex items-center"
                 onMouseEnter={() => setShowFeeDropdown(true)}
                 onMouseLeave={() => setShowFeeDropdown(false)}
               >
@@ -92,7 +92,7 @@ export default function Navbar() {
                 </button>
 
                 <div
-                  className={`absolute top-full left-1/2 -translate-x-1/2 w-[220px] bg-white border border-gray-200 shadow-lg transition-all duration-200 ${
+                  className={`absolute top-full left-1/2 -translate-x-1/2 w-55 bg-white border border-gray-200 shadow-lg transition-all duration-200 ${
                     showFeeDropdown
                       ? "opacity-100 visible translate-y-0"
                       : "opacity-0 invisible translate-y-2"
