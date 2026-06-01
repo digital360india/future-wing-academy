@@ -149,7 +149,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE SIDEBAR */}
       <div
         className={`fixed inset-0 z-50 transition ${
           mobileMenu ? "visible opacity-100" : "invisible opacity-0"
@@ -165,7 +164,6 @@ export default function Navbar() {
             mobileMenu ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          {/* MOBILE HEADER */}
           <div className="flex items-center justify-between mb-8">
             <Image
               src="/Futurewings-Logo.png"
