@@ -267,7 +267,6 @@ export default function Navbar() {
         onClose={() => setIsConsultationPopupOpen(false)}
       />
 
-      {/* APPLY CPSS POPUP */}
       <JoinFormPopup
         isOpen={isJoinFormPopupOpen}
         onClose={() => setIsJoinFormPopupOpen(false)}
