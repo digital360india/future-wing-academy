@@ -237,7 +237,6 @@ export default function Navbar() {
               Contact
             </Link>
 
-            {/* MOBILE BUTTONS */}
             <div className="flex flex-col gap-4 pt-6">
               <button
                 onClick={() => {
