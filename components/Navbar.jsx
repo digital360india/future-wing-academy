@@ -55,7 +55,6 @@ export default function Navbar() {
                 How to Become Pilot
               </Link>
 
-              {/* COURSES DROPDOWN */}
               <div
                 className="relative h-[78px] flex items-center"
                 onMouseEnter={() => setShowCoursesDropdown(true)}
