@@ -38,7 +38,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
           <nav className="hidden lg:flex items-center h-full">
             <div className="flex items-center gap-12 text-[16px] font-medium text-gray-700">
               <Link href="/" className="hover:text-sky-500 transition">
