@@ -81,7 +81,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* FEE STRUCTURE DROPDOWN */}
               <div
                 className="relative h-[78px] flex items-center"
                 onMouseEnter={() => setShowFeeDropdown(true)}
