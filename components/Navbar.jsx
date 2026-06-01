@@ -180,7 +180,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* MOBILE NAVIGATION */}
           <nav className="flex flex-col gap-6 text-[16px] font-medium text-gray-700">
             <Link href="/" onClick={() => setMobileMenu(false)}>
               Home
