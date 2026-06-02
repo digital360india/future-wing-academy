@@ -465,7 +465,6 @@ export default function BecomePilotPage() {
           </ul>
         </StepSection>
 
-        {/* BONUS */}
         <section className="mt-12">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-10 h-10 rounded-full bg-[#c9a84c] flex items-center justify-center text-white font-bold font-serif text-lg">
