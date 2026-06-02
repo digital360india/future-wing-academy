@@ -303,7 +303,7 @@ export default function BecomePilotPage() {
             <p className="font-bold font-serif text-[#c9a84c] mb-2">
               Clear the DGCA Theory Exams:
             </p>
-            <ul className="list-disc pl-5 space-y-1 text-[16px] font-serif text-[#b0bac8] leading-7">
+            <ul className="list-disc pl-5 space-y-1 text-[16px] font-serif text-white leading-7">
               <li>These exams are held multiple times throughout the year.</li>
               <li>
                 The format is multiple-choice, similar to board examinations.
