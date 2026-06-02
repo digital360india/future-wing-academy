@@ -19,7 +19,6 @@ const steps = [
 export default function BecomePilotPage() {
   return (
     <main className="w-full bg-[#f5f3ee] min-h-screen font-serif">
-      {/* ── HERO BANNER ── */}
       <div className="relative bg-[#173158] overflow-hidden">
         {/* decorative diagonal stripe */}
         <div
