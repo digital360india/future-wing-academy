@@ -20,7 +20,6 @@ export default function BecomePilotPage() {
   return (
     <main className="w-full bg-[#f5f3ee] min-h-screen font-serif">
       <div className="relative bg-[#173158] overflow-hidden">
-        {/* decorative diagonal stripe */}
         <div
           className="absolute inset-0 opacity-10"
           style={{
