@@ -199,7 +199,6 @@ export default function FeeStructurePage() {
                   training.
                 </p>
 
-                {/* TABLE - Mobile Responsive */}
                 <div className="mt-6 overflow-x-auto rounded-lg border border-[#dcdcdc]">
                   <div className="min-w-[650px] lg:min-w-full">
                     {/* Header */}
