@@ -270,7 +270,7 @@ export default function BecomePilotPage() {
                 key={label}
                 className="flex gap-4 bg-white border border-[#e2dbd0] p-4 items-start"
               >
-                <span className="mt-1 w-2 h-2 flex-shrink-0 rounded-full bg-[#173158]" />
+                <span className="mt-1 w-2 h-2 shrink-0 rounded-full bg-[#173158]" />
                 <p className="text-[#333] font-serif text-[16px] leading-7">
                   <strong className="text-[#173158]">{label}:</strong> {desc}
                 </p>
