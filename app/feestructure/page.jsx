@@ -152,7 +152,7 @@ export default function FeeStructurePage() {
                   What's Included
                 </h3>
 
-                <div className="mt-5 space-y-3">
+                <div className="mt-5 space-y-3 font-serif">
                   {includes.map((item, index) => {
                     const Icon = item.icon;
                     return (
