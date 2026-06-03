@@ -207,7 +207,7 @@ export default function BecomePilotPage() {
                 key={subject}
                 className="bg-white border border-[#d6cfc4] p-4 flex gap-3 items-start"
               >
-                <span className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-[#c9a84c]" />
+                <span className="mt-1 shrink-0 w-2 h-2 rounded-full bg-[#c9a84c]" />
                 <div>
                   <p className="font-bold text-[#173158] text-[16px] font-serif">
                     {subject}
