@@ -107,7 +107,6 @@ export default function FeeStructurePage() {
             <div className="absolute inset-0 px-5 py-6 md:px-8">
            
 
-              {/* Content */}
               <div className="max-w-117.5">
                 <h1 className="font-serif">
                   <span className="block text-3xl md:text-[42px] font-bold text-white leading-tight">
