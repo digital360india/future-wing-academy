@@ -105,12 +105,7 @@ export default function FeeStructurePage() {
             <div className="absolute inset-0 bg-[#001633]/60" />
 
             <div className="absolute inset-0 px-5 py-6 md:px-8">
-              {/* Breadcrumb */}
-              <div className="mb-6 flex items-center gap-2 text-[12px] text-[#d4d4d4]">
-                <span>Home</span>
-                <span>{">"}</span>
-                <span className="text-white">Fee Structure</span>
-              </div>
+           
 
               {/* Content */}
               <div className="max-w-117.5">
@@ -123,7 +118,7 @@ export default function FeeStructurePage() {
                   </span>
                 </h1>
 
-                <p className="mt-4 text-[15px] md:text-[16px] leading-6 md:leading-7 text-[#d7d7d7] font-serif">
+                <p className="mt-4 text-[15px] md:text-[16px] leading-6 md:leading-7 text-white font-serif">
                   At Future Wings Aviation Academy, we believe in transparency,
                   clarity and a structured approach to your pilot training
                   journey.
