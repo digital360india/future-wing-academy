@@ -214,7 +214,6 @@ export default function FeeStructurePage() {
                       </div>
                     </div>
 
-                    {/* Rows */}
                     {fees.map((item, index) => (
                       <div
                         key={index}
