@@ -171,7 +171,6 @@ export default function FeeStructurePage() {
                   })}
                 </div>
 
-                {/* Quote */}
                 <div className="mt-6 rounded-xl bg-[#eef3fb] p-5">
                   <Quote size={28} className="mb-3 text-[#143c73]" />
                   <p className="text-[15px] md:text-[16px] italic leading-7 text-[#4b4b4b] font-serif">
@@ -186,7 +185,6 @@ export default function FeeStructurePage() {
               </div>
             </div>
 
-            {/* RIGHT */}
             <div>
               <div className="rounded-md bg-white p-5 shadow-sm">
                 <h2 className="text-[26px] md:text-[32px] font-bold text-[#0f2442] font-serif">
