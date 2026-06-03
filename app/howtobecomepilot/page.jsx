@@ -524,7 +524,7 @@ function StepSection({ number, title, children }) {
   return (
     <section className="py-10 border-b border-[#d6cfc4] last:border-0 font-serif">
       <div className="flex items-start gap-5 mb-6">
-        <div className="flex-shrink-0 w-12 h-12 bg-[#173158] flex items-center justify-center">
+        <div className="shrink-0 w-12 h-12 bg-[#173158] flex items-center rounded-2xl justify-center">
           <span className="text-white font-bold font-serif text-lg">
             {number}
           </span>
