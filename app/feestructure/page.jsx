@@ -240,7 +240,6 @@ export default function FeeStructurePage() {
                       </div>
                     ))}
 
-                    {/* TOTAL */}
                     <div className="grid grid-cols-[1fr_200px] md:grid-cols-[1fr_250px] bg-[#082c59]">
                       <div className="px-5 py-5 text-[22px] md:text-[24px] font-bold text-[#f4b32b] font-serif">
                         Total Course Fee
