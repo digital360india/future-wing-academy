@@ -110,7 +110,7 @@ export default function Footer() {
 
               <div className="space-y-6 flex flex-col">
                 <div className="flex items-start gap-4">
-                  <div className="min-w-[42px] h-[42px] rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
+                  <div className="min-w-10.5 h-[42px] rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
                     <MapPin size={18} />
                   </div>
 
