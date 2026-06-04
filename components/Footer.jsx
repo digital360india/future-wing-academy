@@ -190,7 +190,7 @@ export default function Footer() {
                 alt="Future Wings"
                 width={160}
                 height={80}
-                className="w-auto h-[60px]"
+                className="w-auto h-15"
               />
 
               <div className="hidden md:block w-px h-10 bg-white/80" />
