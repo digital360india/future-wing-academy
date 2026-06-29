@@ -227,6 +227,13 @@ export default function Navbar() {
                   >
                     CPSS Loan Structure
                   </Link>
+
+                   <Link
+                    href="/bankdetails"
+                    onClick={() => setMobileMenu(false)}
+                  >
+                    Bank Details
+                  </Link>
                 </div>
               )}
             </div>
