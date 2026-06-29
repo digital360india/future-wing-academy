@@ -104,7 +104,7 @@ export default function FeeStructurePage() {
       <div className="min-h-screen bg-[#f2f2f2] flex justify-center py-6 px-3">
         <div className="w-full max-w-360 overflow-hidden rounded-sm bg-white shadow-lg">
           {/* HERO */}
-          <div className="relative h-[380px] md:h-112.5 w-full overflow-hidden">
+          <div className="relative h-95 md:h-112.5 w-full overflow-hidden">
             <Image
               src="/feeheroimg.jpg"
               alt="Pilot Training"
@@ -208,7 +208,7 @@ export default function FeeStructurePage() {
                 </p>
 
                 <div className="mt-6 overflow-x-auto rounded-lg border border-[#dcdcdc]">
-                  <div className="min-w-[650px] lg:min-w-full">
+                  <div className="min-w-162.5 lg:min-w-full">
                     {/* Header */}
                     <div className="grid grid-cols-[80px_1fr_140px] md:grid-cols-[110px_1fr_150px] bg-[#082c59] text-white">
                       <div className="border-r border-[#284b76] px-3 md:px-4 py-4 text-center text-[14px] font-semibold font-serif">

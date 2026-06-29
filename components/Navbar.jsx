@@ -111,6 +111,13 @@ export default function Navbar() {
                   >
                     CPSS Loan Structure
                   </Link>
+
+                   <Link
+                    href="/bankdetails"
+                    className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-sky-500"
+                  >
+                    Banking Details
+                  </Link>
                 </div>
               </div>
 
