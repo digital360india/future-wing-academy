@@ -11,6 +11,7 @@ import {
   Quote,
   ClipboardCheck,
   PlaneTakeoff,
+  Landmark,
 } from "lucide-react";
 import ContactPopup from "@/components/ContactPopup";
 import { useState } from "react";
@@ -89,6 +90,15 @@ export default function FeeStructurePage() {
     },
   ];
 
+  const bankingDetails = [
+    { label: "Account Name", value: "Future Wings Aviation Pvt. Limited" },
+    { label: "A/C No", value: "50200122209882" },
+    { label: "IFSC Code", value: "HDFC0001399" },
+    { label: "Cust ID", value: "360951928" },
+    { label: "Bank Name", value: "HDFC Bank" },
+     { label: "Branch", value: "Dehradun" },
+  ];
+
   return (
     <>
       <div className="min-h-screen bg-[#f2f2f2] flex justify-center py-6 px-3">
@@ -105,8 +115,6 @@ export default function FeeStructurePage() {
             <div className="absolute inset-0 bg-[#001633]/60" />
 
             <div className="absolute inset-0 px-5 py-6 md:px-8">
-           
-
               <div className="max-w-117.5">
                 <h1 className="font-serif">
                   <span className="block text-3xl md:text-[42px] font-bold text-white leading-tight">
@@ -249,6 +257,41 @@ export default function FeeStructurePage() {
                       </div>
                     </div>
                   </div>
+                </div>
+
+                {/* BANKING DETAILS */}
+                <div className="mt-7 rounded-xl border border-[#c8d9f0] bg-[#eef3fb] p-5">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#143c73] text-white flex-shrink-0">
+                      <Landmark size={20} />
+                    </div>
+                    <h3 className="text-[20px] md:text-[22px] font-bold text-[#0f2442] font-serif">
+                      Banking Details
+                    </h3>
+                  </div>
+
+                  <div className="h-[2px] w-14 bg-[#f4b32b] mb-5" />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {bankingDetails.map((detail, index) => (
+                      <div
+                        key={index}
+                        className="rounded-lg border border-[#d0deee] bg-white px-4 py-3"
+                      >
+                        <p className="text-[12px] font-semibold uppercase tracking-wide text-[#6b84a3] font-serif">
+                          {detail.label}
+                        </p>
+                        <p className="mt-1 text-[15px] md:text-[16px] font-bold text-[#0f2442] font-serif">
+                          {detail.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="mt-4 text-[13px] md:text-[14px] text-[#666] font-serif italic">
+                    * Please use your name and contact number as the payment
+                    reference when making a transfer.
+                  </p>
                 </div>
 
                 {/* IMPORTANT NOTE */}
