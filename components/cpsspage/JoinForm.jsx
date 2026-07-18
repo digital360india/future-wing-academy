@@ -332,9 +332,9 @@ export default function JoinFormPopup({ isOpen, onClose }) {
 
               <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6">
                 <img
-                  src="/qrcode (2).png"
+                  src="/avaitionqrcode.jpeg"
                   alt="QR Code"
-                  className="w-full max-w-55 mx-auto object-contain"
+                  className="w-full max-w-64 mx-auto object-contain"
                 />
               </div>
 

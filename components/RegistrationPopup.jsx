@@ -191,12 +191,12 @@ export default function RegistrationPopup({ isOpen, onClose }) {
               <p className="text-sm text-gray-500 mt-1">Total Amount:</p>
               <h3 className="text-[#4EADE3] text-2xl font-bold mb-5">₹5000</h3>
 
-              <div className="flex flex-col items-center sm:items-start gap-10 md:flex-row md:items-start">
+              <div className=" items-center sm:items-start gap-10 md:flex-row md:items-start">
                 {/* QR code area – centered on mobile */}
-                <div className="flex flex-col items-center md:items-start">
+                <div className=" items-center md:items-start">
                   <img
-                    src="/qrcode (2).png"
-                    className="w-40 h-40 sm:w-36 sm:h-36 md:w-60 md:h-40"
+                    src="/avaitionqrcode.jpeg"
+                    className="w-60 h-72 sm:w-52 sm:h-52 md:w-60 "
                     alt="QR Code"
                   />
 
