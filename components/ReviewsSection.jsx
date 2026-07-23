@@ -156,7 +156,6 @@ export default function ReviewsSection() {
   return (
     <section className="w-full font-serif bg-[#f5f5f5] py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
-        {/* HEADING */}
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
