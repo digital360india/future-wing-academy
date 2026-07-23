@@ -72,7 +72,7 @@ export default function Testimonials() {
           {testimonials.map((item, index) => (
             <SwiperSlide
               key={index}
-              className="!w-full md:!w-[50vw] py-10 md:py-14"
+              className="w-full md:!w-[50vw] py-10 md:py-14"
             >
               {({ isActive }) => (
                 <div
