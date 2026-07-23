@@ -177,8 +177,7 @@ export default function RegistrationPopup({ isOpen, onClose }) {
           {step === 2 && (
             <>
               <div className="text-sm ">
-                <span className="font-bold">Payment To:</span> Mass Management
-                of Contract affiliated by future wings aviation academy
+                <span className="font-bold">Payment To:</span> future wings aviation academy
               </div>
 
               <button
