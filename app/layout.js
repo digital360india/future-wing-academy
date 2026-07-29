@@ -41,6 +41,25 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white overflow-x-hidden`}
       >
+        {/* Google tag (gtag.js) */}
+        <Script
+          id="gtag-src"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18141108152"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18141108152');
+            `,
+          }}
+        />
+
         <Script
           id="tawk-to"
           strategy="afterInteractive"
@@ -66,7 +85,7 @@ export default function RootLayout({ children }) {
 
         <main className="min-h-screen">{children}</main>
 
-        <a href="tel:8679234969" className="fixed bottom-5 left-5 z-[9999]">
+        <a href="tel:8679234969" className="fixed bottom-5 left-5 z-9999">
           <div className="w-14 h-14 md:w-16 md:h-16 bg-sky-500 hover:bg-sky-600 transition-all duration-300 shadow-2xl rounded-full flex items-center justify-center animate-pulse">
             <IoCallOutline className="text-white w-7 h-7 md:w-8 md:h-8" />
           </div>
