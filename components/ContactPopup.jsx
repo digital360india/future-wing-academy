@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ContactPopup({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export default function ContactPopup({ isOpen, onClose }) {
     email: "",
     message: "",
   });
+  const router = useRouter();
 
   const [loading, setLoading] = useState(false);
 
@@ -41,6 +43,7 @@ export default function ContactPopup({ isOpen, onClose }) {
       alert("Message sent successfully ✈️");
       setFormData({ name: "", phone: "", email: "", message: "" });
       onClose();
+      router.push("/thankyou");
     } catch (err) {
       alert(err.message || "Something went wrong");
     } finally {
@@ -81,7 +84,7 @@ export default function ContactPopup({ isOpen, onClose }) {
             </p>
           </div>
 
-          {/* IMAGE */} 
+          {/* IMAGE */}
           <div className="absolute -bottom-10 left-0 hidden lg:block">
             <div className="relative w-60 h-60">
               <Image

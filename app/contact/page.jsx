@@ -3,8 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Phone, Mail, MapPin, ArrowRight, Clock3 } from "lucide-react";
+import { useRouter } from "next/navigation";
+
+
 
 export default function ContactPage() {
+    const router = useRouter();
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -47,6 +52,8 @@ export default function ContactPage() {
         email: "",
         message: "",
       });
+            router.push("/thankyou");
+
     } catch (error) {
       alert(error.message || "Something went wrong");
     } finally {
