@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { X, ShieldCheck, Award, Users } from "lucide-react";
+import { X } from "lucide-react";
 import Image from "next/image";
+
+const LEADS_ENDPOINT = "https://futurewingslead.vercel.app/api/webleads";
 
 export default function JoinFormPopup({ isOpen, onClose }) {
   const [step, setStep] = useState(1);
@@ -36,34 +38,26 @@ export default function JoinFormPopup({ isOpen, onClose }) {
     if (!form.address) err.address = "Required";
     if (!form.city) err.city = "Required";
 
-    if (
-      !form.qualification ||
-      form.qualification === "Highest Qualification"
-    ) {
+    if (!form.qualification || form.qualification === "Highest Qualification") {
       err.qualification = "Required";
     }
 
     setErrors(err);
-
     return Object.keys(err).length === 0;
   };
 
   // VALIDATE STEP 2
   const validateStep2 = () => {
     let err = {};
-
     if (!form.transactionId) {
       err.transactionId = "Required";
     }
-
     setErrors(err);
-
     return Object.keys(err).length === 0;
   };
 
   const nextStep = (e) => {
     e.preventDefault();
-
     if (validateStep1()) {
       setStep(2);
     }
@@ -77,7 +71,8 @@ export default function JoinFormPopup({ isOpen, onClose }) {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/send-cpss", {
+      // 1. Keep existing Gmail API
+      const emailRes = await fetch("/api/send-cpss", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,28 +80,55 @@ export default function JoinFormPopup({ isOpen, onClose }) {
         body: JSON.stringify(form),
       });
 
-      const data = await res.json();
+      const emailData = await emailRes.json();
 
-      if (data.success) {
-        alert("Form Submitted Successfully ✅");
-
-        setForm({
-          name: "",
-          phone: "",
-          email: "",
-          age: "",
-          address: "",
-          city: "",
-          qualification: "",
-          transactionId: "",
-        });
-
-        setStep(1);
-
-        onClose();
-      } else {
-        alert("Something went wrong ❌");
+      if (!emailData.success) {
+        alert("Something went wrong while sending email ❌");
+        return;
       }
+
+      // 2. Also send lead to the dashboard (webleads)
+      const leadPayload = {
+        name: form.name,
+        phone: form.phone, // keep only this
+        // number: form.phone,     ← remove this line
+        email: form.email,
+        age: form.age,
+        address: form.address,
+        city: form.city,
+        qualification: form.qualification,
+        transactionId: form.transactionId,
+        source: "cpss-registration-form",
+      };
+
+      // Fire-and-forget style so email success is not blocked by lead API
+      fetch(LEADS_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(leadPayload),
+      }).catch((err) => {
+        // Only log – don’t show error to user if lead API fails
+        console.error("Failed to save lead to dashboard:", err);
+      });
+
+      // Success
+      alert("Form Submitted Successfully ✅");
+
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        age: "",
+        address: "",
+        city: "",
+        qualification: "",
+        transactionId: "",
+      });
+
+      setStep(1);
+      onClose();
     } catch (err) {
       console.error(err);
       alert("Server Error ❌");
@@ -120,7 +142,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-999 font-serif bg-black/70 backdrop-blur-sm flex items-center justify-center px-4 py-6 overflow-y-auto">
       <div className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl animate-[popup_0.3s_ease] grid lg:grid-cols-2">
-
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/90 hover:bg-red-500 hover:text-white transition flex items-center justify-center shadow-md"
@@ -128,44 +149,35 @@ export default function JoinFormPopup({ isOpen, onClose }) {
           <X size={20} />
         </button>
 
-        <div className="relative hidden lg:flex flex-col justify-between  p-4 overflow-hidden">
-
-          <div className="absolute inset-0 h-[70vh] ">
+        {/* LEFT SIDE IMAGE */}
+        <div className="relative hidden lg:flex flex-col justify-between p-4 overflow-hidden">
+          <div className="absolute inset-0 h-[70vh]">
             <Image
               src="/cpssform.png"
               alt="Pilot"
               width={1000}
-              height={1100} 
-              
+              height={1100}
               className="object-cover"
             />
           </div>
-
-         
-
         </div>
 
         {/* RIGHT SIDE FORM */}
         <div className="bg-white p-6 sm:p-10 lg:p-12 overflow-y-auto max-h-screen">
-
-          {/* TOP HEADER */}
           <div className="mb-7">
-          
             <h2 className="text-2xl font-bold text-gray-900">
               {step === 1 ? "CPSS Registration" : "Complete Your Payment"}
             </h2>
-
           </div>
 
           {step === 1 && (
             <form onSubmit={nextStep} className="space-y-5">
-
+              {/* ... keep all your existing Step 1 fields exactly the same ... */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="text-sm font-medium text-gray-700 mb-2 block">
                     Full Name
                   </label>
-
                   <input
                     type="text"
                     name="name"
@@ -174,11 +186,8 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                     placeholder="Enter your full name"
                     className="w-full h-13 px-4 rounded-2xl border border-gray-300 bg-gray-50 focus:ring-2 focus:ring-sky-500 outline-none"
                   />
-
                   {errors.name && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.name}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.name}</p>
                   )}
                 </div>
 
@@ -186,7 +195,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                   <label className="text-sm font-medium text-gray-700 mb-2 block">
                     Phone Number
                   </label>
-
                   <input
                     type="tel"
                     name="phone"
@@ -195,11 +203,8 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                     placeholder="Enter phone number"
                     className="w-full h-13 px-4 rounded-2xl border border-gray-300 bg-gray-50 focus:ring-2 focus:ring-sky-500 outline-none"
                   />
-
                   {errors.phone && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.phone}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
                   )}
                 </div>
               </div>
@@ -209,7 +214,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                   <label className="text-sm font-medium text-gray-700 mb-2 block">
                     Email Address
                   </label>
-
                   <input
                     type="email"
                     name="email"
@@ -218,11 +222,8 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                     placeholder="Enter email address"
                     className="w-full h-13 px-4 rounded-2xl border border-gray-300 bg-gray-50 focus:ring-2 focus:ring-sky-500 outline-none"
                   />
-
                   {errors.email && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.email}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
                   )}
                 </div>
 
@@ -230,7 +231,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                   <label className="text-sm font-medium text-gray-700 mb-2 block">
                     Age
                   </label>
-
                   <input
                     type="number"
                     name="age"
@@ -239,11 +239,8 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                     placeholder="Age"
                     className="w-full h-13 px-4 rounded-2xl border border-gray-300 bg-gray-50 focus:ring-2 focus:ring-sky-500 outline-none"
                   />
-
                   {errors.age && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.age}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.age}</p>
                   )}
                 </div>
               </div>
@@ -252,7 +249,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                 <label className="text-sm font-medium text-gray-700 mb-2 block">
                   Full Address
                 </label>
-
                 <input
                   type="text"
                   name="address"
@@ -261,11 +257,8 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                   placeholder="Enter full address"
                   className="w-full h-13 px-4 rounded-2xl border border-gray-300 bg-gray-50 focus:ring-2 focus:ring-sky-500 outline-none"
                 />
-
                 {errors.address && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.address}
-                  </p>
+                  <p className="text-red-500 text-xs mt-1">{errors.address}</p>
                 )}
               </div>
 
@@ -274,7 +267,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                   <label className="text-sm font-medium text-gray-700 mb-2 block">
                     City
                   </label>
-
                   <input
                     type="text"
                     name="city"
@@ -283,11 +275,8 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                     placeholder="Enter city"
                     className="w-full h-13 px-4 rounded-2xl border border-gray-300 bg-gray-50 focus:ring-2 focus:ring-sky-500 outline-none"
                   />
-
                   {errors.city && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.city}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.city}</p>
                   )}
                 </div>
 
@@ -295,7 +284,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                   <label className="text-sm font-medium text-gray-700 mb-2 block">
                     Qualification
                   </label>
-
                   <select
                     name="qualification"
                     value={form.qualification}
@@ -308,7 +296,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                     <option>Graduate</option>
                     <option>Post Graduate</option>
                   </select>
-
                   {errors.qualification && (
                     <p className="text-red-500 text-xs mt-1">
                       {errors.qualification}
@@ -329,7 +316,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
           {/* STEP 2 */}
           {step === 2 && (
             <form onSubmit={handleSubmit} className="space-y-2">
-
               <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6">
                 <img
                   src="/avaitionqrcode.jpeg"
@@ -342,7 +328,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                 <label className="text-sm font-medium text-gray-700 mb-2 block">
                   Transaction ID
                 </label>
-
                 <input
                   type="text"
                   name="transactionId"
@@ -351,7 +336,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
                   placeholder="Enter transaction ID"
                   className="w-full h-14 px-4 rounded-2xl border border-gray-300 bg-gray-50 focus:ring-2 focus:ring-sky-500 outline-none"
                 />
-
                 {errors.transactionId && (
                   <p className="text-red-500 text-xs mt-1">
                     {errors.transactionId}
@@ -386,7 +370,6 @@ export default function JoinFormPopup({ isOpen, onClose }) {
         </div>
       </div>
 
-      {/* ANIMATION */}
       <style jsx>{`
         @keyframes popup {
           from {

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+const LEADS_ENDPOINT = "https://futurewingslead.vercel.app/api/webleads";
+
 export default function RegistrationPopup({ isOpen, onClose }) {
   const [step, setStep] = useState(1);
   const router = useRouter();
@@ -60,6 +62,7 @@ export default function RegistrationPopup({ isOpen, onClose }) {
     setLoading(true);
 
     try {
+      // 1. Existing email API
       const res = await fetch("/api/send-registration", {
         method: "POST",
         headers: {
@@ -74,11 +77,38 @@ export default function RegistrationPopup({ isOpen, onClose }) {
       const data = await res.json();
 
       if (data.success) {
-        onClose(); 
-        router.push("/thankyou"); 
+        // 2. Also send lead to the dashboard
+        const leadPayload = {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          age: formData.age,
+          address: formData.address,
+          city: formData.city,
+          qualification: formData.qualification,
+          transactionId,
+          source: "registration-form",
+        };
+
+        // Non-blocking – don’t break the success flow if lead API fails
+        fetch(LEADS_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(leadPayload),
+        }).catch((err) => {
+          console.error("Failed to save lead to dashboard:", err);
+        });
+
+        onClose();
+        router.push("/thankyou");
+      } else {
+        alert("Something went wrong ❌");
       }
     } catch (error) {
       console.log(error);
+      alert("Server Error ❌");
     }
 
     setLoading(false);
@@ -104,7 +134,7 @@ export default function RegistrationPopup({ isOpen, onClose }) {
               <p className="text-[16px] md:text-[20px] mt-1">
                 Registration fee starts at{" "}
                 <span className="text-[#51B6E7] font-bold">₹5000</span>
-              </p> 
+              </p>
 
               <p className="text-xs text-gray-400">
                 Reserve your seats in future wings aviation academy.
@@ -177,7 +207,8 @@ export default function RegistrationPopup({ isOpen, onClose }) {
           {step === 2 && (
             <>
               <div className="text-sm ">
-                <span className="font-bold">Payment To:</span> future wings aviation academy
+                <span className="font-bold">Payment To:</span> future wings
+                aviation academy
               </div>
 
               <button
@@ -190,9 +221,8 @@ export default function RegistrationPopup({ isOpen, onClose }) {
               <p className="text-sm text-gray-500 mt-1">Total Amount:</p>
               <h3 className="text-[#4EADE3] text-2xl font-bold mb-5">₹5000</h3>
 
-              <div className=" items-center sm:items-start gap-10 md:flex-row md:items-start">
-                {/* QR code area – centered on mobile */}
-                <div className=" items-center md:items-start">
+              <div className="items-center sm:items-start gap-10 md:flex-row md:items-start">
+                <div className="items-center md:items-start">
                   <img
                     src="/avaitionqrcode.jpeg"
                     className="w-60 h-72 sm:w-52 sm:h-52 md:w-60 "
@@ -201,13 +231,11 @@ export default function RegistrationPopup({ isOpen, onClose }) {
 
                   <div className="mt-3 text-center md:hidden">
                     <p className="text-sm">
-                      <span className="font-semibold">UPI ID:</span>{" "}
-                      masspal@ibl
+                      <span className="font-semibold">UPI ID:</span> masspal@ibl
                     </p>
                   </div>
                 </div>
 
-                {/* Instructions – stack below QR on mobile */}
                 <div className="text-center md:text-left">
                   <h4 className="font-semibold mb-3 text-base md:text-lg">
                     Here's How it works?
@@ -247,7 +275,7 @@ export default function RegistrationPopup({ isOpen, onClose }) {
         {/* RIGHT IMAGE */}
         <div className="hidden md:block md:w-1/2">
           <img
-            src="/aviation form image.png"
+            src="/aviationform image.png"
             alt="pilot"
             className="w-full h-full object-cover"
           />

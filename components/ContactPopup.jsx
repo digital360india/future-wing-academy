@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+const LEADS_ENDPOINT = "https://futurewingslead.vercel.app/api/webleads";
+
 export default function ContactPopup({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +32,7 @@ export default function ContactPopup({ isOpen, onClose }) {
     setLoading(true);
 
     try {
+      // 1. Existing contact API
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -39,6 +42,26 @@ export default function ContactPopup({ isOpen, onClose }) {
       const data = await res.json();
 
       if (!res.ok) throw new Error(data.error);
+
+      // 2. Also send lead to the dashboard
+      const leadPayload = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+        source: "contact-form",
+      };
+
+      // Non-blocking
+      fetch(LEADS_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(leadPayload),
+      }).catch((err) => {
+        console.error("Failed to save lead to dashboard:", err);
+      });
 
       alert("Message sent successfully ✈️");
       setFormData({ name: "", phone: "", email: "", message: "" });

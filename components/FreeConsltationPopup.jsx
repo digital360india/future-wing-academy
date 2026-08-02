@@ -4,6 +4,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
+// The dashboard's API endpoint that saves leads to Firebase.
+// This lives on a DIFFERENT domain than this form, so it must be an absolute URL.
+const LEADS_ENDPOINT = "https://futurewingslead.vercel.app/api/webleads";
+
 export default function FreeconsultationPopup({ isOpen, onClose }) {
   const router = useRouter();
 
@@ -94,30 +98,52 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
 
     setLoading(true);
 
-    try {
-      const res = await fetch("/api/free-consultation-form", {
+    const payload = {
+      ...formData,
+      interest: selectedInterest,
+      whyInterested: whyInterested,
+      researchStatus: selectedResearch,
+      source: "free-consultation-form",
+    };
+
+    // Fire both requests at once:
+    // 1) your existing local route — sends you the Gmail notification (unchanged, kept as-is)
+    // 2) the dashboard's webleads route — saves it into the Firebase leads table
+    // Promise.allSettled means if one fails, it doesn't stop or break the other.
+    const [emailResult, dashboardResult] = await Promise.allSettled([
+      fetch("/api/free-consultation-form", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          interest: selectedInterest,
-          whyInterested: whyInterested,
-          researchStatus: selectedResearch,
-        }),
-      });
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).then((res) => res.json()),
+      fetch(LEADS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).then((res) => res.json()),
+    ]);
 
-      const data = await res.json();
+    const emailOk = emailResult.status === "fulfilled" && emailResult.value?.success;
+    const dashboardOk = dashboardResult.status === "fulfilled" && dashboardResult.value?.success;
 
-      if (data.success) {
-        onClose();
-        router.push("/thankyou");
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      alert("Submission failed. Please try again.");
+    if (dashboardResult.status === "rejected") {
+      console.error("Dashboard submission failed:", dashboardResult.reason);
+    } else if (!dashboardOk) {
+      console.error("Dashboard submission returned an error:", dashboardResult.value);
+    }
+    if (emailResult.status === "rejected") {
+      console.error("Email notification failed:", emailResult.reason);
+    } else if (!emailOk) {
+      console.error("Email notification returned an error:", emailResult.value);
+    }
+
+    // Keep the original user-facing behavior: proceed as long as the email
+    // route (the one you rely on today) succeeded, same as before this change.
+    if (emailOk) {
+      onClose();
+      router.push("/thankyou");
+    } else {
+      alert("Something went wrong. Please try again.");
     }
 
     setLoading(false);
@@ -157,6 +183,7 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
                     type="text"
                     name="name"
                     placeholder="Full Name"
+                    value={formData.name}
                     onChange={handleChange}
                     className="h-[55px] rounded-xl border border-gray-300 bg-white px-4 outline-none focus:border-[#4BAEE5]"
                   />
@@ -165,6 +192,7 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
                     type="text"
                     name="phone"
                     placeholder="Phone Number"
+                    value={formData.phone}
                     onChange={handleChange}
                     className="h-[55px] rounded-xl border border-gray-300 bg-white px-4 outline-none focus:border-[#4BAEE5]"
                   />
@@ -173,6 +201,7 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
                     type="email"
                     name="email"
                     placeholder="Email Address"
+                    value={formData.email}
                     onChange={handleChange}
                     className="h-[55px] rounded-xl border border-gray-300 bg-white px-4 outline-none focus:border-[#4BAEE5]"
                   />
@@ -181,6 +210,7 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
                     type="number"
                     name="age"
                     placeholder="Age"
+                    value={formData.age}
                     onChange={handleChange}
                     className="h-[55px] rounded-xl border border-gray-300 bg-white px-4 outline-none focus:border-[#4BAEE5]"
                   />
@@ -189,12 +219,14 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
                     type="text"
                     name="city"
                     placeholder="City"
+                    value={formData.city}
                     onChange={handleChange}
                     className="h-[55px] rounded-xl border border-gray-300 bg-white px-4 outline-none focus:border-[#4BAEE5]"
                   />
 
                   <select
                     name="qualification"
+                    value={formData.qualification}
                     onChange={handleChange}
                     className="h-[55px] rounded-xl border border-gray-300 bg-white px-4 outline-none focus:border-[#4BAEE5]"
                   >
@@ -208,6 +240,7 @@ export default function FreeconsultationPopup({ isOpen, onClose }) {
                   <textarea
                     name="address"
                     placeholder="Address"
+                    value={formData.address}
                     onChange={handleChange}
                     className="sm:col-span-2 rounded-xl border border-gray-300 bg-white px-4 py-4 outline-none focus:border-[#4BAEE5]"
                     rows={4}

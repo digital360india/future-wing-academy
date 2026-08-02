@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Phone, Mail, MapPin, ArrowRight, Clock3 } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-
+const LEADS_ENDPOINT = "https://futurewingslead.vercel.app/api/webleads";
 
 export default function ContactPage() {
-    const router = useRouter();
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -28,10 +28,10 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setLoading(true);
 
     try {
+      // 1. Existing contact API
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -44,6 +44,26 @@ export default function ContactPage() {
 
       if (!res.ok) throw new Error(data.error);
 
+      // 2. Also send lead to the dashboard
+      const leadPayload = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+        source: "contact-page",
+      };
+
+      // Non-blocking
+      fetch(LEADS_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(leadPayload),
+      }).catch((err) => {
+        console.error("Failed to save lead to dashboard:", err);
+      });
+
       alert("Message sent successfully ✈️");
 
       setFormData({
@@ -52,8 +72,8 @@ export default function ContactPage() {
         email: "",
         message: "",
       });
-            router.push("/thankyou");
 
+      router.push("/thankyou");
     } catch (error) {
       alert(error.message || "Something went wrong");
     } finally {
@@ -70,7 +90,7 @@ export default function ContactPage() {
             ✈ Future Wings Aviation Academy
           </div>
 
-          <h1 className="mt-5 text-3xl font-serif  font-bold leading-tight text-[#163660]">
+          <h1 className="mt-5 text-3xl font-serif font-bold leading-tight text-[#163660]">
             Let&apos;s Connect &
             <span className="text-sky-500 font-serif">
               {" "}
