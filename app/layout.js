@@ -29,6 +29,10 @@ export const metadata = {
     shortcut: "/aeroplane full shot 1.png",
     apple: "/aeroplane full shot 1.png",
   },
+
+  verification: {
+    google: "-5pa5RLdQht8jXTFZ0f052qbowl_WEgifOh_27H216k",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -41,7 +45,26 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white overflow-x-hidden`}
       >
-        {/* Google tag (gtag.js) */}
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          id="ga-src"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-RDGY3JL20J"
+        />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-RDGY3JL20J');
+            `,
+          }}
+        />
+
+        {/* Google tag (gtag.js) - Google Ads */}
         <Script
           id="gtag-src"
           strategy="afterInteractive"
