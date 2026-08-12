@@ -83,6 +83,19 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        {/* Google Ads - Phone Conversion Tracking */}
+        <Script
+          id="gtag-phone-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('config', 'AW-18141108152/ZAnECNHTieAcELivrcpD', {
+                'phone_conversion_number': '086792 34969'
+              });
+            `,
+          }}
+        />
+
         <Script
           id="tawk-to"
           strategy="afterInteractive"
