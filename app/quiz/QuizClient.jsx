@@ -317,7 +317,6 @@ export default function QuizClient() {
             </div>
           </div>
 
-          {/* TIMER */}
           <div className="bg-red-50 border border-red-100 px-5 py-3 rounded-xl">
             <p className="text-xs text-red-500 font-medium">Time Remaining</p>
 
