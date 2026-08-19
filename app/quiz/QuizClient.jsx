@@ -201,7 +201,6 @@ export default function QuizClient() {
     return (
       <div className="min-h-screen bg-[#f3f6fb] flex items-center justify-center p-4">
         <div className="w-full max-w-2xl bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
-          {/* TOP HEADER */}
           <div className="bg-[#0B1220] px-6 py-8 text-center">
             <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-3xl text-white mx-auto mb-4">
               ✈️
