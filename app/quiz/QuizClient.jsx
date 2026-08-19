@@ -389,7 +389,6 @@ export default function QuizClient() {
               key={q.id}
               className="bg-white border border-gray-200 rounded-3xl p-5 sm:p-7 shadow-sm"
             >
-              {/* QUESTION */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="min-w-[45px] h-[45px] rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
                   {index + 1}
