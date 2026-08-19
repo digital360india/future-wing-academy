@@ -400,7 +400,6 @@ export default function QuizClient() {
                 </h2>
               </div>
 
-              {/* OPTIONS */}
               <div className="space-y-3">
                 {q.options.map((option, i) => (
                   <label
