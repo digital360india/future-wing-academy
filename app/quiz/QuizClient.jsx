@@ -297,7 +297,6 @@ export default function QuizClient() {
     );
   }
 
-  // QUIZ PAGE
   return (
     <div className="min-h-screen bg-[#f3f6fb]">
       {/* HEADER */}
