@@ -382,7 +382,6 @@ export default function QuizClient() {
           </div>
         </div>
 
-        {/* QUESTIONS */}
         <div className="space-y-6">
           {quizQuestions.map((q, index) => (
             <div
