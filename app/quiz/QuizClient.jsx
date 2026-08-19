@@ -427,7 +427,6 @@ export default function QuizClient() {
           ))}
         </div>
 
-        {/* SUBMIT BUTTON */}
         <button
           onClick={() => handleSubmit(false)}
           className="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-md hover:shadow-lg"
