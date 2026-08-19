@@ -197,7 +197,6 @@ export default function QuizClient() {
       alert("Failed to submit quiz. Please try again.");
     }
   };
-  // RESULT SCREEN
   if (submitted && resultData) {
     return (
       <div className="min-h-screen bg-[#f3f6fb] flex items-center justify-center p-4">
