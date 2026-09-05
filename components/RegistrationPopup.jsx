@@ -272,7 +272,6 @@ export default function RegistrationPopup({ isOpen, onClose }) {
           )}
         </div>
 
-        {/* RIGHT IMAGE */}
         <div className="hidden md:block md:w-1/2">
           <img
             src="/aviation form image.png"
